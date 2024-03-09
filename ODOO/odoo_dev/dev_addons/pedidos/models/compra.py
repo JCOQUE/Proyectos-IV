@@ -6,9 +6,9 @@ import base64
 
 _logger = logging.getLogger(__name__)
 # Crear una instancia del productor de Kafka
-producer = KafkaProducer(bootstrap_servers='localhost:9092',
-                        max_block_ms=1048588,
-                        compression_type='gzip')
+# producer = KafkaProducer(bootstrap_servers='localhost:9092',
+#                         max_block_ms=1048588,
+#                         compression_type='gzip')
 
 
 class purchase_custom(models.Model):
