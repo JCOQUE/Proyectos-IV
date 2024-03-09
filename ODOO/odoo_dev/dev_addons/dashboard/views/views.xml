@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+  <data>
 
-    <record id="action_open_dashboard_view" model="ir.actions.act_window">
-      <field name="name">Abrir Tablero</field>
-      <field name="res_model">board.board</field>
-      <field name="view_mode">form</field> 
+    <record model="ir.actions.act_window" id="dashboard.action_dashboard_window">
+      <field name="name">dashboard dashboard graph</field>
+      <field name="res_model">sale.order</field>
+      <field name="view_mode">graph</field>
+      <field name="view_id" ref="sale.view_sale_order_graph" />  
     </record>
 
-
-    <menuitem id="menu_dashboard_main" name="Dashboard" action="action_open_dashboard_view"/>
-  
+    <menuitem id="dashboard.menu_root" name="Graficas" action="dashboard.action_dashboard_window" />
+    <!--<menuitem id="menu_dashboard_compra" name="Compra" parent="menu_dashboard_main" action="action_dashboard_compra_view"/>-->
+  </data>
 </odoo>
