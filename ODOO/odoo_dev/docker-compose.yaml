@@ -30,7 +30,7 @@ services:
       - ERP-BI
 networks:
   ERP-BI:
-    external: true
+  
 volumes:
   odoo-web-data:
   odoo-db-data:

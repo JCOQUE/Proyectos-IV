@@ -1,0 +1,373 @@
+2024-03-09 22:40:53,458 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2024-03-09 22:40:53,459 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2024-03-09 22:40:53,459 1 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-03-09 22:40:53,460 1 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2024-03-09 22:40:53,461 1 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2024-03-09 22:40:53,462 1 DEBUG ? odoo.netsvc: logger level set: ":DEBUG" 
+2024-03-09 22:40:53,470 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-03-09 22:40:53,472 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-03-09 22:40:53,473 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-03-09 22:40:53,473 1 INFO ? odoo: database: odoo@db:5432 
+2024-03-09 22:40:53,589 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-03-09 22:40:53,867 1 DEBUG ? odoo.service.server: Setting signal handlers 
+2024-03-09 22:40:53,869 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 78e76689867c:8069 
+2024-03-09 22:40:53,872 1 DEBUG ? odoo.service.server: cron0 started! 
+2024-03-09 22:40:53,874 1 DEBUG ? odoo.service.server: cron1 started! 
+2024-03-09 22:41:32,962 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-03-09 22:41:32,963 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-03-09 22:41:33,430 1 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 140495259653952)> 
+2024-03-09 22:41:33,432 1 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 140495259653952)> (False) 
+2024-03-09 22:41:33,434 1 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 140495124371200)> (True) 
+2024-03-09 22:41:33,436 1 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 140495115945728)> (True) 
+2024-03-09 22:41:33,438 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-03-09 22:41:33,439 1 DEBUG ? odoo.service.server: -- 
+2024-03-09 22:42:28,063 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2024-03-09 22:42:28,065 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2024-03-09 22:42:28,066 1 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-03-09 22:42:28,066 1 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2024-03-09 22:42:28,067 1 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2024-03-09 22:42:28,068 1 DEBUG ? odoo.netsvc: logger level set: ":DEBUG" 
+2024-03-09 22:42:28,069 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-03-09 22:42:28,070 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-03-09 22:42:28,071 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-03-09 22:42:28,072 1 INFO ? odoo: database: odoo@db:5432 
+2024-03-09 22:42:28,177 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-03-09 22:42:28,369 1 DEBUG ? odoo.service.server: Setting signal handlers 
+2024-03-09 22:42:28,376 1 DEBUG ? odoo.service.server: cron0 started! 
+2024-03-09 22:42:28,377 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on dec20de43017:8069 
+2024-03-09 22:42:28,378 1 DEBUG ? odoo.service.server: cron1 started! 
+2024-03-09 22:42:49,988 1 DEBUG ? odoo.http: HTTP sessions stored in: /var/lib/odoo/sessions 
+2024-03-09 22:42:50,035 1 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 80] [Cache: 3] 
+2024-03-09 22:42:50,043 1 INFO pruebaCoque odoo.modules.loading: loading 1 modules... 
+2024-03-09 22:42:50,044 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base (1/1) 
+2024-03-09 22:42:50,051 1 DEBUG pruebaCoque odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,052 1 INFO pruebaCoque odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-03-09 22:42:50,105 1 DEBUG pruebaCoque odoo.modules.module: module manage: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2024-03-09 22:42:50,106 1 WARNING pruebaCoque odoo.modules.graph: module manage: not installable, skipped 
+2024-03-09 22:42:50,116 1 DEBUG pruebaCoque odoo.modules.loading: Updating graph with 55 more modules 
+2024-03-09 22:42:50,117 1 INFO pruebaCoque odoo.modules.loading: loading 55 modules... 
+2024-03-09 22:42:50,118 1 DEBUG pruebaCoque odoo.modules.loading: Loading module uom (2/55) 
+2024-03-09 22:42:50,121 1 DEBUG pruebaCoque odoo.modules.loading: Module uom loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,122 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web (3/55) 
+2024-03-09 22:42:50,124 1 DEBUG pruebaCoque odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,125 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp (4/55) 
+2024-03-09 22:42:50,134 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,135 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_import (5/55) 
+2024-03-09 22:42:50,174 1 DEBUG pruebaCoque odoo.modules.loading: Module base_import loaded in 0.04s, 0 queries 
+2024-03-09 22:42:50,176 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_setup (6/55) 
+2024-03-09 22:42:50,181 1 DEBUG pruebaCoque odoo.modules.loading: Module base_setup loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,182 1 DEBUG pruebaCoque odoo.modules.loading: Loading module bus (7/55) 
+2024-03-09 22:42:50,201 1 DEBUG pruebaCoque odoo.modules.loading: Module bus loaded in 0.02s, 0 queries 
+2024-03-09 22:42:50,202 1 DEBUG pruebaCoque odoo.modules.loading: Loading module http_routing (8/55) 
+2024-03-09 22:42:50,219 1 DEBUG pruebaCoque odoo.modules.loading: Module http_routing loaded in 0.02s, 0 queries 
+2024-03-09 22:42:50,221 1 DEBUG pruebaCoque odoo.modules.loading: Loading module resource (9/55) 
+2024-03-09 22:42:50,233 1 DEBUG pruebaCoque odoo.modules.loading: Module resource loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,234 1 DEBUG pruebaCoque odoo.modules.loading: Loading module utm (10/55) 
+2024-03-09 22:42:50,247 1 DEBUG pruebaCoque odoo.modules.loading: Module utm loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,249 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_kanban_gauge (11/55) 
+2024-03-09 22:42:50,251 1 DEBUG pruebaCoque odoo.modules.loading: Module web_kanban_gauge loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,252 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_tour (12/55) 
+2024-03-09 22:42:50,257 1 DEBUG pruebaCoque odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,259 1 DEBUG pruebaCoque odoo.modules.loading: Loading module iap (13/55) 
+2024-03-09 22:42:50,270 1 DEBUG pruebaCoque odoo.modules.loading: Module iap loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,271 1 DEBUG pruebaCoque odoo.modules.loading: Loading module mail (14/55) 
+2024-03-09 22:42:50,341 1 DEBUG pruebaCoque odoo.modules.loading: Module mail loaded in 0.07s, 0 queries 
+2024-03-09 22:42:50,342 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet (15/55) 
+2024-03-09 22:42:50,344 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,345 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_editor (16/55) 
+2024-03-09 22:42:50,365 1 DEBUG pruebaCoque odoo.modules.loading: Module web_editor loaded in 0.02s, 0 queries 
+2024-03-09 22:42:50,366 1 DEBUG pruebaCoque odoo.modules.loading: Loading module analytic (17/55) 
+2024-03-09 22:42:50,378 1 DEBUG pruebaCoque odoo.modules.loading: Module analytic loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,378 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_signup (18/55) 
+2024-03-09 22:42:50,384 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_signup loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,384 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp_mail (19/55) 
+2024-03-09 22:42:50,386 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,387 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_install_request (20/55) 
+2024-03-09 22:42:50,391 1 DEBUG pruebaCoque odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,392 1 DEBUG pruebaCoque odoo.modules.loading: Loading module contacts (21/55) 
+2024-03-09 22:42:50,394 1 DEBUG pruebaCoque odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,395 1 DEBUG pruebaCoque odoo.modules.loading: Loading module google_gmail (22/55) 
+2024-03-09 22:42:50,401 1 DEBUG pruebaCoque odoo.modules.loading: Module google_gmail loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,402 1 DEBUG pruebaCoque odoo.modules.loading: Loading module iap_mail (23/55) 
+2024-03-09 22:42:50,404 1 DEBUG pruebaCoque odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,405 1 DEBUG pruebaCoque odoo.modules.loading: Loading module mail_bot (24/55) 
+2024-03-09 22:42:50,410 1 DEBUG pruebaCoque odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,411 1 DEBUG pruebaCoque odoo.modules.loading: Loading module phone_validation (25/55) 
+2024-03-09 22:42:50,444 1 DEBUG pruebaCoque odoo.modules.loading: Module phone_validation loaded in 0.03s, 0 queries 
+2024-03-09 22:42:50,445 1 DEBUG pruebaCoque odoo.modules.loading: Loading module privacy_lookup (26/55) 
+2024-03-09 22:42:50,451 1 DEBUG pruebaCoque odoo.modules.loading: Module privacy_lookup loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,451 1 DEBUG pruebaCoque odoo.modules.loading: Loading module product (27/55) 
+2024-03-09 22:42:50,517 1 DEBUG pruebaCoque odoo.modules.loading: Module product loaded in 0.07s, 0 queries 
+2024-03-09 22:42:50,518 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sales_team (28/55) 
+2024-03-09 22:42:50,524 1 DEBUG pruebaCoque odoo.modules.loading: Module sales_team loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,525 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard (29/55) 
+2024-03-09 22:42:50,527 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,528 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_unsplash (30/55) 
+2024-03-09 22:42:50,532 1 DEBUG pruebaCoque odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,533 1 DEBUG pruebaCoque odoo.modules.loading: Loading module partner_autocomplete (31/55) 
+2024-03-09 22:42:50,548 1 DEBUG pruebaCoque odoo.modules.loading: Module partner_autocomplete loaded in 0.02s, 0 queries 
+2024-03-09 22:42:50,548 1 DEBUG pruebaCoque odoo.modules.loading: Loading module portal (32/55) 
+2024-03-09 22:42:50,556 1 DEBUG pruebaCoque odoo.modules.loading: Module portal loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,557 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sms (33/55) 
+2024-03-09 22:42:50,566 1 DEBUG pruebaCoque odoo.modules.loading: Module sms loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,567 1 DEBUG pruebaCoque odoo.modules.loading: Loading module snailmail (34/55) 
+2024-03-09 22:42:50,575 1 DEBUG pruebaCoque odoo.modules.loading: Module snailmail loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,575 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp_portal (35/55) 
+2024-03-09 22:42:50,577 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,578 1 DEBUG pruebaCoque odoo.modules.loading: Loading module digest (36/55) 
+2024-03-09 22:42:50,583 1 DEBUG pruebaCoque odoo.modules.loading: Module digest loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,584 1 DEBUG pruebaCoque odoo.modules.loading: Loading module payment (37/55) 
+2024-03-09 22:42:50,602 1 DEBUG pruebaCoque odoo.modules.loading: Module payment loaded in 0.02s, 0 queries 
+2024-03-09 22:42:50,604 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account (38/55) 
+2024-03-09 22:42:50,753 1 DEBUG pruebaCoque odoo.modules.loading: Module account loaded in 0.15s, 0 queries 
+2024-03-09 22:42:50,754 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_edi (39/55) 
+2024-03-09 22:42:50,761 1 DEBUG pruebaCoque odoo.modules.loading: Module account_edi loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,762 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_payment (40/55) 
+2024-03-09 22:42:50,768 1 DEBUG pruebaCoque odoo.modules.loading: Module account_payment loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,769 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_sequence (41/55) 
+2024-03-09 22:42:50,774 1 DEBUG pruebaCoque odoo.modules.loading: Module account_sequence loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,775 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_iban (42/55) 
+2024-03-09 22:42:50,779 1 DEBUG pruebaCoque odoo.modules.loading: Module base_iban loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,780 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_vat (43/55) 
+2024-03-09 22:42:50,788 1 DEBUG pruebaCoque odoo.modules.loading: Module base_vat loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,789 1 DEBUG pruebaCoque odoo.modules.loading: Loading module snailmail_account (44/55) 
+2024-03-09 22:42:50,796 1 DEBUG pruebaCoque odoo.modules.loading: Module snailmail_account loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,797 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_account (45/55) 
+2024-03-09 22:42:50,802 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_account loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,804 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard_account (46/55) 
+2024-03-09 22:42:50,807 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,808 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_edi_ubl_cii (47/55) 
+2024-03-09 22:42:50,922 1 DEBUG pruebaCoque odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.11s, 0 queries 
+2024-03-09 22:42:50,923 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_payment_invoice_online_payment_patch (48/55) 
+2024-03-09 22:42:50,926 1 DEBUG pruebaCoque odoo.modules.loading: Module account_payment_invoice_online_payment_patch loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,927 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_qr_code_sepa (49/55) 
+2024-03-09 22:42:50,930 1 DEBUG pruebaCoque odoo.modules.loading: Module account_qr_code_sepa loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,931 1 DEBUG pruebaCoque odoo.modules.loading: Loading module l10n_es (50/55) 
+2024-03-09 22:42:50,932 1 DEBUG pruebaCoque odoo.modules.loading: Module l10n_es loaded in 0.00s, 0 queries 
+2024-03-09 22:42:50,934 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale (51/55) 
+2024-03-09 22:42:50,980 1 DEBUG pruebaCoque odoo.modules.loading: Module sale loaded in 0.05s, 0 queries 
+2024-03-09 22:42:50,981 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_management (52/55) 
+2024-03-09 22:42:50,995 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_management loaded in 0.01s, 0 queries 
+2024-03-09 22:42:50,996 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_product_configurator (53/55) 
+2024-03-09 22:42:51,000 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_product_configurator loaded in 0.00s, 0 queries 
+2024-03-09 22:42:51,002 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_sms (54/55) 
+2024-03-09 22:42:51,004 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_sms loaded in 0.00s, 0 queries 
+2024-03-09 22:42:51,006 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard_sale (55/55) 
+2024-03-09 22:42:51,007 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.00s, 0 queries 
+2024-03-09 22:42:51,008 1 INFO pruebaCoque odoo.modules.loading: 55 modules loaded in 0.89s, 0 queries (+0 extra) 
+2024-03-09 22:42:51,198 1 ERROR pruebaCoque odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['manage'] 
+2024-03-09 22:42:51,200 1 INFO pruebaCoque odoo.modules.loading: Modules loaded. 
+2024-03-09 22:42:51,207 1 INFO pruebaCoque odoo.modules.registry: Registry loaded in 1.216s 
+2024-03-09 22:42:51,210 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:42:51,212 1 INFO pruebaCoque odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-03-09 22:42:51,407 1 INFO pruebaCoque werkzeug: 192.168.32.1 - - [09/Mar/2024 22:42:51] "GET /websocket HTTP/1.1" 101 - 28 0.086 1.335
+2024-03-09 22:42:51,413 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:42:51,416 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-03-09 22:42:51,425 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,393 1 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2024-03-09 22:43:28,399 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 9 acquired 
+2024-03-09 22:43:28,436 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,438 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'SMS: SMS Queue Manager', 189) 
+2024-03-09 22:43:28,439 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2024-03-09 22:43:28,448 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `SMS: SMS Queue Manager` done. 
+2024-03-09 22:43:28,449 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.009s (cron SMS: SMS Queue Manager, server action 189 with uid 1) 
+2024-03-09 22:43:28,454 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 9 updated and released 
+2024-03-09 22:43:28,456 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 6 acquired 
+2024-03-09 22:43:28,463 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,465 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 
+2024-03-09 22:43:28,465 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron:                     1, 
+2024-03-09 22:43:28,466 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron:                     '*', 
+2024-03-09 22:43:28,466 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron:                     'Notification: Send scheduled message notifications', 
+2024-03-09 22:43:28,467 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron:                     129) 
+2024-03-09 22:43:28,468 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `Notification: Send scheduled message notifications`. 
+2024-03-09 22:43:28,474 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `Notification: Send scheduled message notifications` done. 
+2024-03-09 22:43:28,475 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.007s (cron Notification: Send scheduled message notifications, server action 129 with uid 1) 
+2024-03-09 22:43:28,479 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 6 updated and released 
+2024-03-09 22:43:28,481 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 2 acquired 
+2024-03-09 22:43:28,486 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,487 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'Mail: Email Queue Manager', 125) 
+2024-03-09 22:43:28,488 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2024-03-09 22:43:28,521 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2024-03-09 22:43:28,522 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.033s (cron Mail: Email Queue Manager, server action 125 with uid 1) 
+2024-03-09 22:43:28,528 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 2 updated and released 
+2024-03-09 22:43:28,530 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 10 acquired 
+2024-03-09 22:43:28,534 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,536 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'Snailmail: process letters queue', 199) 
+2024-03-09 22:43:28,537 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2024-03-09 22:43:28,541 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
+2024-03-09 22:43:28,542 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.004s (cron Snailmail: process letters queue, server action 199 with uid 1) 
+2024-03-09 22:43:28,545 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 10 updated and released 
+2024-03-09 22:43:28,547 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 8 acquired 
+2024-03-09 22:43:28,551 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,553 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'Partner Autocomplete : Sync with remote DB', 185) 
+2024-03-09 22:43:28,554 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2024-03-09 22:43:28,559 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 
+2024-03-09 22:43:28,560 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.004s (cron Partner Autocomplete : Sync with remote DB, server action 185 with uid 1) 
+2024-03-09 22:43:28,564 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 8 updated and released 
+2024-03-09 22:43:28,566 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 12 acquired 
+2024-03-09 22:43:28,571 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:43:28,574 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'payment: post-process transactions', 206) 
+2024-03-09 22:43:28,575 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-03-09 22:43:28,581 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-03-09 22:43:28,582 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.007s (cron payment: post-process transactions, server action 206 with uid 1) 
+2024-03-09 22:43:28,587 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 12 updated and released 
+2024-03-09 22:43:29,471 1 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2024-03-09 22:43:51,521 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:46:02,656 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2024-03-09 22:46:02,657 1 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2024-03-09 22:46:02,658 1 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2024-03-09 22:46:02,658 1 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2024-03-09 22:46:02,659 1 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2024-03-09 22:46:02,660 1 DEBUG ? odoo.netsvc: logger level set: ":DEBUG" 
+2024-03-09 22:46:02,661 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-03-09 22:46:02,663 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-03-09 22:46:02,663 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-03-09 22:46:02,664 1 INFO ? odoo: database: odoo@db:5432 
+2024-03-09 22:46:02,756 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-03-09 22:46:02,902 1 DEBUG ? odoo.service.server: Setting signal handlers 
+2024-03-09 22:46:02,905 1 DEBUG ? odoo.service.server: cron0 started! 
+2024-03-09 22:46:02,906 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 46646cd2ea64:8069 
+2024-03-09 22:46:02,906 1 DEBUG ? odoo.service.server: cron1 started! 
+2024-03-09 22:46:05,768 1 DEBUG ? odoo.http: HTTP sessions stored in: /var/lib/odoo/sessions 
+2024-03-09 22:46:05,788 1 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 80] [Cache: 3] 
+2024-03-09 22:46:05,792 1 INFO pruebaCoque odoo.modules.loading: loading 1 modules... 
+2024-03-09 22:46:05,794 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base (1/1) 
+2024-03-09 22:46:05,804 1 DEBUG pruebaCoque odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,805 1 INFO pruebaCoque odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-03-09 22:46:05,841 1 DEBUG pruebaCoque odoo.modules.module: module manage: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2024-03-09 22:46:05,842 1 WARNING pruebaCoque odoo.modules.graph: module manage: not installable, skipped 
+2024-03-09 22:46:05,846 1 DEBUG pruebaCoque odoo.modules.loading: Updating graph with 55 more modules 
+2024-03-09 22:46:05,846 1 INFO pruebaCoque odoo.modules.loading: loading 55 modules... 
+2024-03-09 22:46:05,847 1 DEBUG pruebaCoque odoo.modules.loading: Loading module uom (2/55) 
+2024-03-09 22:46:05,849 1 DEBUG pruebaCoque odoo.modules.loading: Module uom loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,850 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web (3/55) 
+2024-03-09 22:46:05,852 1 DEBUG pruebaCoque odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,853 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp (4/55) 
+2024-03-09 22:46:05,860 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,861 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_import (5/55) 
+2024-03-09 22:46:05,880 1 DEBUG pruebaCoque odoo.modules.loading: Module base_import loaded in 0.02s, 0 queries 
+2024-03-09 22:46:05,881 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_setup (6/55) 
+2024-03-09 22:46:05,884 1 DEBUG pruebaCoque odoo.modules.loading: Module base_setup loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,885 1 DEBUG pruebaCoque odoo.modules.loading: Loading module bus (7/55) 
+2024-03-09 22:46:05,895 1 DEBUG pruebaCoque odoo.modules.loading: Module bus loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,896 1 DEBUG pruebaCoque odoo.modules.loading: Loading module http_routing (8/55) 
+2024-03-09 22:46:05,903 1 DEBUG pruebaCoque odoo.modules.loading: Module http_routing loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,904 1 DEBUG pruebaCoque odoo.modules.loading: Loading module resource (9/55) 
+2024-03-09 22:46:05,909 1 DEBUG pruebaCoque odoo.modules.loading: Module resource loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,910 1 DEBUG pruebaCoque odoo.modules.loading: Loading module utm (10/55) 
+2024-03-09 22:46:05,914 1 DEBUG pruebaCoque odoo.modules.loading: Module utm loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,915 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_kanban_gauge (11/55) 
+2024-03-09 22:46:05,916 1 DEBUG pruebaCoque odoo.modules.loading: Module web_kanban_gauge loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,917 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_tour (12/55) 
+2024-03-09 22:46:05,919 1 DEBUG pruebaCoque odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,919 1 DEBUG pruebaCoque odoo.modules.loading: Loading module iap (13/55) 
+2024-03-09 22:46:05,922 1 DEBUG pruebaCoque odoo.modules.loading: Module iap loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,923 1 DEBUG pruebaCoque odoo.modules.loading: Loading module mail (14/55) 
+2024-03-09 22:46:05,955 1 DEBUG pruebaCoque odoo.modules.loading: Module mail loaded in 0.03s, 0 queries 
+2024-03-09 22:46:05,957 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet (15/55) 
+2024-03-09 22:46:05,958 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,959 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_editor (16/55) 
+2024-03-09 22:46:05,970 1 DEBUG pruebaCoque odoo.modules.loading: Module web_editor loaded in 0.01s, 0 queries 
+2024-03-09 22:46:05,971 1 DEBUG pruebaCoque odoo.modules.loading: Loading module analytic (17/55) 
+2024-03-09 22:46:05,975 1 DEBUG pruebaCoque odoo.modules.loading: Module analytic loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,976 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_signup (18/55) 
+2024-03-09 22:46:05,978 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_signup loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,979 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp_mail (19/55) 
+2024-03-09 22:46:05,981 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,982 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_install_request (20/55) 
+2024-03-09 22:46:05,984 1 DEBUG pruebaCoque odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,985 1 DEBUG pruebaCoque odoo.modules.loading: Loading module contacts (21/55) 
+2024-03-09 22:46:05,986 1 DEBUG pruebaCoque odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,987 1 DEBUG pruebaCoque odoo.modules.loading: Loading module google_gmail (22/55) 
+2024-03-09 22:46:05,989 1 DEBUG pruebaCoque odoo.modules.loading: Module google_gmail loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,990 1 DEBUG pruebaCoque odoo.modules.loading: Loading module iap_mail (23/55) 
+2024-03-09 22:46:05,992 1 DEBUG pruebaCoque odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,992 1 DEBUG pruebaCoque odoo.modules.loading: Loading module mail_bot (24/55) 
+2024-03-09 22:46:05,995 1 DEBUG pruebaCoque odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2024-03-09 22:46:05,995 1 DEBUG pruebaCoque odoo.modules.loading: Loading module phone_validation (25/55) 
+2024-03-09 22:46:06,020 1 DEBUG pruebaCoque odoo.modules.loading: Module phone_validation loaded in 0.03s, 0 queries 
+2024-03-09 22:46:06,022 1 DEBUG pruebaCoque odoo.modules.loading: Loading module privacy_lookup (26/55) 
+2024-03-09 22:46:06,024 1 DEBUG pruebaCoque odoo.modules.loading: Module privacy_lookup loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,025 1 DEBUG pruebaCoque odoo.modules.loading: Loading module product (27/55) 
+2024-03-09 22:46:06,075 1 DEBUG pruebaCoque odoo.modules.loading: Module product loaded in 0.05s, 0 queries 
+2024-03-09 22:46:06,076 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sales_team (28/55) 
+2024-03-09 22:46:06,080 1 DEBUG pruebaCoque odoo.modules.loading: Module sales_team loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,081 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard (29/55) 
+2024-03-09 22:46:06,082 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,083 1 DEBUG pruebaCoque odoo.modules.loading: Loading module web_unsplash (30/55) 
+2024-03-09 22:46:06,086 1 DEBUG pruebaCoque odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,087 1 DEBUG pruebaCoque odoo.modules.loading: Loading module partner_autocomplete (31/55) 
+2024-03-09 22:46:06,096 1 DEBUG pruebaCoque odoo.modules.loading: Module partner_autocomplete loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,097 1 DEBUG pruebaCoque odoo.modules.loading: Loading module portal (32/55) 
+2024-03-09 22:46:06,102 1 DEBUG pruebaCoque odoo.modules.loading: Module portal loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,103 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sms (33/55) 
+2024-03-09 22:46:06,110 1 DEBUG pruebaCoque odoo.modules.loading: Module sms loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,111 1 DEBUG pruebaCoque odoo.modules.loading: Loading module snailmail (34/55) 
+2024-03-09 22:46:06,117 1 DEBUG pruebaCoque odoo.modules.loading: Module snailmail loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,117 1 DEBUG pruebaCoque odoo.modules.loading: Loading module auth_totp_portal (35/55) 
+2024-03-09 22:46:06,119 1 DEBUG pruebaCoque odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,119 1 DEBUG pruebaCoque odoo.modules.loading: Loading module digest (36/55) 
+2024-03-09 22:46:06,123 1 DEBUG pruebaCoque odoo.modules.loading: Module digest loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,124 1 DEBUG pruebaCoque odoo.modules.loading: Loading module payment (37/55) 
+2024-03-09 22:46:06,133 1 DEBUG pruebaCoque odoo.modules.loading: Module payment loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,134 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account (38/55) 
+2024-03-09 22:46:06,176 1 DEBUG pruebaCoque odoo.modules.loading: Module account loaded in 0.04s, 0 queries 
+2024-03-09 22:46:06,177 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_edi (39/55) 
+2024-03-09 22:46:06,181 1 DEBUG pruebaCoque odoo.modules.loading: Module account_edi loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,182 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_payment (40/55) 
+2024-03-09 22:46:06,188 1 DEBUG pruebaCoque odoo.modules.loading: Module account_payment loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,189 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_sequence (41/55) 
+2024-03-09 22:46:06,191 1 DEBUG pruebaCoque odoo.modules.loading: Module account_sequence loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,191 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_iban (42/55) 
+2024-03-09 22:46:06,193 1 DEBUG pruebaCoque odoo.modules.loading: Module base_iban loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,194 1 DEBUG pruebaCoque odoo.modules.loading: Loading module base_vat (43/55) 
+2024-03-09 22:46:06,199 1 DEBUG pruebaCoque odoo.modules.loading: Module base_vat loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,200 1 DEBUG pruebaCoque odoo.modules.loading: Loading module snailmail_account (44/55) 
+2024-03-09 22:46:06,202 1 DEBUG pruebaCoque odoo.modules.loading: Module snailmail_account loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,203 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_account (45/55) 
+2024-03-09 22:46:06,205 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_account loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,206 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard_account (46/55) 
+2024-03-09 22:46:06,207 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,207 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_edi_ubl_cii (47/55) 
+2024-03-09 22:46:06,277 1 DEBUG pruebaCoque odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.07s, 0 queries 
+2024-03-09 22:46:06,278 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_payment_invoice_online_payment_patch (48/55) 
+2024-03-09 22:46:06,280 1 DEBUG pruebaCoque odoo.modules.loading: Module account_payment_invoice_online_payment_patch loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,281 1 DEBUG pruebaCoque odoo.modules.loading: Loading module account_qr_code_sepa (49/55) 
+2024-03-09 22:46:06,283 1 DEBUG pruebaCoque odoo.modules.loading: Module account_qr_code_sepa loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,283 1 DEBUG pruebaCoque odoo.modules.loading: Loading module l10n_es (50/55) 
+2024-03-09 22:46:06,284 1 DEBUG pruebaCoque odoo.modules.loading: Module l10n_es loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,284 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale (51/55) 
+2024-03-09 22:46:06,300 1 DEBUG pruebaCoque odoo.modules.loading: Module sale loaded in 0.02s, 0 queries 
+2024-03-09 22:46:06,301 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_management (52/55) 
+2024-03-09 22:46:06,307 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_management loaded in 0.01s, 0 queries 
+2024-03-09 22:46:06,308 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_product_configurator (53/55) 
+2024-03-09 22:46:06,310 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_product_configurator loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,310 1 DEBUG pruebaCoque odoo.modules.loading: Loading module sale_sms (54/55) 
+2024-03-09 22:46:06,311 1 DEBUG pruebaCoque odoo.modules.loading: Module sale_sms loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,312 1 DEBUG pruebaCoque odoo.modules.loading: Loading module spreadsheet_dashboard_sale (55/55) 
+2024-03-09 22:46:06,313 1 DEBUG pruebaCoque odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.00s, 0 queries 
+2024-03-09 22:46:06,313 1 INFO pruebaCoque odoo.modules.loading: 55 modules loaded in 0.47s, 0 queries (+0 extra) 
+2024-03-09 22:46:06,458 1 ERROR pruebaCoque odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['manage'] 
+2024-03-09 22:46:06,460 1 INFO pruebaCoque odoo.modules.loading: Modules loaded. 
+2024-03-09 22:46:06,465 1 INFO pruebaCoque odoo.modules.registry: Registry loaded in 0.694s 
+2024-03-09 22:46:06,466 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:46:06,467 1 INFO pruebaCoque odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-03-09 22:46:06,595 1 INFO pruebaCoque werkzeug: 192.168.48.1 - - [09/Mar/2024 22:46:06] "GET /websocket HTTP/1.1" 101 - 28 0.025 0.802
+2024-03-09 22:46:06,599 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:46:06,603 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-03-09 22:46:06,612 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:47:02,973 1 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2024-03-09 22:47:02,981 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 12 acquired 
+2024-03-09 22:47:03,014 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:47:03,016 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: cron.object.execute('pruebaCoque', 1, '*', 'payment: post-process transactions', 206) 
+2024-03-09 22:47:03,017 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-03-09 22:47:03,024 1 INFO pruebaCoque odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-03-09 22:47:03,026 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: 0.008s (cron payment: post-process transactions, server action 206 with uid 1) 
+2024-03-09 22:47:03,031 1 DEBUG pruebaCoque odoo.addons.base.models.ir_cron: job 12 updated and released 
+2024-03-09 22:47:03,930 1 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2024-03-09 22:47:07,521 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:48:03,092 1 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2024-03-09 22:48:04,954 1 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2024-03-09 22:48:08,521 1 DEBUG pruebaCoque odoo.modules.registry: Multiprocess signaling check: [Registry - 80 -> 80] [Cache - 3 -> 3] 
+2024-03-09 22:49:03,147 1 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2024-03-09 22:49:05,978 1 DEBUG ? odoo.service.server: cron1 polling for jobs 
