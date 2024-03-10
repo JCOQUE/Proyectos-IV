@@ -1,15 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-  <data>
+     
+      <!-- Id = nombreCarpeta.nombreModelo_algo-->
 
-    <record model="ir.actions.act_window" id="dashboard.action_dashboard_window">
-      <field name="name">dashboard dashboard graph</field>
-      <field name="res_model">sale.order</field>
-      <field name="view_mode">graph</field>
-      <field name="view_id" ref="sale.view_sale_order_graph" />  
-    </record>
+      <!-- ################################################################-->
+      <!-- ###      NO DESCOMENTAR ESTO. PUEDE SER UTIL PARA FUTURO     ###-->
+      <!-- ################################################################-->
 
-    <menuitem id="dashboard.menu_root" name="Graficas" action="dashboard.action_dashboard_window" />
-    <!--<menuitem id="menu_dashboard_compra" name="Compra" parent="menu_dashboard_main" action="action_dashboard_compra_view"/>-->
-  </data>
+      <!--
+      <record model="ir.ui.view" id="dashboard.Dashboard_graph">
+        <field name="name">dashboard</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref = 'sale.view_sale_order_graph'></field> 
+        <field name="mode">primary</field>
+        <field name="xpath" type = 'xml'>
+          <xpath expr="//graph" position="after">
+            <template inherit_id="purchase.purchase_order_graph">
+                <field name="title">Graph 1 Title</field>
+            </template>
+          </xpath>
+        </field>
+      </record>
+      
+      -->
+
+
+      <record model="ir.actions.act_window" id="dashboard.compas_a_clientes">
+        <field name="name">dashboard dashboard bar graph</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="sale.view_sale_order_graph" />  
+      </record> 
+
+      <record model="ir.actions.act_window" id="dashboard.ventas_a_consumidores">
+        <field name="name">dashboard dashboard bar graph</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="purchase.purchase_order_graph" />  
+      </record>
+
+      
+
+      <!--  TOP MENU -->
+      <menuitem name="Gráficas"  id="dashboard.menu_root"/>
+
+      <!-- SUB MENUS -->
+      <menuitem name="Compras" id="dashboard.submenu_1" parent="dashboard.menu_root"/>
+
+      <menuitem name="Ventas" id="dashboard.submenu_2" parent="dashboard.menu_root"/>
+
+
+      <!-- SUB SUBMENUS SECCION: COMPRAS -->
+
+      <menuitem name="Compras a clientes" id="dashboard.subCompras_1" parent="dashboard.submenu_1"
+            action="dashboard.compas_a_clientes"/>
+
+      <menuitem name="Ventas a consumidores" id="dashboard.subVentas_1" parent="dashboard.submenu_2"
+            action="dashboard.ventas_a_consumidores"/>
+
+    
 </odoo>
