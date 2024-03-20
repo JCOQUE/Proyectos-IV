@@ -22,6 +22,11 @@
       </record>
       
       -->
+      <record id="action_open_dashboard_view" model="ir.actions.act_window">
+      <field name="name">Abrir Tablero</field>
+      <field name="res_model">board.board</field>
+      <field name="view_mode">form</field> 
+    </record>
 
 
       <record model="ir.actions.act_window" id="dashboard.compas_a_clientes">
@@ -47,6 +52,9 @@
       <menuitem name="Compras" id="dashboard.submenu_1" parent="dashboard.menu_root"/>
 
       <menuitem name="Ventas" id="dashboard.submenu_2" parent="dashboard.menu_root"/>
+
+      <menuitem name="Prueba" id="dashboard.submenu_3" parent="dashboard.menu_root" action="action_open_dashboard_view"/>
+
 
 
       <!-- SUB SUBMENUS SECCION: COMPRAS -->
