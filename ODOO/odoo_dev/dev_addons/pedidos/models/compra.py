@@ -13,7 +13,7 @@ class purchase_custom(models.Model):
     def button_confirm(self):
 
         res = super(purchase_custom, self).button_confirm()
-        kafka_server = "172.22.0.5:29093"  
+        kafka_server = "172.26.0.4:29093"  
         topic_name = self.name
         _logger.info(topic_name)
 
