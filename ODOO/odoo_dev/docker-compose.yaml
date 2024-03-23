@@ -1,24 +1,41 @@
 version: '3.1'
 services:
-  web:
+  producer:
     image: odoo:16.0
     depends_on:
-      - db
+      - db_pruducer
     ports:
       - "8069:8069"
     volumes:
-      - odoo-web-data:/var/lib/odoo
-      - ./config_odoo:/etc/odoo
-      - ./dev_addons:/mnt/extra-addons
-      - ./log:/var/log/odoo
+      - odoo-producer-data:/var/lib/odoo
+      - ./Producer/config_odoo_producer:/etc/odoo
+      - ./Producer/dev_addons_producer:/mnt/extra-addons
+      - ./Producer/log_producer:/var/log/odoo
     environment:
-      - HOST=db
+      - HOST=db_pruducer
       - USER=odoo
       - PASSWORD=myodoo
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.5"
-  db:
+  consumer:
+    image: odoo:16.0
+    depends_on:
+      - db_consumer
+    ports:
+      - "8070:8069"
+    volumes:
+      - odoo-consumer-data:/var/lib/odoo
+      - ./Consumer/config_odoo_consumer:/etc/odoo
+      - ./Consumer/dev_addons_consumer:/mnt/extra-addons
+      - ./Consumer/log_consumer:/var/log/odoo
+    environment:
+      - HOST=db_consumer
+      - USER=odoo
+      - PASSWORD=myodoo
+    networks:
+      ERP-BI:
+        ipv4_address: "172.26.0.10"
+  db_pruducer:
     image: postgres:15
     environment:
       - POSTGRES_DB=postgres
@@ -26,16 +43,28 @@ services:
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
+      - odoo-db_producer-data:/var/lib/postgresql/data/pgdata
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.2"
+        ipv4_address: "172.26.0.20"
+  db_consumer:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db_consumer-data:/var/lib/postgresql/data/pgdata
+    networks:
+      ERP-BI:
+        ipv4_address: "172.26.0.30"
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.3"
+        ipv4_address: "172.26.0.50"
     ports:
       - "2181:2181"
     environment:
@@ -69,7 +98,9 @@ networks:
         - subnet: "172.26.0.0/16"
 
 volumes:
-  odoo-web-data:
-  odoo-db-data:
+  odoo-producer-data:
+  odoo-consumer-data:
+  odoo-db_producer-data:
+  odoo-db_consumer-data:
 
             
