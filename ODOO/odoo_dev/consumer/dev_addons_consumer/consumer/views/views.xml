@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="consumer.list">
-      <field name="name">consumer list</field>
+      <field name="name">Consumer list</field>
       <field name="model">consumer.consumer</field>
       <field name="arch" type="xml">
         <tree>
@@ -18,7 +18,7 @@
     <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="consumer.action_window">
-      <field name="name">consumer window</field>
+      <field name="name">Consumer window</field>
       <field name="res_model">consumer.consumer</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -27,7 +27,7 @@
     <!-- server action to the one above -->
 <!--
     <record model="ir.actions.server" id="consumer.action_server">
-      <field name="name">consumer server</field>
+      <field name="name">Consumer server</field>
       <field name="model_id" ref="model_consumer_consumer"/>
       <field name="state">code</field>
       <field name="code">
@@ -42,7 +42,7 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="consumer" id="consumer.menu_root"/>
+    <menuitem name="Consumer" id="consumer.menu_root"/>
 -->
     <!-- menu categories -->
 <!--

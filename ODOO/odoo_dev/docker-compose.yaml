@@ -3,20 +3,21 @@ services:
   producer:
     image: odoo:16.0
     depends_on:
-      - db_pruducer
+      - db_producer
     ports:
       - "8069:8069"
     volumes:
       - odoo-producer-data:/var/lib/odoo
-      - ./Producer/config_odoo_producer:/etc/odoo
-      - ./Producer/dev_addons_producer:/mnt/extra-addons
-      - ./Producer/log_producer:/var/log/odoo
+      - ./producer/config_odoo_producer:/etc/odoo
+      - ./producer/dev_addons_producer:/mnt/extra-addons
+      - ./producer/log_producer:/var/log/odoo
     environment:
-      - HOST=db_pruducer
+      - HOST=db_producer
       - USER=odoo
       - PASSWORD=myodoo
     networks:
       ERP-BI:
+        ipv4_address: "172.26.0.10"
   consumer:
     image: odoo:16.0
     depends_on:
@@ -25,17 +26,17 @@ services:
       - "8070:8069"
     volumes:
       - odoo-consumer-data:/var/lib/odoo
-      - ./Consumer/config_odoo_consumer:/etc/odoo
-      - ./Consumer/dev_addons_consumer:/mnt/extra-addons
-      - ./Consumer/log_consumer:/var/log/odoo
+      - ./consumer/config_odoo_consumer:/etc/odoo
+      - ./consumer/dev_addons_consumer:/mnt/extra-addons
+      - ./consumer/log_consumer:/var/log/odoo
     environment:
       - HOST=db_consumer
       - USER=odoo
       - PASSWORD=myodoo
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.10"
-  db_pruducer:
+        ipv4_address: "172.26.0.20"
+  db_producer:
     image: postgres:15
     environment:
       - POSTGRES_DB=postgres
@@ -46,7 +47,7 @@ services:
       - odoo-db_producer-data:/var/lib/postgresql/data/pgdata
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.20"
+        ipv4_address: "172.26.0.30"
   db_consumer:
     image: postgres:15
     environment:
@@ -58,7 +59,7 @@ services:
       - odoo-db_consumer-data:/var/lib/postgresql/data/pgdata
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.30"
+        ipv4_address: "172.26.0.40"
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
@@ -92,7 +93,7 @@ services:
 networks:
   ERP-BI:
     external: false
-    name: prueba
+    name: ERP-BI
     ipam: 
       config:
         - subnet: "172.26.0.0/16"
