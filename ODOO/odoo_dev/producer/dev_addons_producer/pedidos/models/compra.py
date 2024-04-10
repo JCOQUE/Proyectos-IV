@@ -12,8 +12,8 @@ class purchase_custom(models.Model):
     _inherit = 'purchase.order'
     def button_confirm(self):
 
-        res = super(purchase_custom, self).button_confirm()
-        kafka_server = "172.26.0.4:29093"  
+        # res = super(purchase_custom, self).button_confirm()
+        kafka_server = "172.26.0.4:29093" 
         topic_name = self.name
         _logger.info(topic_name)
 
@@ -60,10 +60,10 @@ class purchase_custom(models.Model):
 
 
         json_data = json.dumps(log_data)
-        encoded_data = base64.b64encode(json_data.encode('utf-8')).decode('utf-8')
+        encoded_data = json_data.encode('utf-8')
 
         try:
-            producer.send(topic_name, encoded_data.encode('utf-8'))
+            producer.send(topic_name, encoded_data)
             producer.flush()
         except Exception as e:
             _logger.error(f"Error al enviar el mensaje a Kafka: {e}")
