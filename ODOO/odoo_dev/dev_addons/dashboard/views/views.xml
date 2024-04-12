@@ -1,0 +1,69 @@
+<odoo>
+     
+      <!-- Id = nombreCarpeta.nombreModelo_algo-->
+
+      <!-- ################################################################-->
+      <!-- ###      NO DESCOMENTAR ESTO. PUEDE SER UTIL PARA FUTURO     ###-->
+      <!-- ################################################################-->
+
+      <!--
+      <record model="ir.ui.view" id="dashboard.Dashboard_graph">
+        <field name="name">dashboard</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref = 'sale.view_sale_order_graph'></field> 
+        <field name="mode">primary</field>
+        <field name="xpath" type = 'xml'>
+          <xpath expr="//graph" position="after">
+            <template inherit_id="purchase.purchase_order_graph">
+                <field name="title">Graph 1 Title</field>
+            </template>
+          </xpath>
+        </field>
+      </record>
+      
+      -->
+      <record id="action_open_dashboard_view" model="ir.actions.act_window">
+      <field name="name">Abrir Tablero</field>
+      <field name="res_model">board.board</field>
+      <field name="view_mode">form</field> 
+    </record>
+
+
+      <record model="ir.actions.act_window" id="dashboard.compas_a_clientes">
+        <field name="name">dashboard dashboard bar graph</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="sale.view_sale_order_graph" />  
+      </record> 
+
+      <record model="ir.actions.act_window" id="dashboard.ventas_a_consumidores">
+        <field name="name">dashboard dashboard bar graph</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="purchase.purchase_order_graph" />  
+      </record>
+
+      
+
+      <!--  TOP MENU -->
+      <menuitem name="Gráficas"  id="dashboard.menu_root"/>
+
+      <!-- SUB MENUS -->
+      <menuitem name="Compras" id="dashboard.submenu_1" parent="dashboard.menu_root"/>
+
+      <menuitem name="Ventas" id="dashboard.submenu_2" parent="dashboard.menu_root"/>
+
+      <menuitem name="Prueba" id="dashboard.submenu_3" parent="dashboard.menu_root" action="action_open_dashboard_view"/>
+
+
+
+      <!-- SUB SUBMENUS SECCION: COMPRAS -->
+
+      <menuitem name="Compras a clientes" id="dashboard.subCompras_1" parent="dashboard.submenu_1"
+            action="dashboard.compas_a_clientes"/>
+
+      <menuitem name="Ventas a consumidores" id="dashboard.subVentas_1" parent="dashboard.submenu_2"
+            action="dashboard.ventas_a_consumidores"/>
+
+    
+</odoo>

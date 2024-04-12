@@ -9,7 +9,7 @@ services:
     volumes:
       - odoo-producer-data:/var/lib/odoo
       - ./producer/config_odoo_producer:/etc/odoo
-      - ./producer/dev_addons_producer:/mnt/extra-addons
+      - ./dev_addons:/mnt/extra-addons
       - ./producer/log_producer:/var/log/odoo
     environment:
       - HOST=db_producer
@@ -27,7 +27,7 @@ services:
     volumes:
       - odoo-consumer-data:/var/lib/odoo
       - ./consumer/config_odoo_consumer:/etc/odoo
-      - ./consumer/dev_addons_consumer:/mnt/extra-addons
+      - ./dev_addons:/mnt/extra-addons
       - ./consumer/log_consumer:/var/log/odoo
     environment:
       - HOST=db_consumer
