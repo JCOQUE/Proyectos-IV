@@ -8,14 +8,14 @@ from kafka.admin import KafkaAdminClient, NewTopic
 
 _logger = logging.getLogger(__name__)
 
-class purchase_custom(models.Model):
+class PurchasOrder(models.Model):
     _inherit = 'purchase.order'
     def button_confirm(self):
 
         # res = super(purchase_custom, self).button_confirm()
         kafka_server = "172.26.0.4:29093" 
         topic_name = self.name
-        _logger.info(topic_name)
+        _logger.critical(topic_name)
 
 
         admin_client = KafkaAdminClient(
@@ -29,7 +29,7 @@ class purchase_custom(models.Model):
         try:
             admin_client.create_topics(new_topics=[topic], validate_only=False)
         except Exception as e:
-            _logger.error(f"Error al crear el tópico: {e}")
+            _logger.error(f"Error al crear el tÃ³pico: {e}")
 
 
         producer = KafkaProducer(bootstrap_servers=kafka_server,
@@ -39,12 +39,12 @@ class purchase_custom(models.Model):
             "partner_id": self.partner_id.id,
             "name": self.name,
             "client_order_ref": self.partner_ref,
-            "currency_id": self.currency_id.id,
-            "commitment_date": self.date_planned.strftime('%Y-%m-%d'),
+            "date_order": self.date_order.strftime('%Y-%m-%d'),
             "state": 'purchase',  # Establecemos el estado como "Presupuesto" de compra
-            "order_line": []
+            "order_line": [],
+            "company_id":self.company_id.id,
         }
-
+        
         for line in self.order_line:
             product_info = {
                 "product_id": line.product_id.id,
@@ -69,6 +69,6 @@ class purchase_custom(models.Model):
         finally:
             producer.close()
 
-        _logger.info(log_data)
+        _logger.critical(log_data)
 
         return True

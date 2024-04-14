@@ -3,7 +3,7 @@ from kafka import KafkaConsumer
 import logging
 import threading
 
-_logger = logging.getLogger(__name__)
+loggerC = logging.getLogger(__name__)
 
 class KafkaConsumerSaleOrder(models.TransientModel):
     _name = 'kafka.consumer.sale.order'
@@ -16,7 +16,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
             topic_name = 'P00005'
 
             # Creación del consumidor
-            consumer = KafkaConsumer(
+            PEDIDOS = KafkaConsumer(
                 topic_name,
                 bootstrap_servers=kafka_server,
                 auto_offset_reset='earliest',  # Comienza desde el principio del tópico
@@ -24,15 +24,19 @@ class KafkaConsumerSaleOrder(models.TransientModel):
             )
 
             # Escuchando mensajes
-            for message in consumer:
-                _logger.info(f"Mensaje recibido: {message.value.decode('utf-8')}")
-                pedido = message.value.decode('utf-8')
+            for PEDIDO in PEDIDOS:
+                loggerC.critical(f"Mensaje recibido CONSUMER: {PEDIDO.value.decode('utf-8')}")
+                pedido = PEDIDO.value.decode('utf-8')
+                nuevo_pedido = self.env['sale.order'].create({'name': 'PRUEBA'})
+                nuevo_pedido = self.env['sale.order'].create([{'name': 'PRUEBA2'}])
+                nuevo_pedido = self.env['sale.order'].create({'Number': 'PRUEBA3'})
+                nuevo_pedido = self.env['sale.order'].create([{'Number': 'PRUEBA4'}])
                 # Aquí puedes añadir tu lógica para manejar el mensaje y luego insertarlo en sale.order
             # No olvides cerrar el consumidor cuando termines
-            consumer.close()
+            PEDIDOS.close()
         except Exception as e: 
-            _logger.error(f"Error en el consumidor: {e}")
-        nuevo_pedido = self.env['sale.order'].create(pedido)
+            loggerC.error(f"Error en el consumidor: {e}")
+        
 
     def start_consumer_thread(self):
         threaded_calculation = threading.Thread(target=self.consume_messages)
