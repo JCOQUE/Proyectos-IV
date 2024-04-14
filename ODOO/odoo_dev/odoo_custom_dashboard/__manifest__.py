@@ -6,7 +6,7 @@
     'sequence': -1,
     'description': """Panel de control personalizado ERP-BI""",
     'category': 'Dashboard',
-    'depends' : ['base', 'web', 'sale', 'board'],
+    'depends' : ['base', 'web', 'sale', 'board','purchase'],
     'data': [
         'views/sales_dashboard.xml',
     ],

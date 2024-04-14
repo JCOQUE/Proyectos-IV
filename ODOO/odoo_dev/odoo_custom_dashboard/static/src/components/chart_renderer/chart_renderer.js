@@ -47,7 +47,9 @@ export class ChartRenderer extends Component {
                     const mes_inicial = mes_seleccionado.format("YYYY-MM-DD")
                     const mes_final = mes_seleccionado.endOf('month').format("YYYY-MM-DD")
                     
-                    new_domain.push(['date','>=',mes_inicial],['date','<=',mes_final])
+                    let date_field = this.props.model === "purchase.report" ? 'date_order' : 'date';
+                    new_domain.push([date_field, '>=', mes_inicial], [date_field, '<=', mes_final]);
+
 
                   }else{
                     new_domain.push([label_field,"=",label])
@@ -66,7 +68,7 @@ export class ChartRenderer extends Component {
                 this.actionService.doAction({
                   type: "ir.actions.act_window",
                   name: this.props.title,
-                  res_model: "sale.report",
+                  res_model: this.props.model,
                   domain: new_domain,
                   views: [
                       [false,"list"],

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="owl.OwlSalesDashboard" owl="1">
+    <t t-name="owl.OwlPurchasesDashboard" owl="1">
         <div class="vh-100 overflow-auto bg-muted">
             <div class="row m-3">
                 <div class="col-lg-7">
@@ -8,7 +8,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-primary fw-bold">Panel de Ventas</h1>
+                                    <h1 class="text-primary fw-bold">Panel de Compras</h1>
                                     <div>
                                         <select class="form-select" t-model="state.periodo" t-on-change="onChangePeriodo">
                                             <option value="0">Siempre</option>
@@ -25,30 +25,30 @@
                     <div class="row">
                         <KpiCard onClick.bind="vistaPresupuestos" name="'Presupuestos'" value="state.presupuestos.value" percentage="state.presupuestos.porcentaje"/>
                         <KpiCard onClick.bind="vistaPedidos" name="'Pedidos'" value="state.pedidos.value" percentage="state.pedidos.porcentaje"/>
-                        <KpiCard onClick.bind="vistaBeneficios" name="'Beneficios'" value="state.pedidos.beneficio" percentage="state.pedidos.porcentaje_beneficio"/>
-                        <KpiCard onClick.bind="vistaBeneficios" name="'Media por Pedido'" value="state.pedidos.beneficio_media" percentage="state.pedidos.porcentaje_beneficio_media"/>
+                        <KpiCard onClick.bind="vistaGastos" name="'Gastos'" value="state.pedidos.beneficio" percentage="state.pedidos.porcentaje_beneficio"/>
+                        <KpiCard onClick.bind="vistaGastos" name="'Media por Pedido'" value="state.pedidos.beneficio_media" percentage="state.pedidos.porcentaje_beneficio_media"/>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Productos más vendidos</h3>
+                                    <h3 class="text-primary fw-bold">Productos más comprados</h3>
                                     <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'doughnut'" title="'Productos'" model="'sale.report'" config="state.topProductos"/>
+                                <ChartRenderer type="'doughnut'" title="'Productos'" model="'purchase.report'" config="state.topProductos"/>
                             </div>
                         </div>
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Top vendedores</h3>
+                                    <h3 class="text-primary fw-bold">Top venderores</h3>
                                     <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'pie'" title="'Vendedor'" model="'sale.report'" config="state.topVentasPersona"/>
+                                <ChartRenderer type="'pie'" title="'Vendedor'" model="'purchase.report'" config="state.getTopProveedores"/>
                             </div>
                         </div>
                     </div>
@@ -58,12 +58,12 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Ventas mensuales</h3>
+                                    <h3 class="text-primary fw-bold">Compras mensuales</h3>
                                     <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'bar'" title="'Informe mensual de ventas'" model="'sale.report'" config="state.ventasMensuales"/>
+                                <ChartRenderer type="'bar'" title="'Informe mensual de compras'" model="'purchase.report'" config="state.comprasMensuales"/>
                             </div>
                         </div>
                     </div>
@@ -71,12 +71,12 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Ventas por Clientes</h3>
+                                    <h3 class="text-primary fw-bold">Compras por Proveedor</h3>
                                     <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'bar'" title="'Informe de pedidos por clientes'" model="'sale.report'" config="state.pedidosClientes"/>
+                                <ChartRenderer type="'bar'" title="'Informe de pedidos por proveedor'" model="'purchase.report'" config="state.pedidosClientes"/>
                             </div>
                         </div>
                     </div>
