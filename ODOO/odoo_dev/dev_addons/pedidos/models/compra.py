@@ -4,9 +4,13 @@ import logging
 import json
 import base64
 from kafka.admin import KafkaAdminClient, NewTopic
+import socket
+import ast
 
 
-_logger = logging.getLogger(__name__)
+_logger = logging.getLogger('producer')
+hostname = socket.gethostname()
+local_ip = socket.gethostbyname(hostname)
 
 class PurchasOrder(models.Model):
     _inherit = 'purchase.order'
@@ -36,15 +40,17 @@ class PurchasOrder(models.Model):
                                  max_block_ms=1048588,
                                  compression_type='gzip')
         log_data = {
+            "sender_ip": local_ip,
             "partner_id": self.partner_id.id,
             "name": self.name,
-            "client_order_ref": self.partner_ref,
             "date_order": self.date_order.strftime('%Y-%m-%d'),
-            "state": 'purchase',  # Establecemos el estado como "Presupuesto" de compra
+            "state": 'sale',  # Establecemos el estado como "Presupuesto" de compra
             "order_line": [],
             "company_id":self.company_id.id,
+            "user_id": self.user_id.id,
         }
         
+        amount_total = 0
         for line in self.order_line:
             product_info = {
                 "product_id": line.product_id.id,
@@ -55,9 +61,9 @@ class PurchasOrder(models.Model):
                 "price_subtotal": line.price_subtotal,
                 "discount": 0  # No hay campo de descuento en purchase.order, establecemos a 0
             }
+            amount_total += line.price_subtotal
             log_data["order_line"].append((0, 0, product_info))
-
-
+        log_data["amount_total"] = amount_total
         json_data = json.dumps(log_data)
         encoded_data = json_data.encode('utf-8')
 

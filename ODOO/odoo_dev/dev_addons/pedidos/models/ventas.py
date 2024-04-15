@@ -1,42 +1,54 @@
-from odoo import models, api
+from odoo import models, api,registry
 from kafka import KafkaConsumer
 import logging
 import threading
+import socket
+import json
 
-loggerC = logging.getLogger(__name__)
+loggerC = logging.getLogger('consumer')
 
 class KafkaConsumerSaleOrder(models.TransientModel):
     _name = 'kafka.consumer.sale.order'
 
     @api.model
     def consume_messages(self):
+        hostname = socket.gethostname()
+        local_ip = socket.gethostbyname(hostname)
+        PEDIDOS = None
         try:
-            # Configuración del consumidor
             kafka_server = '172.26.0.4:29093'
-            topic_name = 'P00005'
-
-            # Creación del consumidor
+            topic_name = 'P00004'
             PEDIDOS = KafkaConsumer(
                 topic_name,
                 bootstrap_servers=kafka_server,
-                auto_offset_reset='earliest',  # Comienza desde el principio del tópico
-                enable_auto_commit=True,  # Confirmaciones automáticas
+                auto_offset_reset='latest',
+                enable_auto_commit=True,
             )
-
-            # Escuchando mensajes
-            for PEDIDO in PEDIDOS:
-                loggerC.critical(f"Mensaje recibido CONSUMER: {PEDIDO.value.decode('utf-8')}")
-                pedido = PEDIDO.value.decode('utf-8')
-                nuevo_pedido = self.env['sale.order'].create({'name': 'PRUEBA'})
-                nuevo_pedido = self.env['sale.order'].create([{'name': 'PRUEBA2'}])
-                nuevo_pedido = self.env['sale.order'].create({'Number': 'PRUEBA3'})
-                nuevo_pedido = self.env['sale.order'].create([{'Number': 'PRUEBA4'}])
-                # Aquí puedes añadir tu lógica para manejar el mensaje y luego insertarlo en sale.order
-            # No olvides cerrar el consumidor cuando termines
-            PEDIDOS.close()
-        except Exception as e: 
+            for mensaje in PEDIDOS:
+                pedido_str = mensaje.value.decode('utf-8')
+                pedido_dict = json.loads(pedido_str)
+                if str(pedido_dict['sender_ip']) != str(local_ip):
+                    loggerC.critical(pedido_dict)
+                    pedido_dict.pop('sender_ip', None)
+                    loggerC.critical(pedido_dict)
+                    loggerC.critical('MENSAJE RECIBIDO CONSUMER')
+                loggerC.critical('CHUPA PIJA')
+                PEDIDOS.close()
+            loggerC.critical('CHUPA PIJA2')
+        except Exception as e:
             loggerC.error(f"Error en el consumidor: {e}")
-        
+        try:
+            loggerC.critical("Antes de insertar")
+            api.Environment.manage()
+
+            new_cr = registry(self._cr.dbname).cursor()
+            new_cr.autocommit(True)
+            self = self.with_env(self.env(cr=new_cr)).with_context(original_cr=self._cr)
+            nuevo_pedido = self.env['sale.order'].sudo().create(pedido_dict)
+            loggerC.critical("Pedido insertado")
+        except Exception as e:
+            loggerC.error(f"Error al mandar mensaje: {e}")
+
 
     def start_consumer_thread(self):
         threaded_calculation = threading.Thread(target=self.consume_messages)
