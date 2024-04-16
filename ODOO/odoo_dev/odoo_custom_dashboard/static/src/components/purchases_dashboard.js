@@ -183,6 +183,10 @@ export class OwlPurchasesDashboard extends Component {
         this.getFecha()
         await this.getPresupuestos()
         await this.getPedidos()
+        await this.getTopProductos()
+        await this.getTopProveedores()
+        await this.getComprasMensuales()
+        await this.getPedidosClientes()
     }
     
     getFecha(){

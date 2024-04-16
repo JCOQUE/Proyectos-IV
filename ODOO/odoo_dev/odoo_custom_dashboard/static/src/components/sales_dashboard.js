@@ -183,9 +183,13 @@ export class OwlSalesDashboard extends Component {
         this.getFecha()
         await this.getPresupuestos()
         await this.getPedidos()
+        await this.getTopProductos()
+        await this.getTopVentasPersona()
+        await this.getVentasMensuales()
+        await this.getPedidosClientes()
     }
     
-    getFecha(){
+    getFecha(){ 
         //*Cogemos la fecha dependiendo del periodo en el que se encuentre y la formateamos a DD/MM/YYYY
         this.state.fecha_periodo_actual = moment().subtract(this.state.periodo,'days').format("YYYY-MM-DD");
         this.state.fecha_periodo_anterior = moment().subtract(this.state.periodo*2,'days').format("YYYY-MM-DD");

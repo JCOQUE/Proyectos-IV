@@ -2,12 +2,13 @@
 
 import { registry } from "@web/core/registry"
 import { loadJS } from "@web/core/assets"
-const { Component, onWillStart, useRef, onMounted } = owl
+const { Component, onWillStart, useRef, onMounted, useEffect, onWillUnmount } = owl
 import { useService } from "@web/core/utils/hooks"
 
 export class ChartRenderer extends Component {
     setup(){
         this.chartRef = useRef("chart")
+        this.chartInstance = null;
         this.actionService = useService("action")
 
 
@@ -15,11 +16,31 @@ export class ChartRenderer extends Component {
             await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js")
         })
 
-        onMounted(()=>this.renderChart())
+        onMounted(()=>this.ensureChart())
+
+        useEffect(()=>{
+          this.ensureChart();
+        },()=>[this.props.config])
+
+        onWillUnmount(()=>{
+          if (this.chartInstance) {
+            this.chartInstance.destroy(); 
+           }
+        })
+
+    }
+
+    ensureChart() {
+      if (this.chartInstance) {
+        console.log('actualizando grafico')
+          this.updateChart();
+      } else {
+          this.renderChart();
+      }
     }
 
     renderChart(){
-        new Chart(this.chartRef.el,
+      this.chartInstance = new Chart(this.chartRef.el,
         {
           type: this.props.type,
           data: this.props.config.data,
@@ -96,6 +117,13 @@ export class ChartRenderer extends Component {
         }
       );
     }
+
+    updateChart() {
+      if (this.chartInstance) {
+          this.chartInstance.destroy(); 
+          this.renderChart();
+      }
+  }
 }
 
 ChartRenderer.template = "owl.ChartRenderer"
