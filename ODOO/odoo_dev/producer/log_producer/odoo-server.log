@@ -19498,3 +19498,364 @@ pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedido
 2024-04-15 18:37:52,940 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
 2024-04-15 18:37:53,039 1 INFO odoo werkzeug: 172.26.0.1 - - [15/Apr/2024 18:37:53] "GET /websocket HTTP/1.1" 101 - 24 0.029 0.552
 2024-04-15 18:37:53,043 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-16 20:22:45,805 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-16 20:22:45,805 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-16 20:22:45,806 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-16 20:22:45,806 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-16 20:22:45,867 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-16 20:22:45,962 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d092897486fa:8069 
+2024-04-16 20:23:01,336 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-16 20:23:01,337 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-16 20:23:01,478 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-16 20:23:06,439 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-16 20:23:06,440 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-16 20:23:06,440 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-16 20:23:06,441 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-16 20:23:06,500 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-16 20:23:06,612 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d092897486fa:8069 
+2024-04-16 20:25:12,907 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:25:12,911 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:25:12,931 1 WARNING odoo odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-16 20:25:12,941 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:25:13,201 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:25:13,212 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.27s, 0 queries (+0 extra) 
+2024-04-16 20:25:13,286 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:25:13,290 1 INFO odoo odoo.modules.registry: Registry loaded in 0.389s 
+2024-04-16 20:25:13,290 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:25:13,374 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:13] "GET / HTTP/1.1" 303 - 22 0.010 0.469
+2024-04-16 20:25:13,382 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:13] "GET /web HTTP/1.1" 303 - 2 0.001 0.004
+2024-04-16 20:25:13,438 1 WARNING odoo odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-16 20:25:13,603 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:13] "GET /web/login HTTP/1.1" 200 - 61 0.012 0.206
+2024-04-16 20:25:13,783 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-16 20:25:13,793 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:13] "GET /web/binary/company_logo HTTP/1.1" 304 - 3 0.002 0.181
+2024-04-16 20:25:43,979 1 INFO odoo odoo.addons.base.models.res_users: Login successful for db:odoo login:juankiavila752@gmail.com from 172.26.0.1 
+2024-04-16 20:25:43,983 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:43] "POST /web/login HTTP/1.1" 303 - 42 0.012 0.274
+2024-04-16 20:25:45,000 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "GET /web HTTP/1.1" 200 - 77 0.017 0.996
+2024-04-16 20:25:45,255 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.001 0.003
+2024-04-16 20:25:45,283 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "POST /web/action/load HTTP/1.1" 200 - 8 0.003 0.004
+2024-04-16 20:25:45,284 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.003 0.005
+2024-04-16 20:25:45,295 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.002
+2024-04-16 20:25:45,299 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-16 20:25:45,339 1 INFO ? werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.003
+2024-04-16 20:25:45,347 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.014 0.008
+2024-04-16 20:25:45,353 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.017 0.012
+2024-04-16 20:25:45,365 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.003 0.003
+2024-04-16 20:25:45,367 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:45] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.003 0.004
+2024-04-16 20:25:49,249 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:49] "POST /web/action/load HTTP/1.1" 200 - 11 0.004 0.007
+2024-04-16 20:25:49,273 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:49] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 43 0.007 0.013
+2024-04-16 20:25:49,288 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:49] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.001 0.003
+2024-04-16 20:25:49,296 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:49] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.007 0.006
+2024-04-16 20:25:50,537 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:50] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.002 0.004
+2024-04-16 20:25:50,544 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:50] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.007 0.006
+2024-04-16 20:25:56,162 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:56] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.005 0.006
+2024-04-16 20:25:56,169 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:25:56] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.002 0.002
+2024-04-16 20:26:06,720 1 INFO odoo odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-04-16 20:26:06,722 1 INFO odoo odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-16 20:26:38,055 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:26:38,056 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:26:38,057 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:26:38,322 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:26:38,531 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:26:38,535 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:26:38,546 1 INFO odoo odoo.modules.loading: updating modules list 
+2024-04-16 20:26:38,548 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-16 20:26:38,838 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:26:38,858 1 INFO odoo odoo.modules.loading: Loading module pedidos (60/69) 
+2024-04-16 20:26:38,927 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:26:38,986 1 INFO odoo odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-16 20:26:38,993 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:26:38,994 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-16 20:26:38,995 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:26:39,042 1 INFO odoo odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-16 20:26:39,046 1 INFO odoo odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-16 20:26:39,050 1 INFO odoo odoo.modules.loading: Module pedidos: loading demo 
+2024-04-16 20:26:39,050 1 INFO odoo odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-16 20:26:39,055 1 INFO odoo odoo.addons.base.models.ir_module: module pedidos: no translation for language es 
+2024-04-16 20:26:39,062 1 WARNING odoo odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-16 20:26:39,064 1 INFO odoo odoo.modules.loading: Module pedidos loaded in 0.21s, 44 queries (+44 other) 
+2024-04-16 20:26:39,066 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.23s, 44 queries (+44 extra) 
+2024-04-16 20:26:39,106 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-16 20:26:39,117 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-16 20:26:39,128 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-16 20:26:39,129 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-16 20:26:39,145 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-16 20:26:39,162 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:26:39,178 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:26:39,186 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-16 20:26:39,251 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2024-04-16 20:26:39,422 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:26:39,430 1 INFO odoo odoo.modules.registry: Registry loaded in 0.905s 
+2024-04-16 20:26:39,432 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-16 20:26:39,435 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-16 20:26:39,436 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:39] "POST /web/dataset/call_button HTTP/1.1" 200 - 3187 0.459 0.925
+2024-04-16 20:26:39,444 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:26:39,711 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:39] "GET /web HTTP/1.1" 200 - 91 0.019 0.250
+2024-04-16 20:26:39,960 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:39] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.002 0.003
+2024-04-16 20:26:39,980 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:39] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.004
+2024-04-16 20:26:39,984 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:39] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.004 0.005
+2024-04-16 20:26:40,015 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.002
+2024-04-16 20:26:40,074 1 INFO ? werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.002
+2024-04-16 20:26:40,083 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.011 0.007
+2024-04-16 20:26:40,088 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.013 0.011
+2024-04-16 20:26:40,100 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.002 0.003
+2024-04-16 20:26:40,102 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:40] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.002 0.004
+2024-04-16 20:26:42,377 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:42] "POST /web/action/load HTTP/1.1" 200 - 11 0.002 0.005
+2024-04-16 20:26:42,399 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:42] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 44 0.007 0.013
+2024-04-16 20:26:42,413 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:42] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.001 0.003
+2024-04-16 20:26:42,421 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:42] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.007 0.006
+2024-04-16 20:26:55,688 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:55] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.002 0.005
+2024-04-16 20:26:55,695 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:26:55] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.007 0.006
+2024-04-16 20:27:00,609 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:00] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.006 0.007
+2024-04-16 20:27:00,617 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:00] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.002 0.002
+2024-04-16 20:27:02,765 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:27:02,766 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:27:02,766 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:27:03,015 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:27:03,025 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:27:03,029 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:27:03,039 1 INFO odoo odoo.modules.loading: updating modules list 
+2024-04-16 20:27:03,040 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-16 20:27:03,287 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:27:03,306 1 INFO odoo odoo.modules.loading: Loading module pedidos (60/69) 
+2024-04-16 20:27:03,373 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:27:03,432 1 INFO odoo odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-16 20:27:03,439 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:27:03,440 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-16 20:27:03,441 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:27:03,470 1 INFO odoo odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-16 20:27:03,475 1 INFO odoo odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-16 20:27:03,479 1 INFO odoo odoo.modules.loading: Module pedidos: loading demo 
+2024-04-16 20:27:03,479 1 INFO odoo odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-16 20:27:03,485 1 INFO odoo odoo.addons.base.models.ir_module: module pedidos: no translation for language es 
+2024-04-16 20:27:03,487 1 WARNING odoo odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-16 20:27:03,489 1 INFO odoo odoo.modules.loading: Module pedidos loaded in 0.18s, 44 queries (+44 other) 
+2024-04-16 20:27:03,491 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.20s, 44 queries (+44 extra) 
+2024-04-16 20:27:03,550 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-16 20:27:03,562 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-16 20:27:03,574 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-16 20:27:03,585 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-16 20:27:03,601 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-16 20:27:03,609 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:27:03,610 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:27:03,611 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-16 20:27:03,675 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2024-04-16 20:27:03,893 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:27:03,897 1 INFO odoo odoo.modules.registry: Registry loaded in 0.875s 
+2024-04-16 20:27:03,898 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-16 20:27:03,900 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-16 20:27:03,901 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:03] "POST /web/dataset/call_button HTTP/1.1" 200 - 3187 0.444 0.694
+2024-04-16 20:27:03,908 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:27:04,126 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "GET /web HTTP/1.1" 200 - 91 0.015 0.204
+2024-04-16 20:27:04,350 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.001 0.003
+2024-04-16 20:27:04,383 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.003
+2024-04-16 20:27:04,386 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.005
+2024-04-16 20:27:04,392 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.006 0.007
+2024-04-16 20:27:04,435 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.011 0.008
+2024-04-16 20:27:04,440 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.013 0.011
+2024-04-16 20:27:04,452 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.003 0.003
+2024-04-16 20:27:04,453 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:27:04] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.003 0.003
+2024-04-16 20:27:12,369 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-16 20:27:12,370 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-16 20:27:12,395 1 ERROR ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: socket disconnected 
+2024-04-16 20:27:12,395 1 ERROR ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: socket disconnected 
+2024-04-16 20:27:12,395 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: socket disconnected 
+2024-04-16 20:27:12,396 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: socket disconnected 
+2024-04-16 20:27:12,396 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-16 20:27:12,396 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-16 20:27:12,397 1 ERROR ? kafka.consumer.fetcher: Fetch to node 1 failed: KafkaConnectionError: socket disconnected 
+2024-04-16 20:27:12,398 1 ERROR ? kafka.consumer.fetcher: Fetch to node 1 failed: KafkaConnectionError: socket disconnected 
+2024-04-16 20:27:12,399 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:27:12,399 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:27:12,399 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-16 20:27:12,400 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-16 20:27:12,400 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-16 20:27:12,400 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-16 20:27:12,401 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-16 20:27:12,401 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-16 20:27:12,504 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:27:12,505 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-16 20:27:12,507 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-16 20:27:12,508 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2024-04-16 20:27:12,509 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-16 20:27:31,787 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-16 20:27:31,787 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-16 20:27:31,788 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-16 20:27:31,788 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-16 20:27:31,849 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-16 20:27:31,944 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d092897486fa:8069 
+2024-04-16 20:28:02,683 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:28:02,687 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:28:02,707 1 WARNING odoo odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-16 20:28:02,718 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:28:02,990 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:28:02,999 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.28s, 0 queries (+0 extra) 
+2024-04-16 20:28:03,073 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:28:03,075 1 INFO odoo odoo.modules.registry: Registry loaded in 0.400s 
+2024-04-16 20:28:03,077 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:28:03,160 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:03] "GET / HTTP/1.1" 303 - 23 0.010 0.474
+2024-04-16 20:28:04,121 1 WARNING odoo odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-16 20:28:04,256 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "GET /web HTTP/1.1" 200 - 88 0.021 1.072
+2024-04-16 20:28:04,527 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.001 0.003
+2024-04-16 20:28:04,558 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.005 0.007
+2024-04-16 20:28:04,580 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.002
+2024-04-16 20:28:04,585 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-16 20:28:04,719 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.051 0.030
+2024-04-16 20:28:04,744 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "POST /mail/load_message_failures HTTP/1.1" 200 - 11 0.009 0.008
+2024-04-16 20:28:04,966 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-16 20:28:04,966 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-16 20:28:04,967 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-16 20:28:04,971 1 INFO ? werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.312
+2024-04-16 20:28:04,978 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "POST /web/action/load HTTP/1.1" 200 - 8 0.002 0.430
+2024-04-16 20:28:04,990 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.003 0.003
+2024-04-16 20:28:04,991 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:04] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 29 0.010 0.341
+2024-04-16 20:28:09,905 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:09] "POST /web/action/load HTTP/1.1" 200 - 11 0.003 0.005
+2024-04-16 20:28:09,929 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:09] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 44 0.007 0.013
+2024-04-16 20:28:09,945 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:09] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.001 0.003
+2024-04-16 20:28:09,952 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:09] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.008 0.006
+2024-04-16 20:28:10,872 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:10] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.002 0.005
+2024-04-16 20:28:10,881 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:10] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.009 0.007
+2024-04-16 20:28:12,520 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:12] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.007 0.007
+2024-04-16 20:28:12,528 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:12] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.001 0.003
+2024-04-16 20:28:14,393 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:14,394 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:14,395 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:14,646 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:14,847 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:28:14,852 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:28:14,863 1 INFO odoo odoo.modules.loading: updating modules list 
+2024-04-16 20:28:14,864 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-16 20:28:15,125 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:28:15,143 1 INFO odoo odoo.modules.loading: Loading module pedidos (60/69) 
+2024-04-16 20:28:15,252 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:28:15,310 1 INFO odoo odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-16 20:28:15,316 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:28:15,317 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-16 20:28:15,318 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:28:15,364 1 INFO odoo odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-16 20:28:15,383 1 INFO odoo odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-16 20:28:15,389 1 INFO odoo odoo.modules.loading: Module pedidos: loading demo 
+2024-04-16 20:28:15,390 1 INFO odoo odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-16 20:28:15,396 1 INFO odoo odoo.addons.base.models.ir_module: module pedidos: no translation for language es 
+2024-04-16 20:28:15,399 1 WARNING odoo odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-16 20:28:15,401 1 INFO odoo odoo.modules.loading: Module pedidos loaded in 0.26s, 44 queries (+44 other) 
+2024-04-16 20:28:15,403 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.28s, 44 queries (+44 extra) 
+2024-04-16 20:28:15,445 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-16 20:28:15,459 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-16 20:28:15,465 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-16 20:28:15,472 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-16 20:28:15,493 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-16 20:28:15,510 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:28:15,522 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:28:15,523 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-16 20:28:15,591 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2024-04-16 20:28:15,760 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:28:15,768 1 INFO odoo odoo.modules.registry: Registry loaded in 0.925s 
+2024-04-16 20:28:15,768 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-16 20:28:15,771 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-16 20:28:15,772 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:15] "POST /web/dataset/call_button HTTP/1.1" 200 - 3187 0.451 0.931
+2024-04-16 20:28:15,780 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:28:16,045 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "GET /web HTTP/1.1" 200 - 91 0.015 0.252
+2024-04-16 20:28:16,267 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.001 0.003
+2024-04-16 20:28:16,285 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.004
+2024-04-16 20:28:16,289 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.005 0.006
+2024-04-16 20:28:16,293 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.002
+2024-04-16 20:28:16,348 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.010 0.008
+2024-04-16 20:28:16,354 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.013 0.011
+2024-04-16 20:28:16,366 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.003 0.002
+2024-04-16 20:28:16,367 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:16] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.002 0.005
+2024-04-16 20:28:37,812 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:37] "POST /web/action/load HTTP/1.1" 200 - 11 0.002 0.005
+2024-04-16 20:28:37,835 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:37] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 44 0.006 0.014
+2024-04-16 20:28:37,850 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:37] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.001 0.003
+2024-04-16 20:28:37,857 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:37] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.008 0.006
+2024-04-16 20:28:38,887 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:38] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.003 0.005
+2024-04-16 20:28:38,895 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:38] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.009 0.007
+2024-04-16 20:28:40,692 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:40] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.006 0.006
+2024-04-16 20:28:40,699 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:40] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.002 0.002
+2024-04-16 20:28:43,404 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:43,404 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:43,405 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:43,662 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user juankiavila752@gmail.com #2 via 172.26.0.1 
+2024-04-16 20:28:43,671 1 INFO odoo odoo.modules.loading: loading 1 modules... 
+2024-04-16 20:28:43,675 1 INFO odoo odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2024-04-16 20:28:43,686 1 INFO odoo odoo.modules.loading: updating modules list 
+2024-04-16 20:28:43,687 1 INFO odoo odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-16 20:28:43,944 1 INFO odoo odoo.modules.loading: loading 69 modules... 
+2024-04-16 20:28:43,963 1 INFO odoo odoo.modules.loading: Loading module pedidos (60/69) 
+2024-04-16 20:28:44,031 1 WARNING odoo odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-16 20:28:44,088 1 INFO odoo odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-16 20:28:44,093 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:28:44,094 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-16 20:28:44,095 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:28:44,123 1 INFO odoo odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-16 20:28:44,127 1 INFO odoo odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-16 20:28:44,132 1 INFO odoo odoo.modules.loading: Module pedidos: loading demo 
+2024-04-16 20:28:44,133 1 INFO odoo odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-16 20:28:44,138 1 INFO odoo odoo.addons.base.models.ir_module: module pedidos: no translation for language es 
+2024-04-16 20:28:44,140 1 WARNING odoo odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-16 20:28:44,142 1 INFO odoo odoo.modules.loading: Module pedidos loaded in 0.18s, 44 queries (+44 other) 
+2024-04-16 20:28:44,144 1 INFO odoo odoo.modules.loading: 69 modules loaded in 0.20s, 44 queries (+44 extra) 
+2024-04-16 20:28:44,205 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-16 20:28:44,224 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-16 20:28:44,236 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-16 20:28:44,247 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-16 20:28:44,261 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-16 20:28:44,262 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-16 20:28:44,263 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-16 20:28:44,264 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-16 20:28:44,330 1 INFO odoo odoo.modules.registry: verifying fields for every extended model 
+2024-04-16 20:28:44,564 1 INFO odoo odoo.modules.loading: Modules loaded. 
+2024-04-16 20:28:44,572 1 INFO odoo odoo.modules.registry: Registry loaded in 0.904s 
+2024-04-16 20:28:44,573 1 INFO odoo odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-16 20:28:44,575 1 INFO odoo odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-16 20:28:44,576 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:44] "POST /web/dataset/call_button HTTP/1.1" 200 - 3187 0.458 0.717
+2024-04-16 20:28:44,585 1 INFO odoo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-16 20:28:44,805 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:44] "GET /web HTTP/1.1" 200 - 91 0.016 0.206
+2024-04-16 20:28:45,046 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.001 0.003
+2024-04-16 20:28:45,104 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.004
+2024-04-16 20:28:45,106 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.005
+2024-04-16 20:28:45,114 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.006 0.009
+2024-04-16 20:28:45,185 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.010 0.008
+2024-04-16 20:28:45,191 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.014 0.011
+2024-04-16 20:28:45,205 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.004 0.004
+2024-04-16 20:28:45,205 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:28:45] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.003 0.004
+2024-04-16 20:29:40,129 1 CRITICAL ? consumer: {'partner_id': 11, 'name': 'P00002', 'date_order': '2024-04-16', 'state': 'sale', 'order_line': [[0, 0, {'product_id': 6, 'name': '[FURN_8888] Office Lamp', 'product_uom_qty': 20.0, 'price_unit': 132.5, 'tax_id': [[6, 0, []]], 'price_subtotal': 2650.0, 'discount': 0}], [0, 0, {'product_id': 5, 'name': '[FURN_7777] Office Chair', 'product_uom_qty': 5.0, 'price_unit': 89.0, 'tax_id': [[6, 0, []]], 'price_subtotal': 445.0, 'discount': 0}]], 'company_id': 1, 'user_id': 2, 'amount_total': 3095.0} 
+2024-04-16 20:29:40,130 1 CRITICAL ? consumer: MENSAJE RECIBIDO CONSUMER 
+2024-04-16 20:29:40,130 1 CRITICAL ? consumer: {'partner_id': 11, 'name': 'P00002', 'date_order': '2024-04-16', 'state': 'sale', 'order_line': [[0, 0, {'product_id': 6, 'name': '[FURN_8888] Office Lamp', 'product_uom_qty': 20.0, 'price_unit': 132.5, 'tax_id': [[6, 0, []]], 'price_subtotal': 2650.0, 'discount': 0}], [0, 0, {'product_id': 5, 'name': '[FURN_7777] Office Chair', 'product_uom_qty': 5.0, 'price_unit': 89.0, 'tax_id': [[6, 0, []]], 'price_subtotal': 445.0, 'discount': 0}]], 'company_id': 1, 'user_id': 2, 'amount_total': 3095.0} 
+2024-04-16 20:29:40,131 1 CRITICAL ? consumer: MENSAJE RECIBIDO CONSUMER 
+2024-04-16 20:30:32,093 1 INFO odoo odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-04-16 20:30:32,095 1 INFO odoo odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-16 20:30:44,969 1 INFO odoo odoo.http: Session expired 
+2024-04-16 20:30:44,970 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:44] "POST /web/action/load HTTP/1.1" 200 - 2 0.001 0.007
+2024-04-16 20:30:45,898 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:45] "GET /web HTTP/1.1" 303 - 2 0.001 0.006
+2024-04-16 20:30:46,000 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:46] "GET /web/login HTTP/1.1" 200 - 53 0.009 0.090
+2024-04-16 20:30:46,014 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:46] "GET /web/binary/company_logo HTTP/1.1" 304 - 3 0.002 0.006
+2024-04-16 20:30:49,279 1 INFO odoo odoo.addons.base.models.res_users: Login successful for db:odoo login:juankiavila752@gmail.com from 172.26.0.1 
+2024-04-16 20:30:49,284 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /web/login HTTP/1.1" 303 - 29 0.007 0.258
+2024-04-16 20:30:49,294 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /web HTTP/1.1" 200 - 10 0.002 0.005
+2024-04-16 20:30:49,548 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 4 0.001 0.002
+2024-04-16 20:30:49,550 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /web/action/load HTTP/1.1" 200 - 8 0.002 0.004
+2024-04-16 20:30:49,581 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.002 0.005
+2024-04-16 20:30:49,583 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /websocket HTTP/1.1" 101 - 1 0.000 0.002
+2024-04-16 20:30:49,625 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 13 0.006 0.007
+2024-04-16 20:30:49,627 1 INFO ? werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.003
+2024-04-16 20:30:49,634 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /web/image/res.company/1/favicon HTTP/1.1" 304 - 5 0.003 0.006
+2024-04-16 20:30:49,638 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /mail/init_messaging HTTP/1.1" 200 - 32 0.016 0.010
+2024-04-16 20:30:49,641 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "GET /web/image/res.company/1/favicon HTTP/1.1" 304 - 5 0.001 0.003
+2024-04-16 20:30:49,652 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /mail/inbox/messages HTTP/1.1" 200 - 4 0.002 0.004
+2024-04-16 20:30:49,654 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:49] "POST /mail/load_message_failures HTTP/1.1" 200 - 9 0.003 0.004
+2024-04-16 20:30:51,773 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /web/action/load HTTP/1.1" 200 - 14 0.003 0.006
+2024-04-16 20:30:51,829 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /web/dataset/call_kw/sale.order/get_views HTTP/1.1" 200 - 104 0.014 0.038
+2024-04-16 20:30:51,846 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.001 0.002
+2024-04-16 20:30:51,859 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /web/dataset/call_kw/sale.order/web_search_read HTTP/1.1" 200 - 26 0.005 0.010
+2024-04-16 20:30:51,868 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /web/dataset/call_kw/crm.tag/read HTTP/1.1" 200 - 2 0.000 0.002
+2024-04-16 20:30:51,902 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "POST /sales/sale_quotation_onboarding_panel HTTP/1.1" 200 - 34 0.006 0.022
+2024-04-16 20:30:51,911 1 INFO ? werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "GET /sale/static/src/img/sale_quotation_onboarding_bg.jpg HTTP/1.1" 200 - 0 0.000 0.001
+2024-04-16 20:30:51,931 1 INFO odoo werkzeug: 172.26.0.1 - - [16/Apr/2024 20:30:51] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 304 - 9 0.002 0.005
