@@ -4,12 +4,17 @@ import logging
 import threading
 import socket
 import json
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.primitives import hashes
+import hashlib
 
 loggerC = logging.getLogger('consumer')
 
 class KafkaConsumerSaleOrder(models.TransientModel):
     _name = 'kafka.consumer.sale.order'
-
+    __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
+    __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
     @api.model
     def consume_messages(self):
         hostname = socket.gethostname()
@@ -25,8 +30,13 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 enable_auto_commit=True,
             )
             for mensaje in PEDIDOS:
-                pedido_str = mensaje.value.decode('utf-8')
-                pedido_dict = json.loads(pedido_str)
+                loggerC.critical(f'MENSAJE:{mensaje.value}')
+                cipher = Cipher(algorithms.AES(self.__key), modes.CBC(self.__iv))
+                decryptor = cipher.decryptor()
+                decrypted_padded_data = decryptor.update(mensaje.value) + decryptor.finalize()
+                unpadder = padding.PKCS7(128).unpadder()
+                unpadded_data = unpadder.update(decrypted_padded_data) + unpadder.finalize()
+                pedido_dict = json.loads(unpadded_data.decode('utf-8'))
                 if str(pedido_dict['sender_ip']) != str(local_ip):
                     pedido_dict.pop('sender_ip', None)
                     loggerC.critical(pedido_dict)
