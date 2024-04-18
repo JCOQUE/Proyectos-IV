@@ -12,7 +12,6 @@ import socket
 
 
 _logger = logging.getLogger('producer')
-_logger.critical('FUNCIOOOOONNAAAA')
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
