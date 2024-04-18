@@ -1,5 +1,6 @@
 from odoo import models, api, registry
 from kafka import KafkaConsumer
+import time
 import logging
 import threading
 import socket
@@ -14,21 +15,25 @@ class KafkaConsumerSaleOrder(models.TransientModel):
     _name = 'kafka.consumer.sale.order'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
+
+    def init(self):
+        super(KafkaConsumerSaleOrder, self).init()
+        self.start_consumer_thread()
+
+    def start_consumer_thread(self):
+        threaded_calculation = threading.Thread(target=self.consume_messages)
+        threaded_calculation.daemon = True
+        threaded_calculation.start()
+
     @api.model
     def consume_messages(self):
         hostname = socket.gethostname()
         local_ip = socket.gethostbyname(hostname)
-        PEDIDOS = None
         try:
-            kafka_server = '172.26.0.4:29093'
-            topic_name = 'P00002'
-            PEDIDOS = KafkaConsumer(
-                topic_name,
-                bootstrap_servers=kafka_server,
-                auto_offset_reset='latest',
-                enable_auto_commit=True,
-            )
+            time.sleep(4)
+            PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
+                loggerC.critical('Processing message...')
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 if str(mensaje['sender_ip']) != str(local_ip):
@@ -38,6 +43,17 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         finally:
             if PEDIDOS:
                 PEDIDOS.close()
+
+    def connect_kafka(self):
+        kafka_server = '172.26.0.80:29093'
+        topic_name = 'P00002'
+        msg = KafkaConsumer(
+            topic_name,
+            bootstrap_servers=kafka_server,
+            auto_offset_reset='latest',
+            enable_auto_commit=True,
+        )
+        return msg
 
     def decode_message(self, mensaje_encryted):
         #Desencriptacion
@@ -67,11 +83,5 @@ class KafkaConsumerSaleOrder(models.TransientModel):
             self.env['sale.order'].sudo().create(pedido)
             new_cr.commit()
 
-    def start_consumer_thread(self):
-        threaded_calculation = threading.Thread(target=self.consume_messages)
-        threaded_calculation.daemon = True
-        threaded_calculation.start()
 
-    def init(self):
-        super(KafkaConsumerSaleOrder, self).init()
-        self.start_consumer_thread()
+    

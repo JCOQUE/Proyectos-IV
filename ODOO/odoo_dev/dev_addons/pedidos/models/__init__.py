@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import compra,ventas
+from . import compras, ventas

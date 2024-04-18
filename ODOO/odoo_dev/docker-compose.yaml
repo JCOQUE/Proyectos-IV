@@ -4,6 +4,7 @@ services:
     build: .
     depends_on:
       - db_producer
+      - kafka
     ports:
       - "8069:8069"
     volumes:
@@ -22,6 +23,7 @@ services:
     build: .
     depends_on:
       - db_consumer
+      - kafka
     ports:
       - "8070:8069"
     volumes:
@@ -71,13 +73,12 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
-
   kafka:
     image: confluentinc/cp-kafka:latest
     container_name: kafka
     networks:
       ERP-BI:
-        ipv4_address: "172.26.0.4"
+        ipv4_address: "172.26.0.80"
     depends_on:
       - zookeeper
     ports:
@@ -97,7 +98,6 @@ networks:
     ipam: 
       config:
         - subnet: "172.26.0.0/16"
-
 volumes:
   odoo-producer-data:
   odoo-consumer-data:

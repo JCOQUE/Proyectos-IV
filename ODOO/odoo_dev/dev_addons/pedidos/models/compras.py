@@ -6,7 +6,6 @@ import json
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 import hashlib
-import os
 
 import socket
 
@@ -23,7 +22,7 @@ class PurchaseOrder(models.Model):
 
     def button_confirm(self):
         # res = super(purchase_custom, self).button_confirm()
-        kafka_server = "172.26.0.4:29093" 
+        kafka_server = "172.26.0.80:29093" 
         topic_name = self.name
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
@@ -31,8 +30,10 @@ class PurchaseOrder(models.Model):
             bootstrap_servers=kafka_server,
             client_id='admin'
         )
+    
 
         self.create_topic(admin_client, topic_name)
+        admin_client.close()
         producer = self.create_producer(kafka_server)
         kafka_data = self.create_send_data()
         data_encoded = self.encode_data(kafka_data)
@@ -47,11 +48,13 @@ class PurchaseOrder(models.Model):
             kafka.create_topics(new_topics=[topic], validate_only=False)
         except Exception as e:
             _logger.error(f"Error creating the topic: {e}")
+        
 
 
     def create_producer(self, ip):
         producer = KafkaProducer(bootstrap_servers=ip,
                                  max_block_ms=1048588,
+                                 api_version=(0,11,5),
                                  compression_type='gzip')
         return producer
     
