@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   producer:
-    image: odoo:16.0
+    build: .
     depends_on:
       - db_producer
     ports:
@@ -11,7 +11,6 @@ services:
       - ./producer/config_odoo_producer:/etc/odoo
       - ./dev_addons:/mnt/extra-addons
       - ./producer/log_producer:/var/log/odoo
-      - ./requirements.txt:/requirements.txt
     environment:
       - HOST=db_producer
       - USER=odoo
@@ -20,7 +19,7 @@ services:
       ERP-BI:
         ipv4_address: "172.26.0.10"
   consumer:
-    image: odoo:16.0
+    build: .
     depends_on:
       - db_consumer
     ports:
@@ -30,7 +29,6 @@ services:
       - ./consumer/config_odoo_consumer:/etc/odoo
       - ./dev_addons:/mnt/extra-addons
       - ./consumer/log_consumer:/var/log/odoo
-      - ./requirements.txt:/requirements.txt
     environment:
       - HOST=db_consumer
       - USER=odoo

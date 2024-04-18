@@ -8969,3 +8969,323 @@ pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedido
 2024-04-18 09:15:57,233 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:57] "POST /sales/sale_quotation_onboarding_panel HTTP/1.1" 200 - 2 0.002 0.008
 2024-04-18 09:15:57,336 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:57] "POST /mail/load_message_failures HTTP/1.1" 200 - 9 0.008 0.012
 2024-04-18 09:15:57,443 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:57] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 304 - 9 0.006 0.013
+2024-04-18 09:18:09,049 1 INFO consumer odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-04-18 09:18:09,055 1 INFO consumer odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-18 09:28:09,533 1 INFO consumer odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-04-18 09:28:09,544 1 INFO consumer odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-18 09:33:40,427 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:33:40,428 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:33:40,485 1 ERROR consumer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: socket disconnected 
+2024-04-18 09:33:40,486 1 INFO consumer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: socket disconnected 
+2024-04-18 09:33:40,487 1 WARNING consumer kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:33:40,487 1 ERROR consumer kafka.consumer.fetcher: Fetch to node 1 failed: KafkaConnectionError: socket disconnected 
+2024-04-18 09:33:40,489 1 INFO consumer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:33:40,490 1 ERROR consumer kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-18 09:33:40,491 1 INFO consumer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-18 09:33:40,491 1 WARNING consumer kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:33:40,494 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2024-04-18 09:33:53,958 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:33:53,959 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:33:53,960 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:33:53,960 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:33:54,058 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:33:54,242 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:35:55,239 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:35:55,240 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:35:55,420 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:36:01,068 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:36:01,069 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:36:01,070 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:36:01,070 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:36:01,190 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:36:01,377 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:39:20,260 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:39:20,261 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:39:20,675 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:39:28,164 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:39:28,165 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:39:28,165 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:39:28,166 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:39:28,314 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:39:28,481 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:42:25,201 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:42:25,206 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:42:25,258 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:42:31,169 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:42:31,170 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:42:31,170 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:42:31,171 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:42:31,289 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:42:31,453 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:42:47,488 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:42:47,489 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:42:47,977 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:42:53,362 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:42:53,363 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:42:53,364 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:42:53,364 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:42:53,468 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:42:53,614 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:43:41,930 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:43:41,931 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:43:42,191 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:43:47,645 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:43:47,646 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:43:47,647 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:43:47,647 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:43:47,815 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:43:48,025 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:46:45,310 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:46:45,314 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:46:45,792 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:46:52,261 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:46:52,262 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:46:52,263 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:46:52,263 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:46:52,374 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:46:52,525 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:51:59,666 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:51:59,667 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:52:00,007 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 09:52:57,342 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:52:57,721 1 CRITICAL consumer producer: EEEEEEEEOOOOOOOOOOOOOOOOOOOO 
+2024-04-18 09:52:57,730 1 WARNING consumer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:52:58,063 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:52:58,499 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:52:58,504 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:53:24,184 1 WARNING consumer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:53:24,267 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:53:24,268 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:53:24,269 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:53:24,376 1 WARNING consumer odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-18 09:53:24,380 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:53:24,381 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:53:24,382 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-18 09:53:24,384 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-18 09:53:24,402 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-18 09:53:24,420 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:53:24,442 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:53:24,454 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:54:30,978 1 ERROR ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: socket disconnected 
+2024-04-18 09:54:30,979 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: socket disconnected 
+2024-04-18 09:54:30,979 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:54:30,980 1 ERROR ? kafka.consumer.fetcher: Fetch to node 1 failed: KafkaConnectionError: socket disconnected 
+2024-04-18 09:54:30,981 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:54:30,982 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-18 09:54:30,982 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-18 09:54:30,983 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:54:31,085 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:54:31,086 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-18 09:54:31,086 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED 
+2024-04-18 09:54:31,087 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:54:39,820 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:54:40,210 1 CRITICAL consumer producer: EEEEEEEEOOOOOOOOOOOOOOOOOOOO 
+2024-04-18 09:54:40,218 1 WARNING consumer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:55:08,905 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:55:09,386 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:55:09,396 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:55:22,704 1 WARNING consumer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:55:22,890 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-18 09:55:22,891 1 WARNING consumer odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-18 09:55:28,290 1 CRITICAL consumer producer: TOPIC NAME: P00002 
+2024-04-18 09:55:28,633 1 ERROR consumer producer: Error creating the topic: [Error 36] TopicAlreadyExistsError: Request 'CreateTopicsRequest_v3(create_topic_requests=[(topic='P00002', num_partitions=1, replication_factor=1, replica_assignment=[], configs=[])], timeout=30000, validate_only=False)' failed with response 'CreateTopicsResponse_v3(throttle_time_ms=0, topic_errors=[(topic='P00002', error_code=36, error_message="Topic 'P00002' already exists.")])'. 
+2024-04-18 09:55:28,803 1 CRITICAL consumer producer: DATA SENT: b'}\xe4\xed\xc4[\xe5\xc9\xe0\xf8\x85wl\xf7C:\x9an\x91&\xff\xa8\xc2\x90&Q\xa6\x9d\xc0\x9fo\xc9\x99\x9b]7\x8ai\x8d$\x87\xa6\xf7\xf5Y5\xd24\x94\xfa\xd5\xecr}\x1e\x1d\x16\x19\x15\xdb\xac\x9a$\xda\xc4\xb3k{\x18\xe2\x91\xeb\x87\xebl\xdb\xcdRzt\x12\xb8\x16\'\xd6\x1d\xa5v$%\x0c3\xae\xe9\xfc\xb3\xf2\x8dD!!\x0f\\5\xba\x847\x9fP\x94\xec\\\xc7\xc1\xb0{\xc6\x1dy-re\x87<R [\x95\xd8I\x8aE\x93\x80hw\xd9\xea]\xb5\x00\xc9\x01\xd6\xe7\x12\xd3\x1eBT\xa1*R\n\xf9f\xbb\x83\x8a\xf1\xf4`\xc872:{l\x804U\\\xbc*N\xa1\x02\xa9\xb0$\x99\xd1\r\xf1t\xcf\xee\xd4\xc9LE\xf4\x81\xfc\x17\xdcqZ\x87\x16\xcb\x86|h\x94\xb6n\xb0*\xbf.2r\xb8\x0eW0\xd3H5$E\x89M\xae\x8d\xd5\xee\x85LvmCK\xef\xc4.\x80\xe2\xfa\xa0\x7f\xc9\xe6r\x90\x11&\x02\xf01g\x04e(\xbe\xd8y\xb6o\x0e\x05\x01\x02\xee^Z\xf44\xda\x8d\xf2\xd1\xe1\xf6\x1fK>\xfaM\x8c\xed,VI\xd5\x1cC\xafdHr\x8e\x96\xce\x11>\xc2\xdc\xa0s/\xe8f\xe2K\xefC\x82OC\xcd\xc0O\xda\x8c\xf7c\xdc/\xc3\xa2i\xa5vA\xd1p\xe7\xea\x83\x9b\x0e\xe9U\x13y\x1c\xcd\xd2\x85\xcb&\x16r\xa2H*@h\x1b%\xf8CG\xe6\x89\xaf|)\xf5\x96\x9e\r\x1fa\xfd\xaa]G\xda`\xc5\xd9 4\x87\x1bX\x00&\xdf@\xf1|\xd3\xb1\xaby\x15\xac3?QHH\xa6=xS\x06\xe1H\xeaZ\xa8\xd9\x19@\xbd\xb9\xfc\xad\x1eT\xbeh\xf4\x1a?^m\xa6\x9c\xe9\xda!\xf8\xdbI\xfb\xe7\x934\x8ci=\xde\xf5\x12SN\xf3\xbc\x7f\n0\xe1\xb2f\xd2\xd6\\\x04\x1b\x17*\xd9\xa6>\x83\x16\xaf\xa4K\x98\xef\xf9\xcc\xaa\xd6\xcd\x88\xa0\xa5\xfc\xa7r8n\x9c>\xa3\xa9\x97\xbd1q\xb3\xfc\xfe"7\xf6\x9d\x9eWG\xc2\x0e\xdd*\xb6\xdc\x0c\x8e\x1fb\x018w\x15\x13m-\xad\xa2m\xfd\xfc\x1f\xf0\x9b\x13\xa3U\xe3\xb6L' 
+2024-04-18 09:57:54,372 1 ERROR ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: socket disconnected 
+2024-04-18 09:57:54,373 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:57:54,373 1 ERROR ? kafka.consumer.fetcher: Fetch to node 1 failed: KafkaConnectionError: socket disconnected 
+2024-04-18 09:57:54,375 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-18 09:57:54,375 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:57:54,528 1 ERROR ? kafka.conn: Connect attempt to <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]> returned error 111. Disconnecting. 
+2024-04-18 09:57:54,530 1 WARNING ? kafka.client: Node 1 connection failed -- refreshing metadata 
+2024-04-18 09:59:19,805 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:59:19,806 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:59:19,806 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:59:19,807 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 09:59:19,927 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:59:20,098 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 2eb5285c9113:8069 
+2024-04-18 09:59:31,742 1 INFO consumer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:59:31,749 1 INFO consumer odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-04-18 09:59:31,792 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:59:31,795 1 INFO consumer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:59:32,175 1 CRITICAL consumer producer: EEEEEEEEOOOOOOOOOOOOOOOOOOOO 
+2024-04-18 09:59:32,182 1 WARNING consumer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:59:32,190 1 INFO consumer odoo.modules.loading: 58 modules loaded in 0.39s, 0 queries (+0 extra) 
+2024-04-18 09:59:32,299 1 INFO consumer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:59:32,305 1 INFO consumer odoo.modules.registry: Registry loaded in 0.584s 
+2024-04-18 09:59:32,308 1 INFO consumer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:59:32,430 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:32] "GET / HTTP/1.1" 303 - 23 0.018 0.692
+2024-04-18 09:59:32,583 1 WARNING consumer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:59:32,828 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:32] "GET /web HTTP/1.1" 200 - 86 0.039 0.351
+2024-04-18 09:59:33,377 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:33] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.003 0.005
+2024-04-18 09:59:33,436 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:33] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.014 0.014
+2024-04-18 09:59:33,439 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:33] "GET /websocket HTTP/1.1" 101 - 1 0.001 0.008
+2024-04-18 09:59:33,451 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-18 09:59:33,572 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:33] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.078 0.020
+2024-04-18 09:59:33,605 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:33] "POST /mail/load_message_failures HTTP/1.1" 200 - 11 0.011 0.011
+2024-04-18 09:59:34,238 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,238 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,238 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,242 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,242 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,243 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:59:34,249 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:34] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.750
+2024-04-18 09:59:34,256 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:34] "POST /web/action/load HTTP/1.1" 200 - 8 0.003 0.846
+2024-04-18 09:59:34,274 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:34] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 29 0.013 0.785
+2024-04-18 09:59:34,275 1 INFO consumer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:59:34] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.005 0.004
+2024-04-18 10:06:27,912 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:06:27,913 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:06:28,438 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 5 connections  
+2024-04-18 10:08:09,440 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:08:09,442 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:08:09,442 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:08:09,443 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:08:09,563 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:08:09,753 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 8c0ddecf41b3:8069 
+2024-04-18 10:13:13,944 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:13:13,945 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:13:14,220 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:13:20,266 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:13:20,267 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:13:20,267 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:13:20,268 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:13:20,394 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:13:20,650 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 8c0ddecf41b3:8069 
+2024-04-18 10:14:30,504 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:14:30,508 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:14:30,755 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:14:36,307 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:14:36,308 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:14:36,308 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:14:36,309 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:14:36,431 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:14:36,617 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 8c0ddecf41b3:8069 
+2024-04-18 10:16:18,150 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:16:18,151 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:16:18,272 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:16:24,250 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:16:24,251 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:16:24,252 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:16:24,252 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:16:24,385 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:16:24,568 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 8c0ddecf41b3:8069 
+2024-04-18 10:25:40,151 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:25:40,152 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:25:40,428 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:29:46,981 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:29:46,983 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:29:46,983 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:29:46,984 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:29:47,100 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:29:47,297 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on ae7192de4e58:8069 
+2024-04-18 10:32:01,576 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:32:01,577 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:32:01,973 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:32:12,220 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:32:12,222 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:32:12,223 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:32:12,224 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:32:12,442 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:32:12,723 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d5430995bb26:8069 
+2024-04-18 10:33:16,452 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:33:16,457 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:33:16,551 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:33:22,466 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:33:22,468 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:33:22,468 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:33:22,469 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:33:22,623 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:33:22,810 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 46f6fab920cb:8069 
+2024-04-18 10:34:48,774 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:34:48,775 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:34:48,934 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:34:54,797 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:34:54,798 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:34:54,799 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:34:54,799 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:34:54,921 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:34:55,119 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on a97c5acca737:8069 
+2024-04-18 10:37:09,389 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:37:09,393 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:37:09,823 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:37:20,092 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:37:20,093 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:37:20,094 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:37:20,094 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:37:20,216 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:37:20,416 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 73b61c03a86f:8069 
+2024-04-18 10:41:08,925 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:41:08,926 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:41:09,280 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:41:27,994 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:41:27,996 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:41:27,997 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:41:27,998 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:41:28,240 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:41:28,597 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on fb958ac5ecf8:8069 
+2024-04-18 10:42:12,854 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:42:12,856 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:42:13,162 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:44:36,169 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:44:36,171 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:44:36,172 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:44:36,172 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:44:36,294 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:44:36,470 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on fb958ac5ecf8:8069 
+2024-04-18 10:50:31,252 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:50:31,257 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:50:31,527 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:51:11,239 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:51:11,240 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:51:11,241 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:51:11,241 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:51:11,355 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:51:11,560 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on c46f5376d259:8069 
+2024-04-18 10:53:23,308 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:53:23,309 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:53:23,753 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:54:00,657 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:54:00,659 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:54:00,659 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:54:00,660 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:54:00,778 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:54:00,976 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 43a5ba9d86be:8069 
+2024-04-18 10:57:22,143 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:57:22,143 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:57:22,282 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:57:31,309 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:57:31,310 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:57:31,311 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:57:31,311 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:57:31,464 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:57:31,645 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 82b935760c6b:8069 
+2024-04-18 10:57:40,157 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:57:40,159 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:57:40,657 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:58:02,680 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:58:02,682 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:58:02,683 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:58:02,683 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:58:02,801 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:58:02,990 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 81ad4c894652:8069 
+2024-04-18 10:59:06,305 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 10:59:06,308 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 10:59:06,587 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 10:59:15,243 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 10:59:15,244 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 10:59:15,244 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 10:59:15,245 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 10:59:15,377 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 10:59:15,567 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 80b0fd60ff5a:8069 
+2024-04-18 11:02:32,499 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 11:02:32,500 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 11:02:32,850 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2024-04-18 11:02:45,651 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 11:02:45,653 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 11:02:45,654 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 11:02:45,654 1 INFO ? odoo: database: odoo@db_consumer:5432 
+2024-04-18 11:02:45,786 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 11:02:45,980 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 20a678e63962:8069 

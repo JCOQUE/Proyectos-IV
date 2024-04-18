@@ -6,11 +6,13 @@ import json
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 import hashlib
+import os
 
 import socket
 
 
 _logger = logging.getLogger('producer')
+_logger.critical('FUNCIOOOOONNAAAA')
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
