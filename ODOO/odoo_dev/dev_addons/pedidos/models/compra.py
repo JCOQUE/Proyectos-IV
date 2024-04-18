@@ -5,7 +5,6 @@ import logging
 import json
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
-from cryptography.hazmat.primitives import hashes
 import hashlib
 
 import socket
@@ -15,7 +14,7 @@ _logger = logging.getLogger('producer')
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 
-class PurchasOrder(models.Model):
+class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
@@ -44,7 +43,7 @@ class PurchasOrder(models.Model):
         producer = KafkaProducer(bootstrap_servers=kafka_server,
                                  max_block_ms=1048588,
                                  compression_type='gzip')
-        log_data = {
+        kafka_data = {
             "sender_ip": local_ip,
             "partner_id": self.partner_id.id,
             "name": self.name,
@@ -67,24 +66,26 @@ class PurchasOrder(models.Model):
                 "discount": 0  # No hay campo de descuento en purchase.order, establecemos a 0
             }
             amount_total += line.price_subtotal
-            log_data["order_line"].append((0, 0, product_info))
-        log_data["amount_total"] = amount_total
-        serialized_data = json.dumps(log_data).encode('utf-8')
+            kafka_data["order_line"].append((0, 0, product_info))
+
+        #Encriptación    
+        kafka_data["amount_total"] = amount_total
+        serialized_data = json.dumps(kafka_data).encode('utf-8')
         padder = padding.PKCS7(128).padder()
         padded_data = padder.update(serialized_data) + padder.finalize()
         cipher = Cipher(algorithms.AES(self.__key), modes.CBC(self.__iv))
         encryptor = cipher.encryptor()
-        ct = encryptor.update(padded_data) + encryptor.finalize()
+        message_encrypted = encryptor.update(padded_data) + encryptor.finalize()
 
 
         try:
-            producer.send(topic_name, ct)
+            producer.send(topic_name, message_encrypted)
             producer.flush()
         except Exception as e:
             _logger.error(f"Error al enviar el mensaje a Kafka: {e}")
         finally:
             producer.close()
 
-        _logger.critical(ct)
+        _logger.critical(message_encrypted)
 
         return True
