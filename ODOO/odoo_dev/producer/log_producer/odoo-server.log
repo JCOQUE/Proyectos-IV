@@ -23531,3 +23531,384 @@ pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedido
 2024-04-18 07:47:34,407 1 INFO producer odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
 2024-04-18 07:47:34,415 1 INFO producer odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
 2024-04-18 07:47:34,419 1 INFO producer odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-18 09:07:47,112 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:07:47,114 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:07:47,115 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:07:47,116 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-18 09:07:47,377 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:07:47,845 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on de1e1265903e:8069 
+2024-04-18 09:08:59,935 1 INFO producer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:08:59,944 1 INFO producer odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-04-18 09:08:59,999 1 WARNING producer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:09:00,005 1 INFO producer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:09:00,692 1 WARNING producer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:09:00,713 1 INFO producer odoo.modules.loading: 58 modules loaded in 0.71s, 0 queries (+0 extra) 
+2024-04-18 09:09:00,931 1 INFO producer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:09:00,942 1 INFO producer odoo.modules.registry: Registry loaded in 1.083s 
+2024-04-18 09:09:00,946 1 INFO producer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:09:01,193 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:01] "GET / HTTP/1.1" 303 - 22 0.142 1.220
+2024-04-18 09:09:01,211 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:01] "GET /web HTTP/1.1" 303 - 2 0.002 0.011
+2024-04-18 09:09:01,430 1 WARNING producer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:09:01,703 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:01] "GET /web/login HTTP/1.1" 200 - 61 0.088 0.396
+2024-04-18 09:09:02,089 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:09:02,098 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:09:02,131 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:02] "GET /web/binary/company_logo HTTP/1.1" 304 - 3 0.013 0.375
+2024-04-18 09:09:05,797 1 INFO producer odoo.addons.base.models.res_users: Login successful for db:producer login:admin from 172.26.0.1 
+2024-04-18 09:09:05,811 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:05] "POST /web/login HTTP/1.1" 303 - 42 0.058 0.708
+2024-04-18 09:09:06,358 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:06] "GET /web HTTP/1.1" 200 - 75 0.088 0.454
+2024-04-18 09:09:07,697 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:07] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.004 0.008
+2024-04-18 09:09:07,765 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:07] "POST /web/action/load HTTP/1.1" 200 - 8 0.013 0.009
+2024-04-18 09:09:07,769 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:07] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.008 0.016
+2024-04-18 09:09:08,075 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.011
+2024-04-18 09:09:08,092 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "GET /websocket HTTP/1.1" 101 - 1 0.002 0.029
+2024-04-18 09:09:08,117 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-18 09:09:08,136 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.079 0.147
+2024-04-18 09:09:08,166 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.219 0.038
+2024-04-18 09:09:08,213 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.015 0.009
+2024-04-18 09:09:08,222 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:08] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.014 0.015
+2024-04-18 09:09:11,087 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:11] "POST /web/action/load HTTP/1.1" 200 - 11 0.009 0.010
+2024-04-18 09:09:11,168 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:11] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 43 0.040 0.034
+2024-04-18 09:09:11,196 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:11] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.004 0.007
+2024-04-18 09:09:11,222 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:11] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.025 0.013
+2024-04-18 09:09:12,271 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:12] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.004 0.008
+2024-04-18 09:09:12,289 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:12] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.020 0.014
+2024-04-18 09:09:13,861 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:13] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.023 0.013
+2024-04-18 09:09:13,879 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:13] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.006 0.005
+2024-04-18 09:09:16,140 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:09:16,143 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:09:16,143 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:09:17,262 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user admin #2 via 172.26.0.1 
+2024-04-18 09:09:17,293 1 INFO producer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:09:17,304 1 INFO producer odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-04-18 09:09:17,339 1 INFO producer odoo.modules.loading: updating modules list 
+2024-04-18 09:09:17,341 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-18 09:09:19,364 1 INFO producer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:09:19,582 1 INFO producer odoo.modules.loading: Loading module pedidos (53/58) 
+2024-04-18 09:09:20,451 1 WARNING producer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:09:21,103 1 INFO producer odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-18 09:09:21,185 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:09:21,187 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:09:21,545 1 INFO producer odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-18 09:09:21,585 1 INFO producer odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-18 09:09:21,610 1 INFO producer odoo.modules.loading: Module pedidos: loading demo 
+2024-04-18 09:09:21,623 1 INFO producer odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-18 09:09:21,678 1 WARNING producer odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-18 09:09:21,690 1 INFO producer odoo.modules.loading: Module pedidos loaded in 2.11s, 42 queries (+42 other) 
+2024-04-18 09:09:21,696 1 INFO producer odoo.modules.loading: 58 modules loaded in 2.33s, 42 queries (+42 extra) 
+2024-04-18 09:09:23,198 1 ERROR ? consumer: Error en el consumidor: NoBrokersAvailable 
+2024-04-18 09:09:23,632 1 INFO producer odoo.modules.registry: verifying fields for every extended model 
+2024-04-18 09:09:24,965 1 INFO producer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:09:24,978 1 INFO producer odoo.modules.registry: Registry loaded in 7.696s 
+2024-04-18 09:09:24,980 1 INFO producer odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-18 09:09:24,989 1 INFO producer odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-18 09:09:24,992 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:24] "POST /web/dataset/call_button HTTP/1.1" 200 - 3069 3.709 5.147
+2024-04-18 09:09:25,015 1 INFO producer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:09:25,787 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:25] "GET /web HTTP/1.1" 200 - 88 0.060 0.717
+2024-04-18 09:09:26,506 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.005 0.007
+2024-04-18 09:09:26,569 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "POST /web/action/load HTTP/1.1" 200 - 9 0.010 0.010
+2024-04-18 09:09:26,582 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.014 0.020
+2024-04-18 09:09:26,678 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "GET /websocket HTTP/1.1" 101 - 1 0.001 0.006
+2024-04-18 09:09:26,887 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.037 0.028
+2024-04-18 09:09:26,904 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.048 0.035
+2024-04-18 09:09:26,951 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.007 0.010
+2024-04-18 09:09:26,965 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:26] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.012 0.018
+2024-04-18 09:09:27,654 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:27] "POST /web/action/load HTTP/1.1" 200 - 13 0.009 0.013
+2024-04-18 09:09:27,820 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:27] "POST /web/dataset/call_kw/purchase.order/get_views HTTP/1.1" 200 - 85 0.065 0.093
+2024-04-18 09:09:27,861 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:27] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.002 0.008
+2024-04-18 09:09:27,885 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:27] "POST /web/dataset/call_kw/purchase.order/web_search_read HTTP/1.1" 200 - 15 0.014 0.021
+2024-04-18 09:09:27,973 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:27] "POST /web/dataset/call_kw/purchase.order/retrieve_dashboard HTTP/1.1" 200 - 20 0.019 0.013
+2024-04-18 09:09:28,128 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:28] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 304 - 9 0.010 0.019
+2024-04-18 09:09:29,591 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:29] "POST /web/dataset/call_kw/purchase.order/read HTTP/1.1" 200 - 23 0.028 0.016
+2024-04-18 09:09:29,646 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:29] "POST /web/dataset/call_kw/purchase.order.line/read HTTP/1.1" 200 - 15 0.032 0.011
+2024-04-18 09:09:29,777 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:29] "POST /mail/thread/messages HTTP/1.1" 200 - 26 0.034 0.014
+2024-04-18 09:09:29,783 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:29] "POST /mail/thread/data HTTP/1.1" 200 - 32 0.032 0.020
+2024-04-18 09:09:29,829 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:29] "GET /web/bundle/web_editor.assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 11 0.009 0.077
+2024-04-18 09:09:30,208 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:30] "GET /web/image/res.partner/2/avatar_128 HTTP/1.1" 304 - 7 0.005 0.012
+2024-04-18 09:09:31,143 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:31] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.006 0.009
+2024-04-18 09:09:31,150 1 CRITICAL producer producer: TOPIC NAME: P00002 
+2024-04-18 09:09:31,155 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:09:31,159 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:09:31,178 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:31] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.027 0.020
+2024-04-18 09:09:31,188 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:31] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.021 0.022
+2024-04-18 09:09:33,185 1 ERROR producer odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 2044, in __call__
+    response = request._serve_db()
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1633, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 133, in retrying
+    result = func()
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1660, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1864, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 154, in _dispatch
+    result = endpoint(**request.params)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 697, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/dataset.py", line 46, in call_button
+    action = self._call_kw(model, method, args, kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/dataset.py", line 33, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 468, in call_kw
+    result = _call_kw_multi(method, model, args, kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 453, in _call_kw_multi
+    result = method(recs, *args, **kwargs)
+  File "/mnt/extra-addons/pedidos/models/compra.py", line 29, in button_confirm
+    admin_client = KafkaAdminClient(
+  File "/var/lib/odoo/.local/lib/python3.9/site-packages/kafka/admin/client.py", line 208, in __init__
+    self._client = KafkaClient(metrics=self._metrics,
+  File "/var/lib/odoo/.local/lib/python3.9/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/var/lib/odoo/.local/lib/python3.9/site-packages/kafka/client_async.py", line 927, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+2024-04-18 09:09:33,190 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:33] "POST /web/dataset/call_button HTTP/1.1" 200 - 2 0.003 2.048
+2024-04-18 09:09:33,210 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:33] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.004 0.005
+2024-04-18 09:09:33,224 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:09:33] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.008 0.014
+2024-04-18 09:09:47,989 1 INFO producer odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-04-18 09:09:47,996 1 INFO producer odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-04-18 09:12:27,798 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:12:27,799 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:12:27,993 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2024-04-18 09:12:43,865 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:12:43,874 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:12:43,876 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:12:43,878 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-18 09:12:44,344 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:12:44,951 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on de1e1265903e:8069 
+2024-04-18 09:12:52,020 1 INFO producer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:12:52,045 1 INFO producer odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2024-04-18 09:12:52,190 1 WARNING producer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:12:52,199 1 INFO producer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:12:53,686 1 WARNING producer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:12:53,715 1 INFO producer odoo.modules.loading: 58 modules loaded in 1.51s, 0 queries (+0 extra) 
+2024-04-18 09:12:54,062 1 INFO producer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:12:54,071 1 INFO producer odoo.modules.registry: Registry loaded in 2.101s 
+2024-04-18 09:12:54,075 1 INFO producer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:12:54,623 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:12:54] "GET /websocket HTTP/1.1" 101 - 22 0.065 2.590
+2024-04-18 09:12:54,642 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-18 09:13:27,401 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-04-18 09:13:27,402 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-04-18 09:13:27,583 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  
+2024-04-18 09:14:07,075 1 INFO ? odoo: Odoo version 16.0-20240229 
+2024-04-18 09:14:07,093 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-04-18 09:14:07,097 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-04-18 09:14:07,098 1 INFO ? odoo: database: odoo@db_producer:5432 
+2024-04-18 09:14:07,789 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-04-18 09:14:08,631 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on c72f0f408e89:8069 
+2024-04-18 09:14:26,438 1 INFO producer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:14:26,446 1 INFO producer odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-04-18 09:14:26,500 1 WARNING producer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:14:26,504 1 INFO producer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:14:27,093 1 WARNING producer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:14:27,105 1 INFO producer odoo.modules.loading: 58 modules loaded in 0.60s, 0 queries (+0 extra) 
+2024-04-18 09:14:27,257 1 INFO producer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:14:27,264 1 INFO producer odoo.modules.registry: Registry loaded in 0.843s 
+2024-04-18 09:14:27,267 1 INFO producer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:14:27,533 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:27] "GET /websocket HTTP/1.1" 101 - 29 0.033 1.093
+2024-04-18 09:14:27,541 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-04-18 09:14:41,248 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:41] "GET / HTTP/1.1" 303 - 1 0.001 0.002
+2024-04-18 09:14:41,255 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:41] "GET /web HTTP/1.1" 303 - 1 0.000 0.002
+2024-04-18 09:14:41,352 1 WARNING producer odoo.modules.module: Missing `license` key in manifest for 'pedidos', defaulting to LGPL-3 
+2024-04-18 09:14:41,571 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:41] "GET /web/login HTTP/1.1" 200 - 57 0.030 0.279
+2024-04-18 09:14:41,935 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'dashboard', defaulting to LGPL-3 
+2024-04-18 09:14:41,945 1 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'odoo_custom_dashboard', defaulting to LGPL-3 
+2024-04-18 09:14:41,974 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:41] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.004 0.375
+2024-04-18 09:14:45,092 1 INFO producer odoo.addons.base.models.res_users: Login successful for db:producer login:admin from 172.26.0.1 
+2024-04-18 09:14:45,111 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:45] "POST /web/login HTTP/1.1" 303 - 41 0.031 0.654
+2024-04-18 09:14:45,694 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:45] "GET /web HTTP/1.1" 200 - 75 0.053 0.522
+2024-04-18 09:14:46,419 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.003 0.007
+2024-04-18 09:14:46,466 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "POST /web/action/load HTTP/1.1" 200 - 8 0.007 0.007
+2024-04-18 09:14:46,468 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.007 0.011
+2024-04-18 09:14:46,719 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.081
+2024-04-18 09:14:46,721 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "GET /websocket HTTP/1.1" 101 - 1 0.002 0.096
+2024-04-18 09:14:46,745 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.115 0.031
+2024-04-18 09:14:46,773 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.067 0.109
+2024-04-18 09:14:46,812 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.008 0.008
+2024-04-18 09:14:46,821 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:46] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.013 0.010
+2024-04-18 09:14:49,404 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "POST /web/action/load HTTP/1.1" 200 - 10 0.006 0.008
+2024-04-18 09:14:49,557 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "POST /web/dataset/call_kw/res.config.settings/get_views HTTP/1.1" 200 - 44 0.033 0.113
+2024-04-18 09:14:49,743 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "POST /web/dataset/call_kw/res.config.settings/onchange HTTP/1.1" 200 - 127 0.067 0.044
+2024-04-18 09:14:49,907 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "POST /base_setup/demo_active HTTP/1.1" 200 - 3 0.003 0.005
+2024-04-18 09:14:49,928 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "POST /base_setup/data HTTP/1.1" 200 - 6 0.002 0.004
+2024-04-18 09:14:49,971 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "GET /base/static/description/settings.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-04-18 09:14:49,976 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:49] "GET /web/static/img/transparent.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-04-18 09:14:50,054 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:50] "GET /base_setup/static/src/img/app_store.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-04-18 09:14:50,054 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:50] "GET /base_setup/static/src/img/google_play.png HTTP/1.1" 200 - 0 0.000 0.006
+2024-04-18 09:14:51,166 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:51] "POST /web/action/load HTTP/1.1" 200 - 11 0.007 0.012
+2024-04-18 09:14:51,235 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:51] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 41 0.024 0.038
+2024-04-18 09:14:51,317 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:51] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.004 0.008
+2024-04-18 09:14:51,347 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:51] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 40 0.027 0.017
+2024-04-18 09:14:52,360 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:52] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.003 0.010
+2024-04-18 09:14:52,377 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:52] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.019 0.014
+2024-04-18 09:14:53,794 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:53] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 37 0.021 0.013
+2024-04-18 09:14:53,814 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:53] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.006 0.006
+2024-04-18 09:14:56,192 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:14:56,194 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:14:56,195 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['pedidos'] to user admin #2 via 172.26.0.1 
+2024-04-18 09:14:57,006 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user admin #2 via 172.26.0.1 
+2024-04-18 09:14:57,047 1 INFO producer odoo.modules.loading: loading 1 modules... 
+2024-04-18 09:14:57,059 1 INFO producer odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-04-18 09:14:57,086 1 INFO producer odoo.modules.loading: updating modules list 
+2024-04-18 09:14:57,089 1 INFO producer odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 172.26.0.1 
+2024-04-18 09:14:57,995 1 INFO producer odoo.modules.loading: loading 58 modules... 
+2024-04-18 09:14:58,038 1 INFO producer odoo.modules.loading: Loading module pedidos (53/58) 
+2024-04-18 09:14:58,192 1 WARNING producer odoo.models: The model kafka.consumer.sale.order has no _description 
+2024-04-18 09:14:58,344 1 INFO producer odoo.modules.registry: module pedidos: creating or updating database tables 
+2024-04-18 09:14:58,366 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:14:58,368 1 INFO ? kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:14:58,369 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:14:58,493 1 INFO producer odoo.modules.loading: loading pedidos/views/views.xml 
+2024-04-18 09:14:58,494 1 INFO ? kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:14:58,496 1 INFO ? kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:14:58,498 1 WARNING ? kafka.coordinator.consumer: group_id is None: disabling auto-commit. 
+2024-04-18 09:14:58,499 1 INFO ? kafka.consumer.subscription_state: Updating subscribed topics to: ('P00002',) 
+2024-04-18 09:14:58,503 1 INFO ? kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='P00002', partition=0)] 
+2024-04-18 09:14:58,506 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:14:58,510 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:14:58,512 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:14:58,515 1 INFO producer odoo.modules.loading: loading pedidos/views/templates.xml 
+2024-04-18 09:14:58,531 1 INFO producer odoo.modules.loading: Module pedidos: loading demo 
+2024-04-18 09:14:58,532 1 INFO producer odoo.modules.loading: loading pedidos/demo/demo.xml 
+2024-04-18 09:14:58,548 1 WARNING producer odoo.modules.loading: The models ['kafka.consumer.sale.order'] have no access rules in module pedidos, consider adding some, like:
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pedidos.access_kafka_consumer_sale_order,access_kafka_consumer_sale_order,pedidos.model_kafka_consumer_sale_order,base.group_user,1,0,0,0 
+2024-04-18 09:14:58,552 1 INFO producer odoo.modules.loading: Module pedidos loaded in 0.51s, 42 queries (+42 other) 
+2024-04-18 09:14:58,554 1 INFO producer odoo.modules.loading: 58 modules loaded in 0.56s, 42 queries (+42 extra) 
+2024-04-18 09:14:59,046 1 INFO producer odoo.modules.registry: verifying fields for every extended model 
+2024-04-18 09:14:59,557 1 INFO producer odoo.modules.loading: Modules loaded. 
+2024-04-18 09:14:59,570 1 INFO producer odoo.modules.registry: Registry loaded in 2.536s 
+2024-04-18 09:14:59,572 1 INFO producer odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2024-04-18 09:14:59,578 1 INFO producer odoo.modules.registry: Registry changed, signaling through the database 
+2024-04-18 09:14:59,582 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:14:59] "POST /web/dataset/call_button HTTP/1.1" 200 - 3069 1.574 1.821
+2024-04-18 09:14:59,599 1 INFO producer odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-04-18 09:15:00,367 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:00] "GET /web HTTP/1.1" 200 - 88 0.063 0.708
+2024-04-18 09:15:01,257 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 6 0.006 0.010
+2024-04-18 09:15:01,329 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "POST /web/action/load HTTP/1.1" 200 - 9 0.010 0.010
+2024-04-18 09:15:01,340 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 16 0.017 0.016
+2024-04-18 09:15:01,463 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "GET /websocket HTTP/1.1" 101 - 1 0.001 0.006
+2024-04-18 09:15:01,632 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 30 0.042 0.034
+2024-04-18 09:15:01,664 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "POST /mail/init_messaging HTTP/1.1" 200 - 50 0.067 0.043
+2024-04-18 09:15:01,713 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "POST /mail/inbox/messages HTTP/1.1" 200 - 7 0.010 0.012
+2024-04-18 09:15:01,720 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:01] "POST /mail/load_message_failures HTTP/1.1" 200 - 10 0.010 0.015
+2024-04-18 09:15:03,902 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:03] "POST /web/action/load HTTP/1.1" 200 - 13 0.006 0.011
+2024-04-18 09:15:04,038 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:04] "POST /web/dataset/call_kw/purchase.order/get_views HTTP/1.1" 200 - 85 0.043 0.087
+2024-04-18 09:15:04,097 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:04] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.003 0.005
+2024-04-18 09:15:04,115 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:04] "POST /web/dataset/call_kw/purchase.order/web_search_read HTTP/1.1" 200 - 15 0.011 0.017
+2024-04-18 09:15:04,204 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:04] "POST /web/dataset/call_kw/purchase.order/retrieve_dashboard HTTP/1.1" 200 - 20 0.015 0.013
+2024-04-18 09:15:04,328 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:04] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 304 - 9 0.006 0.011
+2024-04-18 09:15:05,572 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "POST /web/dataset/call_kw/purchase.order/read HTTP/1.1" 200 - 23 0.014 0.014
+2024-04-18 09:15:05,615 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "POST /web/dataset/call_kw/purchase.order.line/read HTTP/1.1" 200 - 15 0.017 0.015
+2024-04-18 09:15:05,746 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "POST /mail/thread/messages HTTP/1.1" 200 - 26 0.033 0.018
+2024-04-18 09:15:05,758 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "POST /mail/thread/data HTTP/1.1" 200 - 32 0.036 0.025
+2024-04-18 09:15:05,794 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "GET /web/bundle/web_editor.assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 11 0.007 0.074
+2024-04-18 09:15:05,928 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:05] "GET /web/image/res.partner/2/avatar_128 HTTP/1.1" 304 - 7 0.005 0.010
+2024-04-18 09:15:06,730 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:06] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.006 0.015
+2024-04-18 09:15:06,738 1 CRITICAL producer producer: TOPIC NAME: P00002 
+2024-04-18 09:15:06,743 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:06,746 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:06,750 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:06,751 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:06] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.022 0.019
+2024-04-18 09:15:06,773 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:06] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.024 0.030
+2024-04-18 09:15:06,857 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:06,858 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:06,860 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:06,965 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:06,966 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:06,974 1 INFO producer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:06,976 1 INFO producer kafka.conn: Probing node 1 broker version 
+2024-04-18 09:15:06,978 1 INFO producer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:06,980 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:07,084 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:07,086 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:07,096 1 ERROR producer producer: Error creating the topic: [Error 36] TopicAlreadyExistsError: Request 'CreateTopicsRequest_v3(create_topic_requests=[(topic='P00002', num_partitions=1, replication_factor=1, replica_assignment=[], configs=[])], timeout=30000, validate_only=False)' failed with response 'CreateTopicsResponse_v3(throttle_time_ms=0, topic_errors=[(topic='P00002', error_code=36, error_message="Topic 'P00002' already exists.")])'. 
+2024-04-18 09:15:07,097 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:07,098 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:07,099 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:07,202 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:07,203 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:07,212 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:07,212 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:07,213 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:07,257 1 INFO producer kafka.producer.kafka: Closing the Kafka producer with 9223372036.0 secs timeout. 
+2024-04-18 09:15:07,257 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:07,258 1 CRITICAL producer producer: DATA SENT: b'}\xe4\xed\xc4[\xe5\xc9\xe0\xf8\x85wl\xf7C:\x9a\xba+Tu\xfa\x03\x12l\xe7@\x138Y\xc7O\x11\xd3\xcfD\xed\xa8\x17\xc6R\x9c\xbd\x91n\x93\x9f\x97SA\x8d\xdd$Y\x9c\xcb\x13\xc81\x07N*\x1fV\xf2\xe5\xa0\xe6dv\n;\xc3\xff\xbe\xce\xfdn\x01\xaer\xd8\xdaWx\x99JI\xe2\\\x95.`\xb4*}u\xe4\xb2\n\x8b\x87\x12P\xd6\xa0y\xdfIcn\x8d\x87\xad\xb3.\xe6@@\xcb*\x04\xc5S\'\x81\xf32_\x84\xb0\xed\x90Y\x8eZ>\x83\x80\x9d\xe3\xcf\xbf\x94\x16\n\xfd\x92\xca\x16\xb1\x82\xa5\x8eV#\xcc`;<\x16\xdd:\xde\x91\x973\xd96\xe6\x01P\x8fX\x81\x03\x92\xcc|\xfa[\xaf\x15\xe3\x96\x1fP)\x81\x85\x84\nh\xc3\x004\xc2\xf3Y\x93\xe2\x9d\x83r\xf5[\xb3\x80\x96\xf0c.\x92M\x03C\xd3\xa23\xabI\x1f\x00\x87\xa1\xa6\x1e@\xe3(B\xf3K\x86\x84\xd6\xaf^\xc725\xd3\xa3\xdc\xc70\xc9\x9bD-O\x18\nV\xb7\x91_\\\x93" W8\x9dwI\xc7\x8ax\xc5\xcaF\x85\xb6F[\xb3!\x0e\xb1\x13\x8eaX\n\x14\x9e\x07\n\xb3\x18xS\xd9\xe7\xd3K\xf8\xbexQ\xbd\xe7\xac\xa7\xcb\xc2\xc6\x82\x9b\x9a\xe4\x8d\\f\xd8\xa4\xf9\xb0_3i\x06\xf2\xa1\nx\xcf\xdcu\x9e\xc6\x9e\x8f\x17Z\']\x86\xedG:\x0e\th\xd8\x96r\xf2\x10\x9f+Q\x0b\xe8\xc4\x86d\xbf\x147\xad\xa7\x8c\xa3\xeb?\xe7\x08\xbd\xc1N9\xac\xd9\x1a\xde$\x18I\xb4\xe0\xb9U\x90\x13\x00Q\xaa\xeaA\xed9\x1f\x1e`\xc1\xf7|\x99\xacD>\x88#\xb9\xb4\x19ZL\x13\xb4(\x01\x87\xcf\xaat\x88\x90\x1b\xe2\x08\x91%\x9b"\xac\xcb\x98\x19P\xcc9\x01#\xe0\x0c\x86\xce\xf9\x8d\x88\xf5\x90\xfb\x0b \x15q\xddj\xf9F\rRx\x96\xec\x85\x19(!E,\xc1\xa2\xb9\xccC\xf1\xc5\x1b\x06\xbe\xa1[\xe3\x9c\xc2!\x82\xd5\xe6\xbc\xe2]\xef{\x91)~\xad\x9a\xe3/\xa4\xf1\x89\x0e\xe6\x8e\xd1\x9b\xc4>\xba\r{\xc4\xb4`jS5\xdc!\x01Ho?G\xd9A\xb9\xe9\x06^.' 
+2024-04-18 09:15:07,260 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /web/dataset/call_button HTTP/1.1" 200 - 5 0.008 0.537
+2024-04-18 09:15:07,288 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /web/dataset/call_kw/purchase.order/read HTTP/1.1" 200 - 15 0.007 0.013
+2024-04-18 09:15:07,309 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /web/dataset/call_kw/purchase.order.line/read HTTP/1.1" 200 - 11 0.005 0.009
+2024-04-18 09:15:07,332 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.004 0.007
+2024-04-18 09:15:07,360 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.021 0.017
+2024-04-18 09:15:07,366 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:07] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.019 0.018
+2024-04-18 09:15:34,140 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,140 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,141 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,141 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,141 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /mail/thread/messages HTTP/1.1" 200 - 2 0.002 0.033
+2024-04-18 09:15:34,142 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /web/dataset/call_button HTTP/1.1" 200 - 2 0.002 0.029
+2024-04-18 09:15:34,142 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /mail/thread/data HTTP/1.1" 200 - 2 0.002 0.034
+2024-04-18 09:15:34,143 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /mail/thread/data HTTP/1.1" 200 - 2 0.003 0.025
+2024-04-18 09:15:34,174 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,175 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /mail/thread/data HTTP/1.1" 200 - 2 0.002 0.014
+2024-04-18 09:15:34,176 1 INFO producer odoo.http: Session expired 
+2024-04-18 09:15:34,177 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:34] "POST /mail/thread/messages HTTP/1.1" 200 - 2 0.002 0.017
+2024-04-18 09:15:35,040 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:35] "GET /web HTTP/1.1" 303 - 2 0.002 0.012
+2024-04-18 09:15:35,374 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:35] "GET /web/login HTTP/1.1" 200 - 54 0.044 0.285
+2024-04-18 09:15:35,416 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:35] "GET /web/binary/company_logo HTTP/1.1" 304 - 3 0.002 0.010
+2024-04-18 09:15:37,724 1 INFO producer odoo.addons.base.models.res_users: Login successful for db:producer login:admin from 172.26.0.1 
+2024-04-18 09:15:37,733 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:37] "POST /web/login HTTP/1.1" 303 - 28 0.016 0.669
+2024-04-18 09:15:37,754 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:37] "GET /web HTTP/1.1" 200 - 9 0.005 0.010
+2024-04-18 09:15:38,481 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 304 - 4 0.004 0.007
+2024-04-18 09:15:38,488 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /web/action/load HTTP/1.1" 200 - 11 0.010 0.014
+2024-04-18 09:15:38,634 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.011 0.014
+2024-04-18 09:15:38,638 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "GET /websocket HTTP/1.1" 101 - 1 0.002 0.007
+2024-04-18 09:15:38,654 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /web/dataset/call_kw/purchase.order/get_views HTTP/1.1" 200 - 2 0.002 0.034
+2024-04-18 09:15:38,734 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 13 0.015 0.015
+2024-04-18 09:15:38,759 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /mail/init_messaging HTTP/1.1" 200 - 32 0.032 0.024
+2024-04-18 09:15:38,832 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /web/dataset/call_kw/purchase.order/read HTTP/1.1" 200 - 15 0.013 0.038
+2024-04-18 09:15:38,836 1 INFO ? werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.006
+2024-04-18 09:15:38,858 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "GET /web/image/res.company/1/favicon HTTP/1.1" 304 - 5 0.007 0.015
+2024-04-18 09:15:38,858 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /mail/load_message_failures HTTP/1.1" 200 - 9 0.012 0.020
+2024-04-18 09:15:38,888 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:38] "POST /web/dataset/call_kw/purchase.order.line/read HTTP/1.1" 200 - 11 0.008 0.015
+2024-04-18 09:15:39,114 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:39] "GET /web/bundle/web_editor.assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 1 0.002 0.016
+2024-04-18 09:15:39,133 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:39] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.035 0.031
+2024-04-18 09:15:39,136 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:39] "POST /mail/thread/messages HTTP/1.1" 200 - 22 0.048 0.023
+2024-04-18 09:15:39,512 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:39] "GET /web/image/res.partner/2/avatar_128 HTTP/1.1" 304 - 7 0.017 0.024
+2024-04-18 09:15:39,521 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:39] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 304 - 9 0.016 0.031
+2024-04-18 09:15:44,792 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:44] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.006 0.006
+2024-04-18 09:15:44,799 1 CRITICAL producer producer: TOPIC NAME: P00002 
+2024-04-18 09:15:44,805 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:44,809 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:44,811 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:44,821 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:44] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.021 0.018
+2024-04-18 09:15:44,832 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:44] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.023 0.019
+2024-04-18 09:15:44,918 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:44,919 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:44,920 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:45,024 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:45,026 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:45,034 1 INFO producer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:45,036 1 INFO producer kafka.conn: Probing node 1 broker version 
+2024-04-18 09:15:45,037 1 INFO producer kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:45,038 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:45,143 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:45,143 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:45,145 1 ERROR producer producer: Error creating the topic: [Error 36] TopicAlreadyExistsError: Request 'CreateTopicsRequest_v3(create_topic_requests=[(topic='P00002', num_partitions=1, replication_factor=1, replica_assignment=[], configs=[])], timeout=30000, validate_only=False)' failed with response 'CreateTopicsResponse_v3(throttle_time_ms=0, topic_errors=[(topic='P00002', error_code=36, error_message="Topic 'P00002' already exists.")])'. 
+2024-04-18 09:15:45,146 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to 172.26.0.4:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:45,147 1 INFO producer kafka.conn: Probing node bootstrap-0 broker version 
+2024-04-18 09:15:45,148 1 INFO producer kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:45,251 1 INFO producer kafka.conn: Broker version identified as 2.5.0 
+2024-04-18 09:15:45,253 1 INFO producer kafka.conn: Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup 
+2024-04-18 09:15:45,270 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: connecting to kafka:29093 [('172.26.0.4', 29093) IPv4] 
+2024-04-18 09:15:45,271 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connecting> [IPv4 ('172.26.0.4', 29093)]>: Connection complete. 
+2024-04-18 09:15:45,272 1 INFO ? kafka.conn: <BrokerConnection node_id=bootstrap-0 host=172.26.0.4:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:45,279 1 INFO ? kafka.conn: <BrokerConnection node_id=1 host=kafka:29093 <connected> [IPv4 ('172.26.0.4', 29093)]>: Closing connection.  
+2024-04-18 09:15:45,283 1 CRITICAL producer producer: DATA SENT: b'}\xe4\xed\xc4[\xe5\xc9\xe0\xf8\x85wl\xf7C:\x9a\xba+Tu\xfa\x03\x12l\xe7@\x138Y\xc7O\x11\xd3\xcfD\xed\xa8\x17\xc6R\x9c\xbd\x91n\x93\x9f\x97SA\x8d\xdd$Y\x9c\xcb\x13\xc81\x07N*\x1fV\xf2\xe5\xa0\xe6dv\n;\xc3\xff\xbe\xce\xfdn\x01\xaer\xd8\xdaWx\x99JI\xe2\\\x95.`\xb4*}u\xe4\xb2\n\x8b\x87\x12P\xd6\xa0y\xdfIcn\x8d\x87\xad\xb3.\xe6@@\xcb*\x04\xc5S\'\x81\xf32_\x84\xb0\xed\x90Y\x8eZ>\x83\x80\x9d\xe3\xcf\xbf\x94\x16\n\xfd\x92\xca\x16\xb1\x82\xa5\x8eV#\xcc`;<\x16\xdd:\xde\x91\x973\xd96\xe6\x01P\x8fX\x81\x03\x92\xcc|\xfa[\xaf\x15\xe3\x96\x1fP)\x81\x85\x84\nh\xc3\x004\xc2\xf3Y\x93\xe2\x9d\x83r\xf5[\xb3\x80\x96\xf0c.\x92M\x03C\xd3\xa23\xabI\x1f\x00\x87\xa1\xa6\x1e@\xe3(B\xf3K\x86\x84\xd6\xaf^\xc725\xd3\xa3\xdc\xc70\xc9\x9bD-O\x18\nV\xb7\x91_\\\x93" W8\x9dwI\xc7\x8ax\xc5\xcaF\x85\xb6F[\xb3!\x0e\xb1\x13\x8eaX\n\x14\x9e\x07\n\xb3\x18xS\xd9\xe7\xd3K\xf8\xbexQ\xbd\xe7\xac\xa7\xcb\xc2\xc6\x82\x9b\x9a\xe4\x8d\\f\xd8\xa4\xf9\xb0_3i\x06\xf2\xa1\nx\xcf\xdcu\x9e\xc6\x9e\x8f\x17Z\']\x86\xedG:\x0e\th\xd8\x96r\xf2\x10\x9f+Q\x0b\xe8\xc4\x86d\xbf\x147\xad\xa7\x8c\xa3\xeb?\xe7\x08\xbd\xc1N9\xac\xd9\x1a\xde$\x18I\xb4\xe0\xb9U\x90\x13\x00Q\xaa\xeaA\xed9\x1f\x1e`\xc1\xf7|\x99\xacD>\x88#\xb9\xb4\x19ZL\x13\xb4(\x01\x87\xcf\xaat\x88\x90\x1b\xe2\x08\x91%\x9b"\xac\xcb\x98\x19P\xcc9\x01#\xe0\x0c\x86\xce\xf9\x8d\x88\xf5\x90\xfb\x0b \x15q\xddj\xf9F\rRx\x96\xec\x85\x19(!E,\xc1\xa2\xb9\xccC\xf1\xc5\x1b\x06\xbe\xa1[\xe3\x9c\xc2!\x82\xd5\xe6\xbc\xe2]\xef{\x91)~\xad\x9a\xe3/\xa4\xf1\x89\x0e\xe6\x8e\xd1\x9b\xc4>\xba\r{\xc4\xb4`jS5\xdc!\x01Ho?G\xd9A\xb9\xe9\x06^.' 
+2024-04-18 09:15:45,286 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /web/dataset/call_button HTTP/1.1" 200 - 5 0.010 0.490
+2024-04-18 09:15:45,331 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /web/dataset/call_kw/purchase.order/read HTTP/1.1" 200 - 15 0.012 0.020
+2024-04-18 09:15:45,360 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /web/dataset/call_kw/purchase.order.line/read HTTP/1.1" 200 - 11 0.009 0.011
+2024-04-18 09:15:45,384 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.003 0.009
+2024-04-18 09:15:45,407 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.018 0.015
+2024-04-18 09:15:45,412 1 INFO producer werkzeug: 172.26.0.1 - - [18/Apr/2024 09:15:45] "POST /mail/thread/data HTTP/1.1" 200 - 21 0.016 0.019

@@ -75,4 +75,3 @@ class KafkaConsumerSaleOrder(models.TransientModel):
     def init(self):
         super(KafkaConsumerSaleOrder, self).init()
         self.start_consumer_thread()
-

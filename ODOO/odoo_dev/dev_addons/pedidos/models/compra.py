@@ -18,32 +18,45 @@ class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
-    def button_confirm(self):
 
+
+    def button_confirm(self):
         # res = super(purchase_custom, self).button_confirm()
         kafka_server = "172.26.0.4:29093" 
         topic_name = self.name
-        _logger.critical(topic_name)
-
+        _logger.critical(f'TOPIC NAME: {topic_name}')
 
         admin_client = KafkaAdminClient(
             bootstrap_servers=kafka_server,
             client_id='admin'
         )
 
-        topic = NewTopic(name=topic_name, num_partitions=1, replication_factor=1)
+        self.create_topic(admin_client, topic_name)
+        producer = self.create_producer(kafka_server)
+        kafka_data = self.create_send_data()
+        data_encoded = self.encode_data(kafka_data)
+        self.send_data(producer, topic_name, data_encoded)
 
+        return True
+    
 
+    def create_topic(self, kafka, topic):
+        topic = NewTopic(name=topic, num_partitions=1, replication_factor=1)
         try:
-            admin_client.create_topics(new_topics=[topic], validate_only=False)
+            kafka.create_topics(new_topics=[topic], validate_only=False)
         except Exception as e:
-            _logger.error(f"Error al crear el tÃ³pico: {e}")
+            _logger.error(f"Error creating the topic: {e}")
 
 
-        producer = KafkaProducer(bootstrap_servers=kafka_server,
+    def create_producer(self, ip):
+        producer = KafkaProducer(bootstrap_servers=ip,
                                  max_block_ms=1048588,
                                  compression_type='gzip')
-        kafka_data = {
+        return producer
+    
+
+    def create_send_data(self):
+        send_data = {
             "sender_ip": local_ip,
             "partner_id": self.partner_id.id,
             "name": self.name,
@@ -52,40 +65,50 @@ class PurchaseOrder(models.Model):
             "order_line": [],
             "company_id":self.company_id.id,
             "user_id": self.user_id.id,
+            "amount_total": 0
         }
+        self.add_products(send_data)
+
+        return send_data
         
-        amount_total = 0
-        for line in self.order_line:
+
+    def add_products(self, purchase):
+        for PRODUCT in self.order_line:
             product_info = {
-                "product_id": line.product_id.id,
-                "name": line.name,
-                "product_uom_qty": line.product_qty,
-                "price_unit": line.price_unit,
-                "tax_id": [(6, 0, line.taxes_id.ids)],
-                "price_subtotal": line.price_subtotal,
+                "product_id": PRODUCT.product_id.id,
+                "name": PRODUCT.name,
+                "product_uom_qty": PRODUCT.product_qty,
+                "price_unit": PRODUCT.price_unit,
+                "tax_id": [(6, 0, PRODUCT.taxes_id.ids)],
+                "price_subtotal": PRODUCT.price_subtotal,
                 "discount": 0  # No hay campo de descuento en purchase.order, establecemos a 0
             }
-            amount_total += line.price_subtotal
-            kafka_data["order_line"].append((0, 0, product_info))
+            purchase["order_line"].append((0, 0, product_info))
+            self.add_product_price(purchase, PRODUCT.price_subtotal)
 
-        #Encriptación    
-        kafka_data["amount_total"] = amount_total
-        serialized_data = json.dumps(kafka_data).encode('utf-8')
+
+    def add_product_price(self, purchase, price):
+        purchase["amount_total"] += price
+
+
+    def encode_data(self, data):
+        serialized_data = json.dumps(data).encode('utf-8')
         padder = padding.PKCS7(128).padder()
         padded_data = padder.update(serialized_data) + padder.finalize()
         cipher = Cipher(algorithms.AES(self.__key), modes.CBC(self.__iv))
         encryptor = cipher.encryptor()
         message_encrypted = encryptor.update(padded_data) + encryptor.finalize()
 
+        return message_encrypted
+    
 
+    def send_data(self, producer, topic, data):
         try:
-            producer.send(topic_name, message_encrypted)
+            producer.send(topic, data)
             producer.flush()
         except Exception as e:
-            _logger.error(f"Error al enviar el mensaje a Kafka: {e}")
+            _logger.error(f"Error sending message: {e}")
         finally:
             producer.close()
 
-        _logger.critical(message_encrypted)
-
-        return True
+        _logger.critical(f'DATA SENT: {data}')
