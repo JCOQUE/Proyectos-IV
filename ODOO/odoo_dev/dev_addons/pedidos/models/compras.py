@@ -13,6 +13,7 @@ import socket
 _logger = logging.getLogger('producer')
 hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
+_logger.critical (f'mOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOZAAAAAAAAAAAAAAAAAAAAAAAA {local_ip}')
 
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
@@ -22,7 +23,7 @@ class PurchaseOrder(models.Model):
 
     def button_confirm(self):
         # res = super(purchase_custom, self).button_confirm()
-        kafka_server = "172.26.0.80:29093" 
+        kafka_server = "192.168.0.33:31234" 
         topic_name = self.name
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
@@ -33,12 +34,11 @@ class PurchaseOrder(models.Model):
     
 
         self.create_topic(admin_client, topic_name)
-        admin_client.close()
         producer = self.create_producer(kafka_server)
         kafka_data = self.create_send_data()
         data_encoded = self.encode_data(kafka_data)
         self.send_data(producer, topic_name, data_encoded)
-
+        admin_client.close()
         return True
     
 
@@ -52,9 +52,9 @@ class PurchaseOrder(models.Model):
 
 
     def create_producer(self, ip):
-        producer = KafkaProducer(bootstrap_servers=ip,
+        producer = KafkaProducer(bootstrap_servers=['192.168.0.33:31234'],
                                  max_block_ms=1048588,
-                                 api_version=(0,11,5),
+                                 api_version=(2,0,0),
                                  compression_type='gzip')
         return producer
     

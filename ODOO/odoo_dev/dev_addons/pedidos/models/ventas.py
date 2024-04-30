@@ -30,13 +30,12 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         hostname = socket.gethostname()
         local_ip = socket.gethostbyname(hostname)
         try:
-            time.sleep(4)
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
-                loggerC.critical('Processing message...')
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 if str(mensaje['sender_ip']) != str(local_ip):
+                    loggerC.critical('Processing message...')
                     self.read_message(mensaje)
         except Exception as e:
             loggerC.error(f"Error en el consumidor: {e}")
@@ -45,11 +44,11 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 PEDIDOS.close()
 
     def connect_kafka(self):
-        kafka_server = '172.26.0.80:29093'
+        kafka_server = '127.0.0.1:29093'
         topic_name = 'P00002'
         msg = KafkaConsumer(
             topic_name,
-            bootstrap_servers=kafka_server,
+            bootstrap_servers="192.168.0.33:31234",
             auto_offset_reset='latest',
             enable_auto_commit=True,
         )
