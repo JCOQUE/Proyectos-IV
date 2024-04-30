@@ -11,11 +11,10 @@ echo. Observe la [33mINTERNAL-IP[0m que se muestra a continuacion:
 echo. & echo. & echo. & echo. 
 kubectl get nodes -o wide
 echo. & echo. & echo. & echo.  
-set /p input="Introduzca la INTERNAL-IP: "
 echo. & echo.
 echo --------------------------------------------------------------------
 echo. &
-python create_kafka.py %input%
+python create_kafka.py 
 echo. &
 echo --------------------------------------------------------------------
 echo. & echo. & echo. & echo. 

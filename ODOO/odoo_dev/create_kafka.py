@@ -1,15 +1,17 @@
 import sys
 import yaml
 import re
+import socket
 
-def is_valid_ipv4(ip):
-    ipv4_regex = r'\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b'
+# def is_valid_ipv4():
+#     ipv4_regex = r'\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b'
 
-    if bool(re.match(ipv4_regex, ip)):
-        print('IPv4 correcta.')
-    else:
-        print('IPv4 incorrecta. Pruebe de nuevo')
-        sys.exit()
+#     if bool(re.match(ipv4_regex, ip)):
+#         print('IPv4 correcta.')
+#     else:
+#         print('IPv4 incorrecta. Pruebe de nuevo')
+#         sys.exit()
+
 
 
 def save_file(file):
@@ -23,7 +25,7 @@ def save_file(file):
         sys.exit()
 
 
-def create_yaml(node_ip):
+def create_yaml(local_ip):
     data = [
         {
             "apiVersion": "v1",
@@ -93,7 +95,7 @@ def create_yaml(node_ip):
                                     },
                                     {
                                         "name": "KAFKA_ADVERTISED_LISTENERS",
-                                        "value": f"PLAINTEXT_INTERNAL://{node_ip}:31234"
+                                        "value": f"PLAINTEXT_INTERNAL://{local_ip}:31234"
                                     },
                                     {
                                         "name": "KAFKA_INTER_BROKER_LISTENER_NAME",
@@ -128,9 +130,11 @@ def create_yaml(node_ip):
     save_file(yaml_data)
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        is_valid_ipv4(sys.argv[1])
-        print("Creando YAML...")
-        create_yaml(sys.argv[1])
+    # if len(sys.argv) == 2:
+        #is_valid_ipv4(sys.argv[1])
+    print("Creando YAML...")
+    hostname = socket.gethostname()
+    local_ip = socket.gethostbyname(hostname)
+    create_yaml()
 
 

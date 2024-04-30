@@ -45,7 +45,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
 
     def connect_kafka(self):
         kafka_server = '127.0.0.1:29093'
-        topic_name = 'P00002'
+        topic_name = 'P00004'
         msg = KafkaConsumer(
             topic_name,
             bootstrap_servers="192.168.0.33:31234",
