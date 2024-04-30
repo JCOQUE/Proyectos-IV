@@ -80,10 +80,6 @@ def create_yaml(node_ip):
                                 ],
                                 "env": [
                                     {
-                                        "name": "KAFKA_BROKER_ID",
-                                        "value": "1"
-                                    },
-                                    {
                                         "name": "KAFKA_ZOOKEEPER_CONNECT",
                                         "value": "zookeeper-service:2181"
                                     },
