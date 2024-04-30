@@ -58,7 +58,7 @@ def create_yaml(local_ip):
                 }
             },
             "spec": {
-                "replicas": 2,
+                "replicas": 1,
                 "selector": {
                     "matchLabels": {
                         "app": "kafka"
@@ -135,6 +135,7 @@ if __name__ == "__main__":
     print("Creando YAML...")
     hostname = socket.gethostname()
     local_ip = socket.gethostbyname(hostname)
-    create_yaml()
+    print(local_ip)
+    create_yaml(local_ip)
 
 

@@ -30,8 +30,6 @@ class PurchaseOrder(models.Model):
             bootstrap_servers=kafka_server,
             client_id='admin'
         )
-        _logger.critical('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
-        #admin_client.delete_topics(topics= ['P00002'])
         self.create_topic(admin_client, topic_name)
         producer = self.create_producer(kafka_server)
         kafka_data = self.create_send_data()

@@ -19,7 +19,7 @@ metadata:
     app: kafka
   name: kafka-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: kafka
@@ -40,6 +40,12 @@ spec:
           value: PLAINTEXT_INTERNAL://192.168.0.33:31234
         - name: KAFKA_INTER_BROKER_LISTENER_NAME
           value: PLAINTEXT_INTERNAL
+        - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
+          value: '1'
+        - name: KAFKA_TRANSACTION_STATE_LOG_MIN_ISR
+          value: '1'
+        - name: KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR
+          value: '1'
         image: confluentinc/cp-kafka:7.0.1
         name: broker
         ports:
