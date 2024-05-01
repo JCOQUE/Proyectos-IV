@@ -9,4 +9,5 @@ class purchase_agreement(models.Model):
     name = fields.Char()
     
     def send_pa(self):
-        _logger.critical('PUUUUUUUURCHAAAAAAAAAAAAAAASE')
+        for record in self:
+            _logger.critical('PUUUUUUUURCHAAAAAAAAAAAAAAASE: %s', record.name)
