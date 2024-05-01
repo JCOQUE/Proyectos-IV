@@ -28,7 +28,7 @@ class purchase_agreement(models.Model):
         receiver = self.get_receiver()
 
         kafka_server = "192.168.0.33:31234" 
-        topic_name = 'PA'
+        topic_name = 'PurchAgr'
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
         admin_client = KafkaAdminClient(
@@ -49,7 +49,7 @@ class purchase_agreement(models.Model):
         with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
             ip_names = json.load(json_file)
             _logger.critical(ip_names)
-            
+
             for ip, empresa in ip_names.items():
                 if str(ip) == str(local_ip):
                     self.set_ID(empresa)
@@ -86,7 +86,6 @@ class purchase_agreement(models.Model):
 
     def create_send_data(self, receiver):
         send_data = {
-            "type": 'PA',
             'sender': str(self.ID),
             'receiver': receiver           
         }
@@ -106,6 +105,7 @@ class purchase_agreement(models.Model):
 
     def send_data(self, producer, topic, data):
         try:
+            _logger.critical('SENDING MESSAGE...')
             producer.send(topic, data)
             producer.flush()
         except Exception as e:

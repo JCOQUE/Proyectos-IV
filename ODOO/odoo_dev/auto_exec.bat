@@ -7,6 +7,7 @@ echo. & echo.
 kubectl config get-contexts
 echo. 
 kubectl config use-context docker-desktop
+echo {"Amazon": [], "Nike":[]} > dev_addons/agreement_accepted.json
 echo. & echo. & echo. & echo. 
 echo.  Reseteando kubernetes...
 echo. & echo. & echo. & echo. 

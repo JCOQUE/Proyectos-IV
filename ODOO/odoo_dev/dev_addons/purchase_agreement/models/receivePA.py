@@ -8,6 +8,7 @@ import json
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 import hashlib
+import os
 
 loggerC = logging.getLogger('consumer')
 
@@ -45,12 +46,15 @@ class receivePA(models.TransientModel):
         threaded_calculation.daemon = True
         threaded_calculation.start()
 
-    @api.model
+
     def consume_messages(self):
         try:
             PEDIDOS = self.connect_kafka()
+            loggerC.critical(f'aqui {self.ID}=================={PEDIDOS}')
             for consumer_record in PEDIDOS:
+                loggerC.critical(f'aqui {self.ID}=================={consumer_record}')
                 mensaje_encoded = consumer_record.value
+                loggerC.critical(mensaje_encoded)
                 mensaje = self.decode_message(mensaje_encoded)
                 loggerC.critical(mensaje)
                 if str(mensaje['receiver']) == self.ID:
@@ -65,13 +69,14 @@ class receivePA(models.TransientModel):
 
     def connect_kafka(self):
         kafka_server = '192.168.0.33:31234'
-        topic_name = 'PA'
+        topic_name = 'PurchAgr'
         msg = KafkaConsumer(
             topic_name,
             bootstrap_servers=[kafka_server],
             auto_offset_reset='latest',
             enable_auto_commit=True,
         )
+  
         return msg
 
     def decode_message(self, mensaje_encryted):
@@ -100,7 +105,7 @@ class receivePA(models.TransientModel):
     
 
     def add_acceptance(self, sender):
-        with open('/mnt/extra-addons/accepted.json', 'r') as json_file:
+        with open('/mnt/extra-addons/agreement_accepted.json', 'r') as json_file:
             accepted = json.load(json_file)
             if sender in accepted[self.ID]:
                 return True
@@ -110,7 +115,7 @@ class receivePA(models.TransientModel):
                 return False
             
     def update_accepted(self, accepted):
-        with open('/mnt/extra-addons/accepted.json', 'w') as json_file:
+        with open('/mnt/extra-addons/agreement_accepted.json', 'w') as json_file:
             json.dump(accepted, json_file)
 
 

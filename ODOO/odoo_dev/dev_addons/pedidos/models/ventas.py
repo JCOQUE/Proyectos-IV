@@ -66,7 +66,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
 
     def connect_kafka(self):
         kafka_server = '192.168.0.33:31234'
-        topic_name = 'P00004'
+        topic_name = 'PURCHASES'
         msg = KafkaConsumer(
             topic_name,
             bootstrap_servers=[kafka_server],
@@ -87,7 +87,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         return mensaje_decryted
     
     def check_agreement(self, mensaje):
-        with open('/mnt/extra-addons/accepted.json', 'r') as json_file:
+        with open('/mnt/extra-addons/agreement_accepted.json', 'r') as json_file:
             agreement_accepted = json.load(json_file)
             
             if mensaje['sender'] in agreement_accepted[self.ID]:

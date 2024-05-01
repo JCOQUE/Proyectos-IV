@@ -46,7 +46,7 @@ class PurchaseOrder(models.Model):
         self.set_sender()
 
         kafka_server = "192.168.0.33:31234" 
-        topic_name = self.name
+        topic_name = 'PURCHASES'
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
         admin_client = KafkaAdminClient(
