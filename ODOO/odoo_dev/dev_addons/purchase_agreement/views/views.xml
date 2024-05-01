@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="purchase_agreement.list">
+      <field name="name">purchase agreement list</field>
+      <field name="model">purchase_agreement.purchase_agreement</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="purchase_agreement.action_purchase_window">
+      <field name="name">purchase agreement list</field>
+      <field name="res_model">purchase_agreement.purchase_agreement</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Purchase Agreement" id="purchase_agreement.root" action="purchase_agreement.action_purchase_window"/>
+
+    </data>
+</odoo>

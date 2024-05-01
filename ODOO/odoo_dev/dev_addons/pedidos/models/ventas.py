@@ -44,11 +44,11 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 PEDIDOS.close()
 
     def connect_kafka(self):
-        kafka_server = '127.0.0.1:29093'
+        kafka_server = '192.168.0.33:31234'
         topic_name = 'P00004'
         msg = KafkaConsumer(
             topic_name,
-            bootstrap_servers="192.168.0.33:31234",
+            bootstrap_servers=[kafka_server],
             auto_offset_reset='latest',
             enable_auto_commit=True,
         )

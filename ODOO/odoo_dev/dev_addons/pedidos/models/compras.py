@@ -49,7 +49,7 @@ class PurchaseOrder(models.Model):
 
 
     def create_producer(self, ip):
-        producer = KafkaProducer(bootstrap_servers=['192.168.0.33:31234'],
+        producer = KafkaProducer(bootstrap_servers=[ip],
                                  max_block_ms=1048588,
                                  api_version=(2,0,0),
                                  compression_type='gzip')

@@ -3,15 +3,6 @@ import yaml
 import re
 import socket
 
-# def is_valid_ipv4():
-#     ipv4_regex = r'\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b'
-
-#     if bool(re.match(ipv4_regex, ip)):
-#         print('IPv4 correcta.')
-#     else:
-#         print('IPv4 incorrecta. Pruebe de nuevo')
-#         sys.exit()
-
 
 
 def save_file(file):
