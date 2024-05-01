@@ -6,7 +6,7 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <button name="send_pa" string="Send PA" type="object" class="oe_highlight"/>
+          <button name="send_pa" string="Send Purchase Agreement" type="object" class="oe_highlight"/>
         </tree>
       </field>
     </record>

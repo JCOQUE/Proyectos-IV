@@ -41,5 +41,5 @@ echo. Proceda a abrir una pestaña de un navegador y escriba en ella [33mlocalh
 echo. & echo.
 echo. Ahora, en otra pestaña, de la misma manera, introduzca [33mlocalhost:8070[0m 
 echo. & echo. & echo.
-echo [36m NOTA:[0m Recuerda actualizar los modulos.
+echo [36m NOTA:[0m Recuerde actualizar los modulos.
 echo. & echo. & echo. & echo. 

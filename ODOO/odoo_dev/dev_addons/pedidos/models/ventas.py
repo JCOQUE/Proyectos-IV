@@ -32,6 +32,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         try:
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
+                loggerC.critical('Mensaje recibido')
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 if str(mensaje['sender_ip']) != str(local_ip):
