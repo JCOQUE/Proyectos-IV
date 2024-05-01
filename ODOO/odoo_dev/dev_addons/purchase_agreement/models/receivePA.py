@@ -50,7 +50,6 @@ class receivePA(models.TransientModel):
         try:
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
-                loggerC.critical('Mensaje recibido')
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 loggerC.critical(mensaje)
@@ -96,7 +95,6 @@ class receivePA(models.TransientModel):
                     loggerC.critical('Purchase agreement already made')
                 else:
                     loggerC.critical('Purchase agreement accepted!')
-                self.read_message(mensaje)
             else:
                 loggerC.critical('Purchase agreement declined.')
     
@@ -114,11 +112,6 @@ class receivePA(models.TransientModel):
     def update_accepted(self, accepted):
         with open('/mnt/extra-addons/accepted.json', 'w') as json_file:
             json.dump(accepted, json_file)
-
-    def read_message(self, pedido):
-        pedido.pop('sender_ip', None)
-        loggerC.critical(pedido)
-        loggerC.critical('MENSAJE RECIBIDO CONSUMER')
 
 
 

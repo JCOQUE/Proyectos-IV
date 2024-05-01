@@ -18,10 +18,33 @@ class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
+    ID  = None
+    send_rec_hardcoded = {'Amazon':'Nike',
+                        'Nike':'Amazon'} #sender:receiver
 
+    def set_ID(self, empresa):
+        PurchaseOrder.ID = empresa
+
+
+    def get_ip(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        return ip
+    
+
+    def set_sender(self):
+        local_ip = self.get_ip()
+        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
+            ip_names = json.load(json_file)            
+            for ip, empresa in ip_names.items():
+                if str(ip) == str(local_ip):
+                    self.set_ID(empresa)
 
     def button_confirm(self):
         # res = super(purchase_custom, self).button_confirm()
+
+        self.set_sender()
+
         kafka_server = "192.168.0.33:31234" 
         topic_name = self.name
         _logger.critical(f'TOPIC NAME: {topic_name}')
@@ -33,6 +56,7 @@ class PurchaseOrder(models.Model):
         self.create_topic(admin_client, topic_name)
         producer = self.create_producer(kafka_server)
         kafka_data = self.create_send_data()
+        _logger.critical(kafka_data)
         data_encoded = self.encode_data(kafka_data)
         self.send_data(producer, topic_name, data_encoded)
         admin_client.close()
@@ -58,7 +82,8 @@ class PurchaseOrder(models.Model):
 
     def create_send_data(self):
         send_data = {
-            "sender_ip": local_ip,
+            "sender": self.ID,
+            "receiver": self.send_rec_hardcoded[self.ID],
             "partner_id": self.partner_id.id,
             "name": self.name,
             "date_order": self.date_order.strftime('%Y-%m-%d'),

@@ -15,10 +15,30 @@ class KafkaConsumerSaleOrder(models.TransientModel):
     _name = 'kafka.consumer.sale.order'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
+    ID = None
 
     def init(self):
         super(KafkaConsumerSaleOrder, self).init()
+        self.set_receiver()
         self.start_consumer_thread()
+
+    def set_ID(self, empresa):
+        KafkaConsumerSaleOrder.ID = empresa
+
+
+    def get_ip(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        return ip
+    
+
+    def set_receiver(self):
+        local_ip = self.get_ip()
+        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
+            ip_names = json.load(json_file)            
+            for ip, empresa in ip_names.items():
+                if str(ip) == str(local_ip):
+                    self.set_ID(empresa)
 
     def start_consumer_thread(self):
         threaded_calculation = threading.Thread(target=self.consume_messages)
@@ -32,12 +52,12 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         try:
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
-                loggerC.critical('Mensaje recibido')
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
-                if str(mensaje['sender_ip']) != str(local_ip):
+                if str(mensaje['receiver']) == self.ID:
+                    loggerC.critical(f'This message is for me: {self.ID}')
                     loggerC.critical('Processing message...')
-                    self.read_message(mensaje)
+                    self.check_agreement(mensaje)
         except Exception as e:
             loggerC.error(f"Error en el consumidor: {e}")
         finally:
@@ -65,13 +85,24 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         mensaje_decryted = json.loads(unpadded_data.decode('utf-8'))
         
         return mensaje_decryted
+    
+    def check_agreement(self, mensaje):
+        with open('/mnt/extra-addons/accepted.json', 'r') as json_file:
+            agreement_accepted = json.load(json_file)
+            
+            if mensaje['sender'] in agreement_accepted[self.ID]:
+                loggerC.critical(f'Good! The purchase agreement was already accepted from {self.ID} to {mensaje["sender"]}. Still reading the message...')
+                self.read_message(mensaje)
+            else:
+                loggerC.critical('Purchase agreement either not made yet or previously declined. Stopped from reading the message.')
 
     def read_message(self, pedido):
-        pedido.pop('sender_ip', None)
+        pedido.pop('sender', None)
+        pedido.pop('receiver',None)
         loggerC.critical(pedido)
-        loggerC.critical('MENSAJE RECIBIDO CONSUMER')
         try:
             self.add_sale_record(pedido)
+            loggerC.critical('Order added to the list successfully!')
         except Exception as e:
             loggerC.error(f"Error al mandar mensaje: {e}")
 
