@@ -4,6 +4,8 @@ from kafka.admin import KafkaAdminClient, NewTopic
 import logging 
 import json 
 import hashlib
+import socket
+import os
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 
@@ -14,14 +16,18 @@ class purchase_agreement(models.Model):
     _description = 'purchase_agreement.purchase_agreement'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
+    ID = None
+
+    def set_ID(self, empresa):
+        purchase_agreement.ID = empresa
 
     name = fields.Char()
     
     def send_pa(self):
-        receiver = None
-        for record in self:
-            _logger.critical('PUUUUUUUURCHAAAAAAAAAAAAAAASE: %s', record.name)
-            receiver = record.name
+        sender = self.set_sender()
+        receiver = self.get_receiver()
+        
+        
 
         kafka_server = "192.168.0.33:31234" 
         topic_name = 'PA'
@@ -39,6 +45,32 @@ class purchase_agreement(models.Model):
         admin_client.close()
         return True
     
+    
+    def set_sender(self):
+        local_ip = self.get_ip()
+        current_directory = os.getcwd()
+        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
+            ip_names = json.load(json_file)
+            _logger.critical(ip_names)
+            for ip, empresa in ip_names.items():
+                if str(ip) == str(local_ip):
+                    self.set_ID(empresa)
+                    _logger.critical(f'IIIIIIIIIIIIIIDDDDDDDDDDD: {self.ID}')
+
+    
+    def get_receiver(self):
+        receiver = None
+        for receiver in self:
+            _logger.critical('PUUUUUUUURCHAAAAAAAAAAAAAAASE: %s', receiver.name)
+            receiver = receiver.name
+        return receiver
+    
+
+    def get_ip(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        return ip  
+    
 
     def create_topic(self, kafka, topic):
         topic = NewTopic(name=topic, num_partitions=1, replication_factor=1)
@@ -47,7 +79,6 @@ class purchase_agreement(models.Model):
         except Exception as e:
             _logger.error(f"Error creating the topic: {e}")
         
-
 
     def create_producer(self, ip):
         producer = KafkaProducer(bootstrap_servers=[ip],
@@ -60,11 +91,11 @@ class purchase_agreement(models.Model):
     def create_send_data(self, receiver):
         send_data = {
             "type": 'PA',
-            'sender': 'Amazon',
+            'sender': str(self.ID),
             'receiver': receiver           
         }
         return send_data
-
+    
 
     def encode_data(self, data):
         serialized_data = json.dumps(data).encode('utf-8')
