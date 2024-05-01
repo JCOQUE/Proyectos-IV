@@ -24,10 +24,8 @@ class purchase_agreement(models.Model):
     name = fields.Char()
     
     def send_pa(self):
-        sender = self.set_sender()
+        self.set_sender()
         receiver = self.get_receiver()
-        
-        
 
         kafka_server = "192.168.0.33:31234" 
         topic_name = 'PA'
@@ -48,20 +46,18 @@ class purchase_agreement(models.Model):
     
     def set_sender(self):
         local_ip = self.get_ip()
-        current_directory = os.getcwd()
         with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
             ip_names = json.load(json_file)
             _logger.critical(ip_names)
+            
             for ip, empresa in ip_names.items():
                 if str(ip) == str(local_ip):
                     self.set_ID(empresa)
-                    _logger.critical(f'IIIIIIIIIIIIIIDDDDDDDDDDD: {self.ID}')
 
     
     def get_receiver(self):
         receiver = None
         for receiver in self:
-            _logger.critical('PUUUUUUUURCHAAAAAAAAAAAAAAASE: %s', receiver.name)
             receiver = receiver.name
         return receiver
     

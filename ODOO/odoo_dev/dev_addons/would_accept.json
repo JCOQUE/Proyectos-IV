@@ -1,0 +1,4 @@
+{
+   "Amazon": ["Nike", "Adidas", "Puma"],
+   "Nike": ["Amazon", "E-bay"]
+}

@@ -15,10 +15,30 @@ class receivePA(models.TransientModel):
     _name = 'receive.pa'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
+    ID = None
 
     def init(self):
         super(receivePA, self).init()
+        self.set_receiver()
         self.start_consumer_thread()
+
+    def set_ID(self, empresa):
+        receivePA.ID = empresa
+
+    def get_ip(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        return ip 
+    
+    def set_receiver(self):
+        local_ip = self.get_ip()
+        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
+            ip_names = json.load(json_file)
+            loggerC.critical(ip_names)
+            
+            for ip, empresa in ip_names.items():
+                if str(ip) == str(local_ip):
+                    self.set_ID(empresa)
 
     def start_consumer_thread(self):
         threaded_calculation = threading.Thread(target=self.consume_messages)
@@ -27,8 +47,6 @@ class receivePA(models.TransientModel):
 
     @api.model
     def consume_messages(self):
-        hostname = socket.gethostname()
-        local_ip = socket.gethostbyname(hostname)
         try:
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
@@ -36,9 +54,10 @@ class receivePA(models.TransientModel):
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 loggerC.critical(mensaje)
-                if str(mensaje['sender']) == str('Amazon'):
+                if str(mensaje['receiver']) == self.ID:
+                    loggerC.critical(f'This message is for me: {self.ID}')
                     loggerC.critical('Processing message...')
-                    self.read_message(mensaje)
+                    self.check_agreement(mensaje)
         except Exception as e:
             loggerC.error(f"Error en el consumidor: {e}")
         finally:
@@ -67,14 +86,40 @@ class receivePA(models.TransientModel):
         
         return mensaje_decryted
 
+    def check_agreement(self, mensaje):
+        with open('/mnt/extra-addons/would_accept.json', 'r') as json_file:
+            would_accept = json.load(json_file)
+            
+            if mensaje['sender'] in would_accept[self.ID]:
+                already_accepted = self.add_acceptance(mensaje['sender'])
+                if already_accepted:
+                    loggerC.critical('Purchase agreement already made')
+                else:
+                    loggerC.critical('Purchase agreement accepted!')
+                self.read_message(mensaje)
+            else:
+                loggerC.critical('Purchase agreement declined.')
+    
+
+    def add_acceptance(self, sender):
+        with open('/mnt/extra-addons/accepted.json', 'r') as json_file:
+            accepted = json.load(json_file)
+            if sender in accepted[self.ID]:
+                return True
+            else:
+                accepted[self.ID].append(sender)
+                self.update_accepted(accepted)
+                return False
+            
+    def update_accepted(self, accepted):
+        with open('/mnt/extra-addons/accepted.json', 'w') as json_file:
+            json.dump(accepted, json_file)
+
     def read_message(self, pedido):
         pedido.pop('sender_ip', None)
         loggerC.critical(pedido)
         loggerC.critical('MENSAJE RECIBIDO CONSUMER')
-        # try:
-        #     self.add_sale_record(pedido)
-        # except Exception as e:
-        #     loggerC.error(f"Error al mandar mensaje: {e}")
+
 
 
     
