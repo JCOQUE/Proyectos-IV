@@ -12,45 +12,54 @@ import os
 
 loggerC = logging.getLogger('consumer')
 
-class receivePA(models.TransientModel):
-    _name = 'receive.pa'
+class prkprueba(models.Model):
+    _name = 'prkprueba'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
     ID = None
 
     def init(self):
-        super(receivePA, self).init()
+        loggerC.critical('PA HE ENTRADO EN INIT')
+        #super(receivePA, self).init()
         self.set_receiver()
+        loggerC.critical('PA VOY A LLAMAR')
         self.start_consumer_thread()
 
+
     def set_ID(self, empresa):
-        receivePA.ID = empresa
+        prkprueba.ID = empresa
+
 
     def get_ip(self):
         hostname = socket.gethostname()
         ip = socket.gethostbyname(hostname)
         return ip 
     
+
     def set_receiver(self):
+        loggerC.critical('AL TOQUE MI ARMA')
         local_ip = self.get_ip()
         with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
             ip_names = json.load(json_file)
             loggerC.critical(ip_names)
-            
             for ip, empresa in ip_names.items():
                 if str(ip) == str(local_ip):
                     self.set_ID(empresa)
 
+
     def start_consumer_thread(self):
+        loggerC.critical('PA HE ENTRADO EN LEER THREAD')
         threaded_calculation = threading.Thread(target=self.consume_messages)
         threaded_calculation.daemon = True
         threaded_calculation.start()
 
 
+    @api.model
     def consume_messages(self):
+        loggerC.critical('PA HE ENTRADO EN LEER MENSAJES')
         try:
             PEDIDOS = self.connect_kafka()
-            loggerC.critical(f'aqui {self.ID}=================={PEDIDOS}')
+            loggerC.critical(f'aqui PA {self.ID}=================={PEDIDOS}')
             for consumer_record in PEDIDOS:
                 loggerC.critical(f'aqui {self.ID}=================={consumer_record}')
                 mensaje_encoded = consumer_record.value

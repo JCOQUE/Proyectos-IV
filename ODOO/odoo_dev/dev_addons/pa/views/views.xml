@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="pa.list">
+      <field name="name">pa list</field>
+      <field name="model">pa.pa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <button name="send_pa" string="Send Purchase Agreement" type="object" class="oe_highlight"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pa.action_purchase_window">
+      <field name="name">pa list</field>
+      <field name="res_model">pa.pa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Purchase Agreement" id="pa.root" action="pa.action_purchase_window"/>
+
+    </data>
+</odoo>
