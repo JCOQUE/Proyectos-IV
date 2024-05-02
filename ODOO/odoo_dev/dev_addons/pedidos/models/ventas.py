@@ -47,12 +47,10 @@ class KafkaConsumerSaleOrder(models.TransientModel):
 
     @api.model
     def consume_messages(self):
-        loggerC.critical('PEDIDOS HE ENTRADO EN LEER MENSAJES')
         hostname = socket.gethostname()
         local_ip = socket.gethostbyname(hostname)
         try:
             PEDIDOS = self.connect_kafka()
-            loggerC.critical(f'aqui PEDIDOS {self.ID}=================={PEDIDOS}')
             for consumer_record in PEDIDOS:
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)

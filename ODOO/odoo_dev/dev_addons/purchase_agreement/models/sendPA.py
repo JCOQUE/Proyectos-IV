@@ -18,11 +18,13 @@ class purchase_agreement(models.Model):
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
     ID = None
 
+    name = fields.Char()
+    
+
     def set_ID(self, empresa):
         purchase_agreement.ID = empresa
 
-    name = fields.Char()
-    
+
     def send_pa(self):
         self.set_sender()
         receiver = self.get_receiver()

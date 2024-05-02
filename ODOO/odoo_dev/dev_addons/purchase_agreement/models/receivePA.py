@@ -12,22 +12,27 @@ import os
 
 loggerC = logging.getLogger('consumer')
 
-class prkprueba(models.Model):
-    _name = 'prkprueba'
+class receivePA(models.TransientModel):
+    _name = 'receive.pa'
+    _name = 'receiver.pa'
     __key = hashlib.sha256('admin123'.encode('utf-8')).digest()
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
     ID = None
+    flag = True
 
-    def init(self):
-        loggerC.critical('PA HE ENTRADO EN INIT')
-        #super(receivePA, self).init()
-        self.set_receiver()
-        loggerC.critical('PA VOY A LLAMAR')
-        self.start_consumer_thread()
+    def set_flag(self, value):
+        receivePA.flag = value
 
 
     def set_ID(self, empresa):
-        prkprueba.ID = empresa
+        receivePA.ID = empresa
+
+    def init(self):
+        if self.flag:
+            #super(receivePA, self).init()
+            self.set_receiver()
+            self.start_consumer_thread()
+            self.set_flag(False)
 
 
     def get_ip(self):
@@ -37,7 +42,6 @@ class prkprueba(models.Model):
     
 
     def set_receiver(self):
-        loggerC.critical('AL TOQUE MI ARMA')
         local_ip = self.get_ip()
         with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
             ip_names = json.load(json_file)
@@ -48,7 +52,7 @@ class prkprueba(models.Model):
 
 
     def start_consumer_thread(self):
-        loggerC.critical('PA HE ENTRADO EN LEER THREAD')
+        self.set_flag(True)
         threaded_calculation = threading.Thread(target=self.consume_messages)
         threaded_calculation.daemon = True
         threaded_calculation.start()
@@ -56,18 +60,13 @@ class prkprueba(models.Model):
 
     @api.model
     def consume_messages(self):
-        loggerC.critical('PA HE ENTRADO EN LEER MENSAJES')
         try:
             PEDIDOS = self.connect_kafka()
-            loggerC.critical(f'aqui PA {self.ID}=================={PEDIDOS}')
             for consumer_record in PEDIDOS:
-                loggerC.critical(f'aqui {self.ID}=================={consumer_record}')
                 mensaje_encoded = consumer_record.value
-                loggerC.critical(mensaje_encoded)
                 mensaje = self.decode_message(mensaje_encoded)
                 loggerC.critical(mensaje)
                 if str(mensaje['receiver']) == self.ID:
-                    loggerC.critical(f'This message is for me: {self.ID}')
                     loggerC.critical('Processing message...')
                     self.check_agreement(mensaje)
         except Exception as e:
@@ -98,6 +97,7 @@ class prkprueba(models.Model):
         mensaje_decryted = json.loads(unpadded_data.decode('utf-8'))
         
         return mensaje_decryted
+    
 
     def check_agreement(self, mensaje):
         with open('/mnt/extra-addons/would_accept.json', 'r') as json_file:
