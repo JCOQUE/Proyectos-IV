@@ -20,19 +20,6 @@ class receivePA(models.TransientModel):
     ID = None
     flag = True
 
-    def set_flag(self, value):
-        receivePA.flag = value
-
-
-    def set_ID(self, empresa):
-        receivePA.ID = empresa
-
-    def init(self):
-        if self.flag:
-            #super(receivePA, self).init()
-            self.set_receiver()
-            self.start_consumer_thread()
-            self.set_flag(False)
 
 
     def get_ip(self):
@@ -40,6 +27,19 @@ class receivePA(models.TransientModel):
         ip = socket.gethostbyname(hostname)
         return ip 
     
+
+    def get_host_machine_ip(self):
+        host_ip = socket.gethostbyname('host.docker.internal')
+        return host_ip
+    
+
+    def set_flag(self, value):
+        receivePA.flag = value
+
+
+    def set_ID(self, empresa):
+        receivePA.ID = empresa
+
 
     def set_receiver(self):
         local_ip = self.get_ip()
@@ -49,6 +49,14 @@ class receivePA(models.TransientModel):
             for ip, empresa in ip_names.items():
                 if str(ip) == str(local_ip):
                     self.set_ID(empresa)
+    
+
+    def init(self):
+        if self.flag:
+            #super(receivePA, self).init()
+            self.set_receiver()
+            self.start_consumer_thread()
+            self.set_flag(False)
 
 
     def start_consumer_thread(self):
@@ -65,8 +73,8 @@ class receivePA(models.TransientModel):
             for consumer_record in PEDIDOS:
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
-                loggerC.critical(mensaje)
                 if str(mensaje['receiver']) == self.ID:
+                    loggerC.critical(mensaje)
                     loggerC.critical('Processing message...')
                     self.check_agreement(mensaje)
         except Exception as e:
@@ -76,7 +84,8 @@ class receivePA(models.TransientModel):
                 PEDIDOS.close()
 
     def connect_kafka(self):
-        kafka_server = '192.168.0.33:31234'
+        host_ip = self.get_host_machine_ip()
+        kafka_server = f'{host_ip}:31234'
         topic_name = 'PurchAgr'
         msg = KafkaConsumer(
             topic_name,

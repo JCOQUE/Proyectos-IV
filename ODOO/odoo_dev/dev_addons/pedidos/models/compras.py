@@ -20,10 +20,8 @@ class PurchaseOrder(models.Model):
     __iv =  hashlib.sha256('admin123'.encode('utf-8')).digest()[:16]
     ID  = None
     send_rec_hardcoded = {'Amazon':'Nike',
-                        'Nike':'Amazon'} #sender:receiver
+                          'Nike':'Amazon'} #sender:receiver
 
-    def set_ID(self, empresa):
-        PurchaseOrder.ID = empresa
 
 
     def get_ip(self):
@@ -31,6 +29,15 @@ class PurchaseOrder(models.Model):
         ip = socket.gethostbyname(hostname)
         return ip
     
+    
+    def get_host_machine_ip(self):
+        host_ip = socket.gethostbyname('host.docker.internal')
+        return host_ip
+    
+
+    def set_ID(self, empresa):
+        PurchaseOrder.ID = empresa
+
 
     def set_sender(self):
         local_ip = self.get_ip()
@@ -41,11 +48,9 @@ class PurchaseOrder(models.Model):
                     self.set_ID(empresa)
 
     def button_confirm(self):
-        # res = super(purchase_custom, self).button_confirm()
-
         self.set_sender()
-
-        kafka_server = "192.168.0.33:31234" 
+        host_ip = self.get_host_machine_ip()
+        kafka_server = f'{host_ip}:31234'
         topic_name = 'PURCHASES'
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
@@ -70,7 +75,6 @@ class PurchaseOrder(models.Model):
         except Exception as e:
             _logger.error(f"Error creating the topic: {e}")
         
-
 
     def create_producer(self, ip):
         producer = KafkaProducer(bootstrap_servers=[ip],

@@ -22,15 +22,21 @@ class KafkaConsumerSaleOrder(models.TransientModel):
         self.set_receiver()
         self.start_consumer_thread()
 
-    def set_ID(self, empresa):
-        KafkaConsumerSaleOrder.ID = empresa
-
-
+    
     def get_ip(self):
         hostname = socket.gethostname()
         ip = socket.gethostbyname(hostname)
         return ip
     
+    
+    def get_host_machine_ip(self):
+        host_ip = socket.gethostbyname('host.docker.internal')
+        return host_ip
+    
+
+    def set_ID(self, empresa):
+        KafkaConsumerSaleOrder.ID = empresa
+
 
     def set_receiver(self):
         local_ip = self.get_ip()
@@ -40,6 +46,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 if str(ip) == str(local_ip):
                     self.set_ID(empresa)
 
+
     def start_consumer_thread(self):
         threaded_calculation = threading.Thread(target=self.consume_messages)
         threaded_calculation.daemon = True
@@ -47,15 +54,13 @@ class KafkaConsumerSaleOrder(models.TransientModel):
 
     @api.model
     def consume_messages(self):
-        hostname = socket.gethostname()
-        local_ip = socket.gethostbyname(hostname)
         try:
             PEDIDOS = self.connect_kafka()
             for consumer_record in PEDIDOS:
                 mensaje_encoded = consumer_record.value
                 mensaje = self.decode_message(mensaje_encoded)
                 if str(mensaje['receiver']) == self.ID:
-                    loggerC.critical(f'This message is for me: {self.ID}')
+                    loggerC.critical(mensaje)
                     loggerC.critical('Processing message...')
                     self.check_agreement(mensaje)
         except Exception as e:
@@ -65,7 +70,8 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 PEDIDOS.close()
 
     def connect_kafka(self):
-        kafka_server = '192.168.0.33:31234'
+        host_ip = self.get_host_machine_ip()
+        kafka_server = f'{host_ip}:31234'
         topic_name = 'PURCHASES'
         msg = KafkaConsumer(
             topic_name,
@@ -99,7 +105,6 @@ class KafkaConsumerSaleOrder(models.TransientModel):
     def read_message(self, pedido):
         pedido.pop('sender', None)
         pedido.pop('receiver',None)
-        loggerC.critical(pedido)
         try:
             self.add_sale_record(pedido)
             loggerC.critical('Order added to the list successfully!')

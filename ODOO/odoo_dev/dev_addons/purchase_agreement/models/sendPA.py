@@ -5,7 +5,7 @@ import logging
 import json 
 import hashlib
 import socket
-import os
+
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
 
@@ -19,17 +19,48 @@ class purchase_agreement(models.Model):
     ID = None
 
     name = fields.Char()
+
+
+
+    def get_receiver(self):
+        receiver = None
+        for receiver in self:
+            receiver = receiver.name
+        return receiver
+    
+
+    def get_ip(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        return ip
+    
+
+    def get_host_machine_ip(self):
+        host_ip = socket.gethostbyname('host.docker.internal')
+        return host_ip
     
 
     def set_ID(self, empresa):
         purchase_agreement.ID = empresa
 
 
+    def set_sender(self):
+        local_ip = self.get_ip()
+        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
+            ip_names = json.load(json_file)
+            _logger.critical(ip_names)
+
+            for ip, empresa in ip_names.items():
+                if str(ip) == str(local_ip):
+                    self.set_ID(empresa)
+
+
     def send_pa(self):
+        host_ip = self.get_host_machine_ip()
         self.set_sender()
         receiver = self.get_receiver()
 
-        kafka_server = "192.168.0.33:31234" 
+        kafka_server = f'{host_ip}:31234'
         topic_name = 'PurchAgr'
         _logger.critical(f'TOPIC NAME: {topic_name}')
 
@@ -44,30 +75,6 @@ class purchase_agreement(models.Model):
         self.send_data(producer, topic_name, data_encoded)
         admin_client.close()
         return True
-    
-    
-    def set_sender(self):
-        local_ip = self.get_ip()
-        with open('/mnt/extra-addons/ipv4_name.json', 'r') as json_file:
-            ip_names = json.load(json_file)
-            _logger.critical(ip_names)
-
-            for ip, empresa in ip_names.items():
-                if str(ip) == str(local_ip):
-                    self.set_ID(empresa)
-
-    
-    def get_receiver(self):
-        receiver = None
-        for receiver in self:
-            receiver = receiver.name
-        return receiver
-    
-
-    def get_ip(self):
-        hostname = socket.gethostname()
-        ip = socket.gethostbyname(hostname)
-        return ip  
     
 
     def create_topic(self, kafka, topic):
