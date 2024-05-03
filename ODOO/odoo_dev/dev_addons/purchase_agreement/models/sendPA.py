@@ -59,7 +59,6 @@ class purchase_agreement(models.Model):
         host_ip = self.get_host_machine_ip()
         self.set_sender()
         receiver = self.get_receiver()
-
         kafka_server = f'{host_ip}:31234'
         topic_name = 'PurchAgr'
         _logger.critical(f'TOPIC NAME: {topic_name}')

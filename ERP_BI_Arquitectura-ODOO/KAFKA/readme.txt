@@ -1,1 +1,0 @@
-Tutorial: https://docs.confluent.io/platform/current/platform-quickstart.html
