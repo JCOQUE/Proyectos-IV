@@ -62,7 +62,7 @@ class KafkaConsumerSaleOrder(models.TransientModel):
                 if str(mensaje['receiver']) == self.ID:
                     loggerC.critical(mensaje)
                     loggerC.critical('Processing message...')
-                    self.check_agreement(mensaje)
+                    self.read_message(mensaje)
         except Exception as e:
             loggerC.error(f"Error en el consumidor: {e}")
         finally:
