@@ -10,5 +10,5 @@ Por otra parte, el Dashboard se ha realizado en código Javascript; concretament
 
 ## Referencias
 #### Dashboard
-- https://www.youtube.com/watch?v=CJvaY-VGqwk&pp=ygUhZGFzaGJvYXJkIGluIE9kb28gd2l0aCBqYXZhc2NyaXB0
-- https://www.youtube.com/watch?v=I8E9XszUYGY&pp=ygUhZGFzaGJvYXJkIGluIE9kb28gd2l0aCBqYXZhc2NyaXB0
+- [Vídeo 1 dashboard en Odoo](https://www.youtube.com/watch?v=CJvaY-VGqwk&pp=ygUhZGFzaGJvYXJkIGluIE9kb28gd2l0aCBqYXZhc2NyaXB0)
+- [Vídeo 2 dashboard en Odoo](https://www.youtube.com/watch?v=I8E9XszUYGY&pp=ygUhZGFzaGJvYXJkIGluIE9kb28gd2l0aCBqYXZhc2NyaXB0)
