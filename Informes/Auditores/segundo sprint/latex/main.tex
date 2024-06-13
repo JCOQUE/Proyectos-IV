@@ -1,0 +1,452 @@
+\documentclass[12pt, a4paper, twoside]{article} %twoside is for fancyhdr
+
+
+
+
+
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+% ------------------------------  PACKAGES --------------------------------%
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+
+% ----------------------  GENERIC DOCUMENT SETTINGS -----------------------%
+%--------------------------------------------------------------------------%
+\usepackage{geometry}  
+	\geometry{top = 3.5cm, bottom = 3cm, left = 2cm, right = 2cm, headsep = 1.4cm, footskip = 1.5cm}
+\usepackage[skip = 7pt, indent = 0pt]{parskip} % paragraph settings
+\usepackage{titlesec}%first parameter to set specific indentation to each section
+					 %second and third paarmeters to set before and after spacing
+					 % in section, subsection y subsubsection
+    \titlespacing\section{0pt}{0.6cm}{0.6cm}
+    \titlespacing\subsection{0pt}{0.5cm}{0.5cm}
+    \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\usepackage{microtype} %improves the justification, and therefore the visualization of the text
+\usepackage{times} %font family to times new roman
+%%\usepackage{fontspec}%font-family
+	%%\setmainfont{Verdana} %FALSE POSITIVE ERROR
+	
+\usepackage{hyperref} %links: internal & external
+\hypersetup{ %for all kinds of links. It has more parameters but
+	% we are just going to use the most basic ones
+    colorlinks = true,
+    linkcolor = blue, % internal links
+    urlcolor = orange, % external links
+    filecolor = green % link to your files
+} % ------------- USE \hyperlink for internal link and \href for external ------------------%
+
+\usepackage{fancyhdr} % To create custom headers and footnotes
+%\fancypagestyle{plain}{ % este es un tipo de header y footer. Lo he llamado plain. 
+%	\fancyhead{} % clear header
+%	
+%	\fancyhead[L]{\nouppercase\leftmark}
+%	\fancyhead[RE]{\text{Trabajo Fin de Grado}}
+%	\fancyhead[RO]{\text{Análisis de Series Temporales}}
+%	\fancyfoot{} % clear footnote
+%	\fancyfoot[RE]{\text{U-tad 2023-2024}} 
+%	\fancyfoot[RO]{\text{MAIS}}
+%	\fancyfoot[C]{\thepage}
+%	\fancyfoot[L]{\text{Javier Coque}}
+%	\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+%}
+
+%--------------------- NOTA IMPORTANTE -------------------------%
+%---------------------------------------------------------------%
+%Me acabo de crear arriba un estilo que se llama plain;  le podría haber llamado bocata. Para aplicar dicho header, basta con poner \pagestyle{plain} al principio del documento para que se aplique.
+
+
+%El comando \leftmark sirve para asignar como texto el título de la sección. El caso es que solo funciona para secciones numeradas. Para que también funcione en secciones no numeradas deberemos usar el siguiente comando: \markboth{nombre_seccio_no_numerada}{nombre_seccion_no_numerada}. El primer parámetro indica lo que poner en páginas pares y el segundo en impares, así que se puede modificar a gusto propio.
+
+%En caso de querer usar un estilo propio en alguna de las secciones, se puede hacer con \thispagestyle{fancy} y luego aplicar las customizaciones que quieras como pueden ser \fancyfoot[L]{\text{nuevo_foot_text}}. Al acabar, vuelve a poner el comnado \pagestyle{plain} para volver al otro estilo.
+
+%Otra cosa que se puede hacer es crear  varios estilos de fancyhdr. Al igual que me he creado el estilo plain, me puedo cerar otros. 
+
+%Lo que acabo de explicar está en mi TFG de matemáticas hecho.
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% -----------------------  FOR MORE SUBSECTIONS ---------------------------%
+%--------------------------------------------------------------------------%
+% Define a custom heading for the fourth level
+%%\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\} %now I do have subsubsubsubsection
+%%\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+%%\setcounter{tocdepth}{4} % Enable numbering for up to the fourth level
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% --------------------==------  FOR MATH STUFF ----------------------------%
+%--------------------------------------------------------------------------%
+%%\usepackage{amsmath,amsfonts,amsthm, amssymb} % Para poder usar \mathbb
+	%%\renewcommand{\qed}{\hfill\blacksquare} %blacksquare for demonstrations
+%%\numberwithin{equation}{subsection} %this numbers the equatino along with the subsections
+%%\usepackage{cancel} %to cancel numbers in  equations
+%%\usepackage{mathtools} %to annotate brackets in equations
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% ----------------------  FIGURES , TABLES & TIKZ  ------------------------%
+%--------------------------------------------------------------------------%
+\usepackage{graphicx}
+    \graphicspath{ {./imgs/} }
+%%\counterwithin{figure}{section}%figure number along with the section
+%%\usepackage{subfigure} % for subfigures
+%%\usepackage{wrapfig} % to wrap a figure among text
+%%\usepackage{caption} % caption management in figures and tables
+	%%\captionsetup[figure]{name=Figura}%Changes the default name Figure to Figura in figures
+\usepackage{float} % for H command in figures and tables
+%%\usepackage{listings} % para poder hacer uso de "listings" propios (p.ej. códigos)
+%%	\lstset{
+%%		language=Python,
+%%		basicstyle=\ttfamily\small,
+%%		keywordstyle=\bfseries\color{blue},
+%%		stringstyle=\color{orange!70!black},
+%%		commentstyle=\color{green!70!black},
+%%		showstringspaces=false,
+%%		frame=single,
+%%		breaklines=true,
+%%		captionpos=b
+%%	}
+\usepackage{longtable} % Para tablas muy largas
+\usepackage{array} % for table's setting such as spacing within cells and 
+				   % the border width
+\renewcommand{\tablename}{Tabla} % %Changes the default name Table to Tabla in tables
+%\newcolumntype{s}{>{\columncolor{blue!15}} c} %command for a specific type of column.
+\renewcommand{\arraystretch}{3} % top and bottom spacing inside table's cells				   	
+\usepackage{multirow} % Para agrupar varias filas en las tablas
+
+
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows, positioning}
+    \usetikzlibrary{patterns}
+\usepackage{pgfplots}
+    \usepgfplotslibrary{fillbetween}% color tikz's images
+    \pgfplotsset{compat=1.17} %this can be change to compat = newest
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% ---------------  TCOLORBOXES, COLORS AND OTHER DECORATIVES  -------------%
+%--------------------------------------------------------------------------%
+\usepackage{xcolor}  % color package to create colors. Additional table features added to xcolor package
+%ATTENTION:NO SPACING IN COLOR RGB VALUES
+	% ------------ RGB style -----------%
+	\definecolor{redos}{RGB}{255,46,46}
+	\definecolor{redcl}{RGB}{255,200,200}
+	% ------------ HTML CODE style -----------%
+	\definecolor{azulos}{HTML}{4291FD}
+	\definecolor{azulcl}{HTML}{E8F3FF}
+	
+\usepackage[most]{tcolorbox} % package to create color boxes  like the note box
+
+\newtcolorbox{atencion}{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=redcl,
+	coltitle=redos,
+	title= Atencion:,
+	colbacktitle=redcl,
+	title code={
+		\path[draw=redos,solid,line width=0.75mm]
+		([xshift=0mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{redos},
+	colback=redcl,
+}
+
+\newtcolorbox{demo}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulos,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+	top = 10pt, %body margin
+	before title={\vspace*{5pt}}, %title margin
+	bottom = 8pt
+}
+
+\newtcolorbox{teorema}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulcl,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	title code={
+		\path[draw=azulos,solid,line width=0.75mm]
+		([xshift=5mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+
+\newtcolorbox{ejemplo}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	%colbacktitle=azulos,
+	coltitle=azulos,
+	title=#1,
+	%colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+\newtcolorbox{ejemplo2}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulcl,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	title code={
+		\path[draw=azulos,solid,line width=0.75mm]
+		([xshift=0mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+
+
+\newtcolorbox{nota}{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	%colbacktitle=azulos,
+	coltitle=azulos,
+	title=Nota,
+	colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	%borderline west={3pt}{0pt}{azulos},
+	colback=white,
+}
+
+%\newtcolorbox{mathbox}{
+%	colback = white,
+%	colframe = azulos,
+%}
+%
+%
+%\newenvironment{matheq}{%
+%	\begin{center}%
+%		\begin{mathbox}%
+%		}{%
+%		\end{mathbox}%
+%	\end{center}%
+%}
+%
+%\newenvironment{matheq2}{%
+%	\begin{center}%
+%		\tcbox[colback = azulcl, colframe = azulos]%
+%	}{%
+%	\end{center}%
+%}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  MISCELLANEOUS  ------------------------------%
+%--------------------------------------------------------------------------%
+\usepackage{comment} %to comment big sections with \begin{comment}...\end{comment}
+\usepackage{enumitem} %for lists
+\usepackage{url} %to place url with te command \url{https://...}
+\usepackage{environ}% to create new environments
+
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  REFERENCES  --------------------------------%
+%-------------------------------------------------------------------------%
+\usepackage[backend = biber, style = numeric]{biblatex} %change styple to apa if necessary
+%\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{biblio.bib} % Fichero donde se incluyen las referencias
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+% -------------------------  NEW COMMANDS & NEW ENVIRONMENTS ---------------------------%
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+
+
+
+
+% ---------------------  GENERIC DOCUMENT SETTINGS ------------------------%
+%--------------------------------------------------------------------------%
+\renewcommand{\baselinestretch}{1.4}% Espaciado entre líneas
+%\usepackage{setspace} %espaciado entre lineas de manera no tan precisa 
+	%\onehalfspacin
+\newcommand{\B}[1]{\textbf{#1}}
+\newcommand{\slas}{$\backslash$}
+\newcommand{\ti}{\emph} %it stands for text italic. The command \it is already taken.
+\newcommand{\ul}{\underline}
+\newcommand{\fn}{\footnote}
+\newcommand{\fnm}{\footnotemark}
+\newcommand{\fnt}{\footnotetext}
+    \setlength{\footnotesep}{\baselineskip}%increase spacing between footnotes
+% CHANGE THE DEFAULT NAME OF TOC AND LIST OF FIGURES/TABLES AT THE BEGINNING.
+% i.e. when using \tableofcontents, \listoffigures, \listoftables in \begin{document}
+%\renewcommand{\contentsname}{Tabla de contenidos}%cambiar titulo de \listofcontents (contents por defecto)
+%\renewcommand{\listfigurename}{Lista de Figuras}
+%\renewcommand{\listtablename}{Lista de Tablas}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+	
+% -------------------------------  MATH  ----------------------------------%
+%--------------------------------------------------------------------------%
+%This is to display inline math symbols as if they were block symbols. Shorten commands intead of
+%using displaystyle... .
+\newcommand{\Int}[2]{\displaystyle \int_{#1}^{#2}}
+\newcommand{\Sum}[2]{\displaystyle \sum_{#1}^{#2}}
+\newcommand{\Lim}[1]{\displaystyle \lim_{#1}}
+\newcommand{\Frac}[2]{\displaystyle \frac{#1}{#2}}
+
+%Make shorter the command to write the N of Naturals, Z of Integer,  R of Reals, Q of rational & C of complex
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%to be able to write the text Var, Cov and Corr in math equations
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Corr}{\mathrm{Corr}}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  MISCELLANEOUS  ------------------------------%
+%--------------------------------------------------------------------------%
+\newcommand{\Code}[1]{\fcolorbox{code}{code}{\slas #1}} %to write words meaning a command or code
+	\definecolor{code}{RGB}{228, 229, 231}
+	
+% Para que el índice no sea clickable
+%\makeatletter
+%\let\Hy@linktoc\Hy@linktoc@none
+%\makeatother
+
+% To avoid word splitting between lines. Example: (first line) misce- (seccond line) llaneous.
+%\pretolerance=10000
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+\title{Informe sprint 2\\
+\large Proyectos IV: Equipo BI\\
+\large Proyecto: ERP}
+\author{
+  \small{Juan Carlos Ávila}\fn{juan.avila@live.u-tad.com}
+  \and
+  \small{Javier Coque}\fn{javier.coque@live-u.tad.com}
+  \and
+  \small{Alejandro García}\fn{alejandro.gallego@live.u-tad.com}
+  \and
+  \small{Chantal López}\fn{chantal.lopez@live.u-tad.com}
+}
+\date{17, marzo 2024}
+
+\begin{document}
+\maketitle
+
+
+\pagenumbering{arabic}
+\pagestyle{plain} % setting our default header and footer that we set with
+% ÍNDICE DE CONTENIDOS
+\setcounter{page}{1}
+
+\section{Resumen Sprint 2}
+En líneas generales, el equipo de BA del proyecto BigEye ha hecho un buen Sprint. No sólo se han hecho las tareas que quedaron pendientes del Sprint anterior---como pueden ser la creación de un 
+dataset para el modelo de segmentación de instancias a partir de datos de Catastro y la creación de un modelo básico de segmentación--- sino que se han completado con éxito una amplia mayoría de las tareas propuestas para Sprint. 
+
+A lo largo del Sprint, surgieron problemas, que o bien fueron resueltos por ellos mismos, o consiguieron ayuda por parte del equipo de BI ---en relación al datalake--- o se resolvieron por parte del cliente (Pablo) en la propia auditoría o se quedaron pendientes de resolver en un futuro próximo con este mismo cliente (compatibilidad de Prefect con distintos SO)
+
+\begin{ejemplo2}{Nota}
+    Juan Carlos, miembro de nuestro equipo, propuso emplear el datalake de Azure como posible solución a su problema. Esto es porque Microsoft aporta más facilidades, en general, al uso de sus herramientas para los estudiantes
+\end{ejemplo2}
+
+\section{Puntos Concretos}
+Habiendo dado un poco de contexto general sobre cómo fue la auditoría, se procede a explicar algunos puntos con algo más en detalle.
+
+Debido a la alta computación por parte del entrenamiento de los modelos, se optó por ejecutarlos en Google Colab. Sin embargo, cada dos horas, esta plataforma detenía su ejecución. Finalmente, se decide hacerlo con la herramienta que ya se estaba usando para MLOps: Prefect.
+
+Esto nos lleva al siguiente punto: problemas con Prefect. Esta herramienta presentaba un problema no resuelto para la auditoría: no se podían gestionar workers desde distintos SO, pues cada uno tenía una ruta distinta y no se pudo establecer \ti{una ruta común} en los ordenadores de cada integrante del equipo auditado. Pablo, el cliente, les comentó que él tiene esa misma situación y que sabe la solución al problema. Entonces, aunque este problema no quede resuelto, se le ha encontrado solución.
+
+Respecto a la obtención de datos para las nubes de puntos (modelo para clasificación una vez empleado el modelo de segmentación), hubo problemas a la hora de obtenerlos. El único recurso proveedor de datos con el que se obtenían buenos resultados, era de pago. El equipo de BA de BigEye optó entonces por descargarse datos ya existentes de una dataset. Con estos datos se obtenía una $51\%$ de \ti{accuracy}; algo que está bastante bien teniendo en cuenta que hay $5$ posibles clases en el modelo de segmentación\fnm.
+
+\fnt{Si es edificio: Residual, Público, Comercial o Religioso. La quinta clase es que no sea un edificio y se clasifique como tal.}
+
+En cuanto al modelo de TCN, al ser imágenes satélites, la serie temporal presentaba muchos picos (outliers). Esto es debido a los días nublados, en los que se las imágenes captadas son de las propias nubes y no de suelo como tal. Esto provoca que imágenes muy distintas se capten según si el día está nublado o no. Esto, no solo da lugar a una serie temporal con datos que no son \ti{verdaderos}, sino que provoca también que la serie  temporal sea mucho más difícil de modelar debido datos tan dispares y aleatorios. Una solución para este problema---que cabe remarcar que nos ha gustado mucho--- es la de obtener datos de un sitio en el que, que el día esté nublado sea infrecuente. Este sitio en concreto es el Parque Natural Sierra
+Alhamilla en Almería. De esta manera, se consiguió un modelo con una mejor precisión.
+
+Algo pendiente para el siguiente Sprint (aunque el equipo auditado ya tiene alguna idea) respecto al punto anterior, es la de determinar qué se quiere hacer con este modelo; qué hacer con los datos obtenidos. 
+
+\section{Objetivos para el siguiente Sprint}
+El equipo de BA del proyecto BigEye, hacia el final de la auditoría comentaron los objetivos finales que tienen para el \B{tercer y  último Sprint}. Estos son:
+
+\begin{itemize}
+    \item Como se comentaba recientemente, terminar de dar un enfoque al modelo de TCN.
+    \item Mejorar la precisión (refinar) tanto el modelo de TCN, pero más urgentemente el de segmentación. 
+    \item Lanzar a producción estos modelos una vez refinados.
+    \item Consultar con el equipo de BI de BigEye acerca de posibles dudas o de cómo han implementado ciertas cosas que al equipo auditado aún le quedan por hacer o mejorar. 
+    \item Crear una interfaz gráfica para mostrar los resultados
+\end{itemize}
+
+\section{Comentarios y Consejos}
+En líneas generales, poco tenemos que decirle al equipo auditado. Están haciendo muy buen trabajo, se nota que han mejorado la comunicación entre ellos---algo que se destacó como mejora en el primer Sprint---, y que lo tienen bastante avanzado. Como se nos mostró en el PowerPoint, tienen en todos los modelos (segmentación, clasificación y predicción) más de un $50\%$ de progreso, llegando incluso al $70\%$ en el último. 
+
+\section{Conclusión}
+Aunque tengan que meter un empujón final en este Sprint, han hecho un gran trabajo hasta el momento, y no tenemos ninguna duda de que llegarán al final de Sprint 3 con un producto final adecuado. 
+\end{document}
+

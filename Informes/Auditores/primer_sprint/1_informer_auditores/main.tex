@@ -1,0 +1,60 @@
+\documentclass[12pt, a4paper]{article} %twoside is for fancyhdr
+\usepackage{graphicx} % Required for inserting images
+
+\title{Primera Auditoría}
+\author{Equipo BI ERP}
+\date{Fecha: 27/02/2024}
+\usepackage{fontspec}
+\setmainfont{Verdana}
+\usepackage{geometry} % page margins
+	\geometry{top = 3.5cm, bottom = 3cm, left = 2cm, right = 2cm, headsep = 1.4cm, footskip = 1.5cm}
+ \renewcommand{\baselinestretch}{1.4}% Otra manera de poner espaciado entre líneas más precisa
+\usepackage{microtype}
+\usepackage{xcolor}  % color package to create colors. Additional table features added to xcolor package
+	\definecolor{azulos}{RGB}{66,145,253}
+	\definecolor{azulcl}{RGB}{232,243,255}
+	\definecolor{redos}{RGB}{255, 46, 46}
+	\definecolor{redcl}{RGB}{255, 200, 200}
+        \definecolor{morados}{RGB}{115, 91, 251}
+        \definecolor{moradmed}{RGB}{161, 144, 238}
+        \definecolor{moradcl}{RGB}{228, 223, 252}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{ejemplo}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	%colbacktitle=azulos,
+	coltitle=azulos,
+	title=#1,
+	%colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+\usepackage[skip = 7pt, indent = 0pt]{parskip} % paragraph settings
+\usepackage{url}
+
+\begin{document}
+
+\maketitle
+
+\section{Resumen}
+La auditoría con el equipo de BA del proyecto Big Eye se tuvo que dividir en dos sesiones porque no dio tiempo a terminarla en tiempo de clase. En la primera de las sesiones, se nos comentó, por el equipo auditado, el empleo de las herramientas de CATASTRO para la detección de instancias, como la herramienta de COPÉRNICO para la segmentación de imágenes. Asimismo, se comentaron diversos problemas que habían surgido en la obtención de datos en dichas herramientas; ya sea porque no se encontró ninguna API disponible con CATASTRO, o por tema de que no permitía la descarga de datos durante los fines de semana. El equipo auditado propuso como solución a estos problemas QGis. De todas formas, nuestro equipo, concretamente Alejandro García, encontró una manera de utilizar la API con CATASTRO (\url{https://www.catastro.meh.es/ws/webservices_libres.pdf}). Estos problemas retrasaron ligeramente el primer sprint del equipo auditado. 
+
+También se comentó el uso de series temporales para la predicción del índice de la diferencia de vegetación normalizado (NDVI por sus siglas en inglés). En este caso, el equipo de BA Big Eye, cumplió su objetivo de obtener un modelo muy básico en una primera instancia. No se buscaba que este modelo fuera ni eficaz, ni eficiente; sino simplemente un modelo simple por el que empezar. Para ello, el equipo auditado opta por un algoritmo TCN (\emph{Temporal Convolutional Network}) debido a que uno de los integrantes de dicho equipo ---Claudia Reyero concretamente--- realizó una presentación, respecto a este algoritmo, para esta misma asignatura. De todas maneras, el miembro del equipo auditor, Javier Coque, les propone, en caso de que el equipo BA Big Eye desee en algún momento, aplicar algoritmos adicionales para poder compararlos y de esta manera, elegir modelos entre un abanico más amplio de posibilidades.
+
+\begin{ejemplo}{Nota}
+    Las series temporales son con periodicidad de 5 días
+\end{ejemplo}
+
+La segunda sesión fue al día siguiente, por llamada online. Se trató de una reunión breve en la que se procedió a dar cierre a la auditoría. 
+
+\section{Consejos}
+Como posibles recomendaciones de parte del equipo BI ERP hacia el equipo de BA Big Eye, simplemente una de momento: que haya quizá más comunicación entre el equipo sobre lo que está haciendo cada uno. Lo que se quiere decir con esto, no es que se pretenda que todo el equipo esté al tanto de todo ---somos conscientes de que es imposible---. Pero, quizá, si un miembro del equipo, para el desempeño de una tarea en concreto, va comentando al resto del equipo links o fuentes de información para que, si se da el caso, se necesite la ayuda de otro compañero para una determinada tarea, este compañero no especializado en dicha tarea tenga como punto de partida el mismo que el del otro miembro del equipo que necesita una ayuda. De esta manera, el equipo auditor cree que puede acelerar el proceso a lo largo del proyecto.
+
+\section{Conclusión}
+En general, se ha visto un gran avance para un primer sprint por parte del equipo auditado. Han cumplido la mayor parte de sus tareas y los objetivos para el segundo sprint eran ambiciosos. 
+
+
+\end{document}
