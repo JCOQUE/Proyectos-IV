@@ -1,0 +1,469 @@
+\documentclass[12pt, a4paper, twoside]{article} %twoside is for fancyhdr
+
+
+
+
+
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+% ------------------------------  PACKAGES --------------------------------%
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+
+% ----------------------  GENERIC DOCUMENT SETTINGS -----------------------%
+%--------------------------------------------------------------------------%
+\usepackage{geometry}  
+	\geometry{top = 3.5cm, bottom = 3cm, left = 2cm, right = 2cm, headsep = 1.4cm, footskip = 1.5cm}
+\usepackage[skip = 7pt, indent = 0pt]{parskip} % paragraph settings
+\usepackage{titlesec}%first parameter to set specific indentation to each section
+					 %second and third paarmeters to set before and after spacing
+					 % in section, subsection y subsubsection
+    \titlespacing\section{0pt}{0.6cm}{0.6cm}
+    \titlespacing\subsection{0pt}{0.5cm}{0.5cm}
+    \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\usepackage{microtype} %improves the justification, and therefore the visualization of the text
+\usepackage{times} %font family to times new roman
+%%\usepackage{fontspec}%font-family
+	%%\setmainfont{Verdana} %FALSE POSITIVE ERROR
+	
+\usepackage{hyperref} %links: internal & external
+\hypersetup{ %for all kinds of links. It has more parameters but
+	% we are just going to use the most basic ones
+    colorlinks = true,
+    linkcolor = blue, % internal links
+    urlcolor = blue, % external links
+    filecolor = green % link to your files
+} % ------------- USE \hyperlink for internal link and \href for external ------------------%
+
+\usepackage{fancyhdr} % To create custom headers and footnotes
+%\fancypagestyle{plain}{ % este es un tipo de header y footer. Lo he llamado plain. 
+%	\fancyhead{} % clear header
+%	
+%	\fancyhead[L]{\nouppercase\leftmark}
+%	\fancyhead[RE]{\text{Trabajo Fin de Grado}}
+%	\fancyhead[RO]{\text{Análisis de Series Temporales}}
+%	\fancyfoot{} % clear footnote
+%	\fancyfoot[RE]{\text{U-tad 2023-2024}} 
+%	\fancyfoot[RO]{\text{MAIS}}
+%	\fancyfoot[C]{\thepage}
+%	\fancyfoot[L]{\text{Javier Coque}}
+%	\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+%}
+
+%--------------------- NOTA IMPORTANTE -------------------------%
+%---------------------------------------------------------------%
+%Me acabo de crear arriba un estilo que se llama plain;  le podría haber llamado bocata. Para aplicar dicho header, basta con poner \pagestyle{plain} al principio del documento para que se aplique.
+
+
+%El comando \leftmark sirve para asignar como texto el título de la sección. El caso es que solo funciona para secciones numeradas. Para que también funcione en secciones no numeradas deberemos usar el siguiente comando: \markboth{nombre_seccio_no_numerada}{nombre_seccion_no_numerada}. El primer parámetro indica lo que poner en páginas pares y el segundo en impares, así que se puede modificar a gusto propio.
+
+%En caso de querer usar un estilo propio en alguna de las secciones, se puede hacer con \thispagestyle{fancy} y luego aplicar las customizaciones que quieras como pueden ser \fancyfoot[L]{\text{nuevo_foot_text}}. Al acabar, vuelve a poner el comnado \pagestyle{plain} para volver al otro estilo.
+
+%Otra cosa que se puede hacer es crear  varios estilos de fancyhdr. Al igual que me he creado el estilo plain, me puedo cerar otros. 
+
+%Lo que acabo de explicar está en mi TFG de matemáticas hecho.
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% -----------------------  FOR MORE SUBSECTIONS ---------------------------%
+%--------------------------------------------------------------------------%
+% Define a custom heading for the fourth level
+%%\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\} %now I do have subsubsubsubsection
+%%\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+%%\setcounter{tocdepth}{4} % Enable numbering for up to the fourth level
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% --------------------==------  FOR MATH STUFF ----------------------------%
+%--------------------------------------------------------------------------%
+%%\usepackage{amsmath,amsfonts,amsthm, amssymb} % Para poder usar \mathbb
+	%%\renewcommand{\qed}{\hfill\blacksquare} %blacksquare for demonstrations
+%%\numberwithin{equation}{subsection} %this numbers the equatino along with the subsections
+%%\usepackage{cancel} %to cancel numbers in  equations
+%%\usepackage{mathtools} %to annotate brackets in equations
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% ----------------------  FIGURES , TABLES & TIKZ  ------------------------%
+%--------------------------------------------------------------------------%
+\usepackage{graphicx}
+    \graphicspath{ {./imgs/} }
+%%\counterwithin{figure}{section}%figure number along with the section
+%%\usepackage{subfigure} % for subfigures
+%%\usepackage{wrapfig} % to wrap a figure among text
+%%\usepackage{caption} % caption management in figures and tables
+	%%\captionsetup[figure]{name=Figura}%Changes the default name Figure to Figura in figures
+\usepackage{float} % for H command in figures and tables
+%%\usepackage{listings} % para poder hacer uso de "listings" propios (p.ej. códigos)
+%%	\lstset{
+%%		language=Python,
+%%		basicstyle=\ttfamily\small,
+%%		keywordstyle=\bfseries\color{blue},
+%%		stringstyle=\color{orange!70!black},
+%%		commentstyle=\color{green!70!black},
+%%		showstringspaces=false,
+%%		frame=single,
+%%		breaklines=true,
+%%		captionpos=b
+%%	}
+\usepackage{longtable} % Para tablas muy largas
+\usepackage{array} % for table's setting such as spacing within cells and 
+				   % the border width
+\renewcommand{\tablename}{Tabla} % %Changes the default name Table to Tabla in tables
+%\newcolumntype{s}{>{\columncolor{blue!15}} c} %command for a specific type of column.
+\renewcommand{\arraystretch}{3} % top and bottom spacing inside table's cells				   	
+\usepackage{multirow} % Para agrupar varias filas en las tablas
+
+
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows, positioning}
+    \usetikzlibrary{patterns}
+\usepackage{pgfplots}
+    \usepgfplotslibrary{fillbetween}% color tikz's images
+    \pgfplotsset{compat=1.17} %this can be change to compat = newest
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+
+% ---------------  TCOLORBOXES, COLORS AND OTHER DECORATIVES  -------------%
+%--------------------------------------------------------------------------%
+\usepackage{xcolor}  % color package to create colors. Additional table features added to xcolor package
+%ATTENTION:NO SPACING IN COLOR RGB VALUES
+	% ------------ RGB style -----------%
+	\definecolor{redos}{RGB}{255,46,46}
+	\definecolor{redcl}{RGB}{255,200,200}
+	% ------------ HTML CODE style -----------%
+	\definecolor{azulos}{HTML}{4291FD}
+	\definecolor{azulcl}{HTML}{E8F3FF}
+        \definecolor{verdeos}{RGB}{76,174,80}
+        \definecolor{verdecl}{RGB}{231,244,233}
+        \definecolor{morados}{RGB}{115, 91, 251}
+        \definecolor{moradcl}{RGB}{228, 223, 252}
+        \definecolor{orange}{RGB}{255, 197,0}
+	
+\usepackage[most]{tcolorbox} % package to create color boxes  like the note box
+
+\newtcolorbox{atencion}{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=redcl,
+	coltitle=redos,
+	title= Atencion:,
+	colbacktitle=redcl,
+	title code={
+		\path[draw=redos,solid,line width=0.75mm]
+		([xshift=0mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{redos},
+	colback=redcl,
+}
+
+\newtcolorbox{demo}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulos,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+	top = 10pt, %body margin
+	before title={\vspace*{5pt}}, %title margin
+	bottom = 8pt
+}
+
+\newtcolorbox{teorema}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulcl,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	title code={
+		\path[draw=azulos,solid,line width=0.75mm]
+		([xshift=5mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+
+\newtcolorbox{ejemplo}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	%colbacktitle=azulos,
+	coltitle=azulos,
+	title=#1,
+	%colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+\newtcolorbox{ejemplo2}[1]{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	colbacktitle=azulcl,
+	coltitle=azulos,
+	title= #1,
+	colbacktitle=azulcl,
+	title code={
+		\path[draw=azulos,solid,line width=0.75mm]
+		([xshift=0mm]title.south west) -- ([xshift=0mm]title.south east);
+	},
+	boxrule=0pt,frame hidden,
+	borderline west={3pt}{0pt}{azulos},
+	colback=azulcl,
+}
+
+
+\newtcolorbox{nota}{
+	enhanced,
+	breakable,
+	fonttitle=\sffamily\bfseries,
+	%colbacktitle=azulos,
+	coltitle=azulos,
+	title=Nota,
+	colbacktitle=azulcl,
+	boxrule=0pt,frame hidden,
+	%borderline west={3pt}{0pt}{azulos},
+	colback=white,
+}
+
+%\newtcolorbox{mathbox}{
+%	colback = white,
+%	colframe = azulos,
+%}
+%
+%
+%\newenvironment{matheq}{%
+%	\begin{center}%
+%		\begin{mathbox}%
+%		}{%
+%		\end{mathbox}%
+%	\end{center}%
+%}
+%
+%\newenvironment{matheq2}{%
+%	\begin{center}%
+%		\tcbox[colback = azulcl, colframe = azulos]%
+%	}{%
+%	\end{center}%
+%}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  MISCELLANEOUS  ------------------------------%
+%--------------------------------------------------------------------------%
+\usepackage{comment} %to comment big sections with \begin{comment}...\end{comment}
+\usepackage{enumitem} %for lists
+\usepackage{url} %to place url with te command \url{https://...}
+\usepackage{environ}% to create new environments
+
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  REFERENCES  --------------------------------%
+%-------------------------------------------------------------------------%
+\usepackage[backend = biber, style = numeric]{biblatex} %change styple to apa if necessary
+%\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{biblio.bib} % Fichero donde se incluyen las referencias
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+% -------------------------  NEW COMMANDS & NEW ENVIRONMENTS ---------------------------%
+%---------------------------------------------------------------------------------------%
+%---------------------------------------------------------------------------------------%
+
+
+
+
+% ---------------------  GENERIC DOCUMENT SETTINGS ------------------------%
+%--------------------------------------------------------------------------%
+\renewcommand{\baselinestretch}{1.4}% Espaciado entre líneas
+%\usepackage{setspace} %espaciado entre lineas de manera no tan precisa 
+	%\onehalfspacin
+\newcommand{\B}[1]{\textbf{#1}}
+\newcommand{\slas}{$\backslash$}
+\newcommand{\ti}{\emph} %it stands for text italic. The command \it is already taken.
+\newcommand{\ul}{\underline}
+\newcommand{\fn}{\footnote}
+\newcommand{\fnm}{\footnotemark}
+\newcommand{\fnt}{\footnotetext}
+    \setlength{\footnotesep}{\baselineskip}%increase spacing between footnotes
+% CHANGE THE DEFAULT NAME OF TOC AND LIST OF FIGURES/TABLES AT THE BEGINNING.
+% i.e. when using \tableofcontents, \listoffigures, \listoftables in \begin{document}
+%\renewcommand{\contentsname}{Tabla de contenidos}%cambiar titulo de \listofcontents (contents por defecto)
+%\renewcommand{\listfigurename}{Lista de Figuras}
+%\renewcommand{\listtablename}{Lista de Tablas}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+	
+% -------------------------------  MATH  ----------------------------------%
+%--------------------------------------------------------------------------%
+%This is to display inline math symbols as if they were block symbols. Shorten commands intead of
+%using displaystyle... .
+\newcommand{\Int}[2]{\displaystyle \int_{#1}^{#2}}
+\newcommand{\Sum}[2]{\displaystyle \sum_{#1}^{#2}}
+\newcommand{\Lim}[1]{\displaystyle \lim_{#1}}
+\newcommand{\Frac}[2]{\displaystyle \frac{#1}{#2}}
+
+%Make shorter the command to write the N of Naturals, Z of Integer,  R of Reals, Q of rational & C of complex
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%to be able to write the text Var, Cov and Corr in math equations
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Corr}{\mathrm{Corr}}
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+% --------------------------  MISCELLANEOUS  ------------------------------%
+%--------------------------------------------------------------------------%
+\newcommand{\Code}[1]{\fcolorbox{code}{code}{\slas #1}} %to write words meaning a command or code
+	\definecolor{code}{RGB}{228, 229, 231}
+	
+% Para que el índice no sea clickable
+%\makeatletter
+%\let\Hy@linktoc\Hy@linktoc@none
+%\makeatother
+
+% To avoid word splitting between lines. Example: (first line) misce- (seccond line) llaneous.
+%\pretolerance=10000
+%--------------------------------------------------------------------------%
+%--------------------------------------------------------------------------%
+
+
+
+
+\title{Sprint 3\\
+\large Equipo: ERP BI\\
+\large Asignatura: Proyectos IV}
+
+\author{
+  \small{Juan Carlos Á}\fn{juan.avila@live.u-tad.com}
+  \and
+  \small{Javier Coque}\fn{javier.coque@live.u-tad.com}
+  \and
+  \small{Alejandro Gallego}\fn{alejandro.gallego@live.u-tad.com}
+  \and
+  \small{Chantal López}\fn{chantal.lopez@live.u-tad.com}
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\pagenumbering{arabic}
+\pagestyle{plain} % setting our default header and footer that we set with
+% ÍNDICE DE CONTENIDOS
+\setcounter{page}{1}
+
+\section*{Resumen Sprint}
+
+\subsection*{Kafka}
+En la sección de Kafka, se han hecho grandes avances. Principalmente se han llevado a cabo las siguientes historias de usuario:
+
+\begin{itemize}[label=\textcolor{verdeos}{\textbullet}]
+    \item Yo como desarrollador quiero establecer una IP estática  a la red Docker para simplificar el despliegue.
+    \item Yo como desarrollador quiero que  el \textit{Consumer} esté atento a nuevas notificaciones, al mismo tiempo que procesa las que ya hay para que no se quede bloqueado.
+    \item Yo como desarrollador quiero que el \textit{Consumer} sea capaz de leer (desencolar) y procesar los mensajes para poder ejecutar las acciones necesarias.
+    \item Yo como desarrollador quiero poder eliminar los pedidos que el \textit{Consumer} ya ha leído para no procesar un pedido dos veces.
+    \item Yo como usuario de Odoo, quiero que los mensajes que circulen por la red vayan securizados para evitar problemas de robo.
+\end{itemize}
+
+Sin embargo, no ha dado tiempo a hacer las siguientes historias de usuario; no obstante están en proceso.
+
+\begin{itemize}[label=\textcolor{orange}{\textbullet}]
+    \item Yo como usuario de Odoo, quiero que sea una plataforma escalable para poder soportar gran volumen de datos (i.e. desplegar Kafka con kubernetes).
+    \item Yo como comprador quiero recibir una fecha de entrega aproximada al realizar un pedido.
+    \item Yo como comprador quiero poder cancelar un pedido.
+\end{itemize}
+
+Las siguientes historias de usuario no se cree, en un principio, que vayan a ser viables para fecha final de entrega:
+
+\begin{itemize}[label=\textcolor{redos}{\textbullet}]
+
+    \item Yo como desarrollador quiero poder establecer un \ti{purchase agreement} entre dos empresas.
+    \item Yo como vendendor me gustaría que el comprador pudiera ver el estado de su pedido.
+\end{itemize}
+
+\subsection*{Dashboard}
+En esta sección, se han podido llevar a cabo \B{\textcolor{verdeos}{todas}} las historias de usuario:
+
+\begin{itemize}[label=\textcolor{verdeos}{\textbullet}]
+    \item Yo como comprador/vendedor quiero poder ver con gráficas interactivas \ti{insights} de mis transacciones.
+    \item Yo como comprador/vendedor quiero poder ver varias gráficas al mismo tiempo en una misma pantalla para poder seleccionar mejor qué es lo que quiero ver.
+    \item Yo como comprador/vendedor quiero poder realizar comparaciones a lo largo del tiempo de una misma gráfica para poder sacar conclusiones de transacciones en dos pediodos de tiempo distintos.
+\end{itemize}
+
+\section*{Contratiempos}
+
+En este Sprint han surgido ciertos problemas y contratiempos que se han tratado de solventar.
+
+En primer lugar, se ha visto muy complicado el poder implementar un \ti{purchase agreement} entre dos máquinas Odoo. Se ha buscado información y el trabajo de documentación se ha realizado, pero no se ha encontrado ninguna lógica para poder implementarlo. 
+
+Por otra parte, también respecto a \B{Kafka}, hubo bastantes complicaciones a la hora de insertar un pedido en el 'Odoo vendedor' cuando el 'Odoo comprador' realizaba un pedido. No fue una tarea fácil y llevo días conseguirlo porque no era trivial.
+
+Por último, respecto a la sección de \B{Dashboard}, finalmente se \href{https://youtu.be/I8E9XszUYGY}{encontró}\fn{\href{https://github.com/ajscriptmedia/odoo_custom_dashboard/tree/orm_action_service}{github}.} una manera de poder hacer unos gráficos interactivos. Para poder llevar a cabo esto, ha sido fundamental la librería \href{https://www.chartjs.org/}\ti{ChartJS}.
+
+\section*{Conclusiones}
+Este Sprint era muy ambicioso ---quizá demasiado--- y no se han podido llevar a cabo todas las historias  de usuario previstas. No obstante, sí se han conseguido, no únicamente las funcionalidades básicas requeridas, sino que con ciertas funcionalidades, como el \ti{dashboard}, se ha conseguido ir un pasito más allá. 
+
+En líneas generales, el equipo está contento con el trabajo y se espera pulir ciertas características para la presentación al cliente.
+\end{document}
+
