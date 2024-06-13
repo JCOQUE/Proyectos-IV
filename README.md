@@ -7,6 +7,7 @@ Estos ERP están desplegados con Docker, a través de la imagen de Odoo encontra
 
 Por otra parte, el Dashboard se ha realizado en código Javascript; concretamente con la librería ChartsJS. 
 
+---
 
 ## Referencias
 #### Dashboard
